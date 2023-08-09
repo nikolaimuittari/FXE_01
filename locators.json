@@ -1,0 +1,188 @@
+{
+    "FXE_new_project_wizard_back_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_back_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_create_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_create_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_empty_proj_name_err": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_empty_proj_name_err-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_local_ip_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_local_ip_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_local_ip_fld": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_local_ip_fld-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_location_folder_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_location_folder_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_next_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_next_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_plc_selection_dropdn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_plc_selection_dropdn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_prefix_dropdn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_prefix_dropdn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_project_wizard_save_folder_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_new_project_wizard_save_folder_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_new_wizard_close_wizard_btn": {
+        "confidence": 63.0,
+        "path": ".images\\fxe_new_wizard_close_wizard_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_project_main_project_info_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_project_main_project_info_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_Fidelix_manual_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_fidelix_manual_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_add_to_favorites_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_add_to_favorites_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_create_a_new_group_project_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_create_a_new_group_project_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_create_a_new_group_project_save_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_create_a_new_group_project_save_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_create_a_new_project_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_create_a_new_project_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_create_group_select_all": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_create_group_select_all-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_explore_fx_editor_data_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_explore_fx_editor_data_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_favorites_delete_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_favorites_delete_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_fxeditor_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_fxeditor_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_group_project_add_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_group_project_add_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_import_new_plc_firmware_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_license_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_license_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_open_an_existing_project_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_open_an_existing_project_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_openpcs_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_openpcs_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_right_down_logo": {
+        "confidence": 71.0,
+        "path": ".images\\fxe_start_right_down_logo-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_settings_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_tools_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_tools_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_update_history_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_update_history_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_your_version_is_up_to_date_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_your_version_is_up_to_date_btn-path.png",
+        "source": null,
+        "type": "image"
+    }
+}
