@@ -267,6 +267,9 @@ Project Tab Hardware Configuration Subtab Add Modbus Device
     RPA.Desktop.Click    alias:FXE_main_ADD_form_btn
     RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn
     
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_subtab_modbus_address247_elem
+    RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_subtab_modbus_address247_elem    double click
+
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_subtab_modbus_holding_elem
     RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_subtab_modbus_holding_elem    double click
 

@@ -23,9 +23,9 @@
         "source": null,
         "type": "image"
     },
-    "FXE_main_NO_form_noicon_btn": {
+    "FXE_main_NO_noicon_form_btn": {
         "confidence": 80.0,
-        "path": ".images\\fxe_main_no_form_noicon_btn-path.png",
+        "path": ".images\\fxe_main_no_noicon_form_btn-path.png",
         "source": null,
         "type": "image"
     },
