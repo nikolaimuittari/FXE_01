@@ -1,4 +1,316 @@
 {
+    "FXE_main_ADD_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_add_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_CANCEL_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_cancel_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_CANCEL_noicon_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_cancel_noicon_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_Graphics_tab_separate_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_graphics_tab_separate_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_NO_form_noicon_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_no_form_noicon_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_OK_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_ok_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_YES_noicon_form_btn": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_yes_noicon_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_browser_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_browser_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_documents_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_documents_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fxonline_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fxonline_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_graphics_html_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_graphics_html_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_graphics_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_graphics_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_history_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_label_list_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_label_list_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_close_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_close_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_add_address_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_add_address_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_add_device_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_add_device_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_address_right_menu": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_address_right_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port10_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port10_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port3_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port3_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port4_elem": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port4_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port5_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port5_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port6_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port6_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port7_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port7_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port8_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port8_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port9_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port9_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_hardware_conf_modbus_port_right_menu": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_hardware_conf_modbus_port_right_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_save_no_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_save_no_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_save_yes_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_save_yes_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_comm_settings_subtab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_settings_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_modules_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_modules_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab_modbus_upload_btn": {
+        "confidence": 100.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_modbus_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab_modules_settings_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_modules_settings_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab_modules_upload_btn": {
+        "confidence": 100.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_modules_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab_ports_list": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_ports_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_add_address_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_add_address_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_address1_TCPIP_elem": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address1_tcpip_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_address1_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address1_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_address247_TCPIP_elem": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address247_tcpip_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_address247_elem": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address247_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_subtab_modbus_holding_elem": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_holding_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_settings_subtab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_settings_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_project_info_subtab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_project_info_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_settings_subtab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_settings_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_icon_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_icon_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_separate_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_separate_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_new_project_wizard_back_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_new_project_wizard_back_btn-path.png",
@@ -68,6 +380,12 @@
     "FXE_project_main_project_info_bar": {
         "confidence": 80.0,
         "path": ".images\\fxe_project_main_project_info_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_project_save_msg": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_project_save_msg-path.png",
         "source": null,
         "type": "image"
     },

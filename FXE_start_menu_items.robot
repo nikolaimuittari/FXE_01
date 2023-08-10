@@ -4,7 +4,9 @@ Documentation       FXE start menu item walkthrough
 Library             RPA.Desktop
 Library             RPA.Windows
 Library             OperatingSystem
-Resource            ${CURDIR}\\resources\\common.resource
+#Resource            ${CURDIR}\\resources\\common.resource
+Resource            resources/common.resource
+
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
 
 *** Variables ***
@@ -17,6 +19,8 @@ Start Menu Items Walkthrough
     #Check And Delete Test Project
     Open FXE
     Start Page New Group Project Wizard Open Close
+    Start Page Open Existing Project
+    
     #Open Existing Project
     #Close All
 

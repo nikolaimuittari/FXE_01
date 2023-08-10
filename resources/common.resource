@@ -9,9 +9,10 @@ Library             OperatingSystem
 ${FXEditor_app}             c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
 ${FXE_TEST_PROJECTS_FOLDER_PATH}    c:\\QA\\TestProjects
 ${FXE_TEST_PROJECT_PATH}    c:\\QA\\TestProjects\\${TEST_PROJECT_NAME}
+${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 ${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 ${TEST_PROJECT_NAME}    TestProject1234
-${SLEEP_TIMEOUT_DEFAULT}    3s
+${SLEEP_TIMEOUT_DEFAULT}    1s
 
 
 
@@ -169,4 +170,35 @@ Start Page New Group Project Wizard Open Close
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_start_group_project_add_btn
 
+
+Start Page Open Existing Project
+    RPA.Desktop.Click    alias:FXE_start_open_an_existing_project_btn
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Type Text    ${FXE_TEST_PROJECT_FILENAME_PATH}    # C:\QA\TestProjects\TestProject1234\TestProject1234.fxp
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
+
     
+Close Opened Project With Saving
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=15
+    RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    # Saving dialog if project has been chnaged
+    ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
+    # Pressing YES
+    Run Keyword If    ${Saving_dialog}
+    ...    RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_btn
+   
+
+Close Opened Project Without Saving
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=15
+    RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    # Saving dialog if project has been chnaged
+    ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
+    # Pressing NO
+    Run Keyword If    ${Saving_dialog}
+    ...    RPA.Desktop.Click    alias:FXE_main_NO_noicon_form_btn
+    
+       
