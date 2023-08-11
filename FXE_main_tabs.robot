@@ -16,19 +16,24 @@ Resource            resources/project_tab.resource
 *** Tasks ***
 Start Menu Items Walkthrough
     Check Projects Common Folder Exists
-    #Check And Delete Test Project
-    #Open FXE
-    Open Existing Project
-    #Project Tab Project Information Subtab
-    #Project Tab Communication Settings Subtab
-    #Close Opened Project With Saving
-    Project Tab Hardware Configuration Subtab
-    Project Tab Hardware Configuration Subtab Add Modbus Address
-    Project Tab Hardware Configuration Subtab Add Modbus Device
-    Close Opened Project Without Saving
-    #Project Tab Hardware Configuration Subtab New Module
-    #Project Tab Hardware Configuration Subtab New Modbus Device
-    #Close All
+    # Check And Delete Test Project
+    # Open FXE
+    # Open Existing Project
+    # Project Tab Project Information Subtab
+    # Project Tab Communication Settings Subtab
+        
+    # Project Tab Hardware Configuration Subtab
+    # Project Tab Hardware Configuration Subtab New Module
+    
+    # Project Tab Hardware Configuration Subtab Add Modbus Address
+    # Project Tab Hardware Configuration Subtab Add Modbus Device
+    
+    Project Tab Point Settings Subtab
+    
+    # Close Opened Project Without Saving
+    # Close Opened Project With Saving
+
+    # Close All
 
     Log    Done.
 

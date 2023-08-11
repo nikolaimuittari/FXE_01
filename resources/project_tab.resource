@@ -5,7 +5,8 @@ Library             RPA.Desktop
 Library             RPA.Windows
 Library             OperatingSystem
 Library             DateTime
-Library    RPA.RobotLogListener
+Library             RPA.RobotLogListener
+
 
 Resource            resources/common.resource
 
@@ -99,7 +100,7 @@ Project Tab Communication Settings Subtab
     RPA.Desktop.Type Text    78901
 
 Project Tab Hardware Configuration Subtab
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_conf_subtab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_conf_subtab
@@ -176,7 +177,8 @@ Project Tab Hardware Configuration Subtab Add Modbus Address
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Press Keys    delete
     RPA.Desktop.Type Text    247    # Modbus Address set 
-    # RPA.Desktop.Press Keys    tab    # Group dropdown
+    RPA.Desktop.Press Keys    tab    # Group dropdown
+    RPA.Desktop.Type Text    AHU machine
     # RPA.Desktop.Press Keys    tab    # Alarm point ID
     # RPA.Desktop.Press Keys    tab    # TCPIP checkbox
     RPA.Desktop.Click    alias:FXE_main_ADD_form_btn
@@ -219,6 +221,7 @@ Project Tab Hardware Configuration Subtab Add Modbus Address
     RPA.Desktop.Press Keys    delete
     RPA.Desktop.Type Text    247    # Modbus Address set 
     RPA.Desktop.Press Keys    tab    # Group dropdown
+    RPA.Desktop.Type Text    TCPIP device
     RPA.Desktop.Press Keys    tab    # Alarm point ID
     RPA.Desktop.Press Keys    tab    # TCPIP checkbox
     RPA.Desktop.Press Keys    space    # TCPIP checkbox activate
@@ -274,3 +277,57 @@ Project Tab Hardware Configuration Subtab Add Modbus Device
     RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_subtab_modbus_holding_elem    double click
 
     # RPA.Desktop.Click    alias:FXE_main_project_hardware_conf_modbus_port10_elem    double click
+
+
+Project Tab Point Settings Subtab
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_point_settings_subtab    timeout=10
+    RPA.Desktop.Click    alias:FXE_main_project_tab
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_main_project_tab_point_settings_subtab
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # Resize button
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    RPA.Desktop.Click With Offset    x=135    y=0    action=click    # Resize columns button
+
+    # Add button
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    RPA.Desktop.Click With Offset    x=-29    y=0    action=click    # Add prefix button
+
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_point_set_subtab_add_prefix_form    timeout=5
+    RPA.Desktop.Type Text    Prefix_1
+    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
+
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    # RPA.Desktop.Click With Offset    x=-135    y=0    action=click    # Open prefix button
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    # RPA.Desktop.Click With Offset    x=-82    y=0    action=click    # Save prefix button
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    # RPA.Desktop.Click With Offset    x=-29    y=0    action=click    # Add prefix button
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    # RPA.Desktop.Click With Offset    x=29    y=0    action=click    # Delete prefix button
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
+    # RPA.Desktop.Click With Offset    x=82    y=0    action=click    # Delet All prefixes button
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_prefix_column    # Pointname settings panel, "Prefix" column header
+    RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Column first line
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    # Column first line click after delay
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Type Text    AHU
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_type_column    # Pointname settings panel, "Type" column header
+    RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Column first line -> type dropdown
+    RPA.Desktop.Press Keys    down    # Empty
+    RPA.Desktop.Press Keys    down    # Cabinet
+    RPA.Desktop.Press Keys    down    # Fidleix
+    RPA.Desktop.Press Keys    down    # Building
+    RPA.Desktop.Press Keys    down    # Object
+    # RPA.Desktop.Press Keys    down    # System ?
+    RPA.Desktop.Press Keys    enter    # Confirming
+
+    
