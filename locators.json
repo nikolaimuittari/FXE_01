@@ -35,6 +35,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_OK_noicon_form_btn": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_ok_noicon_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_YES_noicon_form_btn": {
         "confidence": 70.0,
         "path": ".images\\fxe_main_yes_noicon_form_btn-path.png",
@@ -251,12 +257,6 @@
         "source": null,
         "type": "image"
     },
-    "FXE_main_project_tab_hardware_subtab_modbus_address1_elem": {
-        "confidence": 90.0,
-        "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address1_elem-path.png",
-        "source": null,
-        "type": "image"
-    },
     "FXE_main_project_tab_hardware_subtab_modbus_address247_TCPIP_elem": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address247_tcpip_elem-path.png",
@@ -264,7 +264,7 @@
         "type": "image"
     },
     "FXE_main_project_tab_hardware_subtab_modbus_address247_elem": {
-        "confidence": 90.0,
+        "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_address247_elem-path.png",
         "source": null,
         "type": "image"
@@ -272,6 +272,30 @@
     "FXE_main_project_tab_hardware_subtab_modbus_holding_elem": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_hardware_subtab_modbus_holding_elem-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_set_subtab_add_prefix_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_add_prefix_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_set_subtab_filter_icons": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_filter_icons-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_set_subtab_prefix_column": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_prefix_column-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_set_subtab_type_column": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_type_column-path.png",
         "source": null,
         "type": "image"
     },
@@ -290,6 +314,12 @@
     "FXE_main_project_tab_settings_subtab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_settings_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_yab_point_set_subtab_prefix_column": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_project_yab_point_set_subtab_prefix_column-path.png",
         "source": null,
         "type": "image"
     },
