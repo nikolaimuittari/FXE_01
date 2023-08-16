@@ -5,6 +5,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_ADD_points_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_add_points_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_CANCEL_form_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_cancel_form_btn-path.png",
@@ -14,6 +20,12 @@
     "FXE_main_CANCEL_noicon_form_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_cancel_noicon_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_CLOSE_points_form_btn": {
+        "confidence": 19.0,
+        "path": ".images\\fxe_main_close_points_form_btn-path.png",
         "source": null,
         "type": "image"
     },
@@ -104,6 +116,24 @@
     "FXE_main_points_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_add_button": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_add_button-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_add_points_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_points_tab_add_points_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_select_filter_dropdown": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_select_filter_dropdown-path.png",
         "source": null,
         "type": "image"
     },
@@ -287,9 +317,21 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_project_tab_point_set_subtab_pointname_build_field": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_pointname_build_field-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_project_tab_point_set_subtab_prefix_column": {
         "confidence": 90.0,
         "path": ".images\\fxe_main_project_tab_point_set_subtab_prefix_column-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_point_set_subtab_sample_field": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_point_set_subtab_sample_field-path.png",
         "source": null,
         "type": "image"
     },
@@ -338,6 +380,12 @@
     "FXE_main_st-edit_tab_separate_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_stedit_tab_separate_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_template_icon-path.png",
         "source": null,
         "type": "image"
     },

@@ -280,7 +280,7 @@ Project Tab Hardware Configuration Subtab Add Modbus Device
 
 
 Project Tab Point Settings Subtab
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_point_settings_subtab    timeout=10
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_point_settings_subtab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_main_project_tab_point_settings_subtab
@@ -329,5 +329,25 @@ Project Tab Point Settings Subtab
     RPA.Desktop.Press Keys    down    # Object
     # RPA.Desktop.Press Keys    down    # System ?
     RPA.Desktop.Press Keys    enter    # Confirming
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_pointname_build_field    # Pointname build sample text field label
+    RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Text field offset  
+
+    RPA.Desktop.Click    action=doubleclick
+    RPA.Desktop.Type Text    BUILD_SYSTEM_SUFIX
+    RPA.Desktop.Press Keys    enter
+
+Project Tab Settings Subtab
+    RPA.Desktop.Press Keys    tab    # "Autosave project every" checkbox
+    RPA.Desktop.Press Keys    space     # activate
+
+    RPA.Desktop.Press Keys    tab    # "minutes" textbox - 5 min is default
+    RPA.Desktop.Type Text    10    # Changing to 10 min
+    RPA.Desktop.Press Keys    Tab    # "prompt before save" checkbox
+    RPA.Desktop.Press Keys    space    space     # activate/deactivate -> return in previous position
+
+    RPA.Desktop.Press Keys    tab    # "Auto import points" checkbox
+    RPA.Desktop.Press Keys    space    space     # activate/deactivate -> return in previous position
+
 
     

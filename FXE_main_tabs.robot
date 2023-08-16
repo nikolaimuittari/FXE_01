@@ -6,6 +6,7 @@ Library             RPA.Windows
 Library             OperatingSystem
 Resource            resources/common.resource
 Resource            resources/project_tab.resource
+Resource            resources/points_tab.resource
 #Resource            ${CURDIR}\\resources\\common.resource
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
 
@@ -18,22 +19,25 @@ Start Menu Items Walkthrough
     Check Projects Common Folder Exists
     # Check And Delete Test Project
     # Open FXE
-    # Open Existing Project
-    # Project Tab Project Information Subtab
-    # Project Tab Communication Settings Subtab
+    Open Existing Project
+    #Project Tab Project Information Subtab
+    #Project Tab Communication Settings Subtab
         
-    # Project Tab Hardware Configuration Subtab
-    # Project Tab Hardware Configuration Subtab New Module
+    #Project Tab Hardware Configuration Subtab
+    #Project Tab Hardware Configuration Subtab New Module
     
-    # Project Tab Hardware Configuration Subtab Add Modbus Address
-    # Project Tab Hardware Configuration Subtab Add Modbus Device
+    #Project Tab Hardware Configuration Subtab Add Modbus Address
+    #Project Tab Hardware Configuration Subtab Add Modbus Device
     
-    Project Tab Point Settings Subtab
-    
-    # Close Opened Project Without Saving
+    #Project Tab Point Settings Subtab
+    #Project Tab Settings Subtab
+
+    Points Tab Select Filter Create All Kinds Of Points
+
+    Close Opened Project Without Saving
     # Close Opened Project With Saving
 
-    # Close All
+    Close All
 
     Log    Done.
 
