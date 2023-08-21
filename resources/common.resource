@@ -1,5 +1,8 @@
 *** Settings ***
 Documentation       Common resource file
+# Display parameters:
+# Physical resolution: 1920 * 1080
+# Windows scaling: 100%
 
 Library             RPA.Desktop
 Library             RPA.Windows

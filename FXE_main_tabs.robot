@@ -29,10 +29,12 @@ Start Menu Items Walkthrough
     #Project Tab Hardware Configuration Subtab Add Modbus Address
     #Project Tab Hardware Configuration Subtab Add Modbus Device
     
-    #Project Tab Point Settings Subtab
+    Project Tab Point Settings Subtab
     #Project Tab Settings Subtab
-
-    Points Tab Select Filter Create All Kinds Of Points
+    
+    #Points Tab Select
+    #State Text Edit Form
+    #Points Tab Select Filter Create All Kinds Of Points
 
     Close Opened Project Without Saving
     # Close Opened Project With Saving

@@ -53,6 +53,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_OK_round_form_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_ok_round_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_YES_noicon_form_btn": {
         "confidence": 70.0,
         "path": ".images\\fxe_main_yes_noicon_form_btn-path.png",
@@ -113,15 +119,33 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_more_information_drop_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_more_information_drop_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_alarmgroup_upload_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_alarmgroup_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_state_upload_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_state_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab-path.png",
         "source": null,
         "type": "image"
     },
-    "FXE_main_points_tab_add_button": {
+    "FXE_main_points_tab_add_btn": {
         "confidence": 80.0,
-        "path": ".images\\fxe_main_points_tab_add_button-path.png",
+        "path": ".images\\fxe_main_points_tab_add_btn-path.png",
         "source": null,
         "type": "image"
     },
@@ -131,9 +155,51 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_add_upload_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_add_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_alarmgroup_edit_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_alarmgroup_edit_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_connection_failed_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_connection_failed_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_select_filter_dropdown": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_select_filter_dropdown-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_state_text_upload_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_state_text_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_statetext_edit_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_statetext_edit_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_upload_changed_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_upload_changed_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_upload_displayed_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_upload_displayed_btn-path.png",
         "source": null,
         "type": "image"
     },
