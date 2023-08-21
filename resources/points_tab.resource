@@ -234,8 +234,93 @@ Alarm Group Edit Form
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
     RPA.Desktop.Click With Offset    x=112    y=-188    action=click    # Time schedule drop-down Alarmgroup EDIT FORM
     RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    enter    # Select time schedule
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
-    RPA.Desktop.Click With Offset    x=112    y=-188    action=click    # Time schedule drop-down Alarmgroup EDIT FORM
+    RPA.Desktop.Click With Offset    x=249    y=-188    action=doubleclick    # Time schedule priority digital field. Alarmgroup EDIT FORM
+    RPA.Desktop.Type Text    1    # Priority set
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=232    y=-149    action=click    # Time schedule syncronization select. Alarmgroup EDIT FORM
+    # RPA.Desktop.Click With Offset    x=232    y=-149    action=click    # Time schedule syncronization select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=-296    y=-42    action=click    # Alarmdevice name cell. Alarmgroup EDIT FORM
+    RPA.Desktop.Press Keys    F2
+    RPA.Desktop.Type Text    EMAIL_ALARM    # Alarm group name
+    
+    # EMail alarm device
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=96    y=20    action=click    # Email address. Alarmgroup EDIT FORM
+    RPA.Desktop.Type Text    email@email.email    # Email address
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=245    y=20    action=click    # Server drop-down. Alarmgroup EDIT FORM
     RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    enter    # Select time schedule
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=165    y=60    action=click    # Template drop-down. Alarmgroup EDIT FORM
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    down    # Select time schedule
+    RPA.Desktop.Press Keys    enter    # Select time schedule
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=25    y=105    action=click    # Acknowlwdge select. Alarmgroup EDIT FORM
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=130    y=105    action=click    # LockState select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=25    y=120    action=click    # State 0 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=130    y=120    action=click    # State 4 select. Alarmgroup EDIT FORM
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=235    y=120    action=click    # State 8 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=130    y=140    action=click    # State 5 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=130    y=155    action=click    # State 6 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=130    y=175    action=click    # State 7 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=25    y=140    action=click    # State 1 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=25    y=155    action=click    # State 2 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=25    y=175    action=click    # State 0 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=235    y=140    action=click    # State 9 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=235    y=155    action=click    # State 10 select. Alarmgroup EDIT FORM
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=235    y=175    action=click    # State 11 select. Alarmgroup EDIT FORM
+
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=5    y=205    action=click    # Syncronize select. Alarmgroup EDIT FORM
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
+    RPA.Desktop.Click With Offset    x=120    y=205    action=click    # Open picture select. Alarmgroup EDIT FORM
+    
+    # RPA.Desktop.Click    alias:FXE_main_SAVE_form_btn 
+    RPA.Desktop.Click    alias: alias:FXE_main_CANCEL_form_btn
+
+    
 
