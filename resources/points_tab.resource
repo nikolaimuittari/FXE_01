@@ -26,7 +26,7 @@ ${current_date}=    Get Current Date    result_format=%d.%m.%y
 *** Keywords ***
 
 Points Tab Select
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_points_tab
     
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -35,7 +35,7 @@ Points Tab Select
 
 Points Tab Select Filter Create All Kinds Of Points
     
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_points_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
@@ -48,7 +48,7 @@ Points Tab Select Filter Create All Kinds Of Points
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
     # "Adding new points" button
-    RPA.Desktop.Click    alias:FXE_main_points_tab_add_button    # "Add point" button
+    RPA.Desktop.Click    alias:FXE_main_points_tab_add_btn    # "Add point" button
     
     # Waiting for "Add points" form
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_points_form    timeout=25    # Add point form. Dim: 392*488, center: 196*244
@@ -160,6 +160,7 @@ Points Tab Select Filter Create All Kinds Of Points
 
 Button Press Upload Selected Points To PLC
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_upload_btn    timeout=25    # Add + Upload SELECTED buttons locator. Dims:  102*44 center: 51*22
+    
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_upload_btn    # Moving to the form's center
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload points to PLC button click
 
@@ -170,6 +171,7 @@ Button Press Upload Selected Points To PLC
 
 Button Press Upload Displayed Points To PLC
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_displayed_btn    timeout=25    # Upload DISPLAYED points locator.
+    
     RPA.Desktop.Click    alias:FXE_main_points_tab_upload_displayed_btn    # Upload Displayed points to PLC button click
 
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
@@ -179,7 +181,9 @@ Button Press Upload Displayed Points To PLC
     
 Button Press Upload Changed Points To PLC
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_changed_btn    timeout=25    # Upload CHANGED points locator.
-
+    
+    RPA.Desktop.Click    alias:FXE_main_points_tab_upload_changed_btn
+    
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
@@ -202,20 +206,25 @@ State Text Edit Form
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_statetext_edit_form    # State text edit form locator.
     RPA.Desktop.Click With Offset    x=-202    y=-183    action=doubleclick    # DOUBLECLICK Textgroup name first line
     RPA.Desktop.Type Text    TEST_STATE_TEXT
+    RPA.Desktop.Press Keys    tab
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_statetext_edit_form    # State text edit form locator.
     RPA.Desktop.Click With Offset    x=27    y=-183    action=doubleclick    # DOUBLECLICK Textgroup right panel VALUE first line
     RPA.Desktop.Type Text    999
+    RPA.Desktop.Press Keys    tab
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_statetext_edit_form    # State text edit form locator.
     RPA.Desktop.Click With Offset    x=56    y=-183    action=doubleclick    # DOUBLECLICK Textgroup right panel TEXT first line
     RPA.Desktop.Type Text    STATE text 999
-    
+    RPA.Desktop.Press Keys    tab
+
     # Synchronize checkbox
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_statetext_edit_form    # State text edit form locator.
     RPA.Desktop.Click With Offset    x=-247    y=304    action=click    # Checkbox click
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_statetext_edit_form    # State text edit form locator.
     RPA.Desktop.Click With Offset    x=-247    y=304    action=click    # Checkbox click
-
+    
     # RPA.Desktop.Click    alias:FXE_main_OK_round_form_btn    # OK button (Round)
     RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn    # CANCEL button
 
@@ -314,13 +323,46 @@ Alarm Group Edit Form
 
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
-    RPA.Desktop.Click With Offset    x=5    y=205    action=click    # Syncronize select. Alarmgroup EDIT FORM
+    RPA.Desktop.Click With Offset    x=15    y=205    action=click    # Syncronize select. Alarmgroup EDIT FORM
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
     RPA.Desktop.Click With Offset    x=120    y=205    action=click    # Open picture select. Alarmgroup EDIT FORM
     
     # RPA.Desktop.Click    alias:FXE_main_SAVE_form_btn 
-    RPA.Desktop.Click    alias: alias:FXE_main_CANCEL_form_btn
+    RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn
 
-    
+    ${save_before_closing}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form  # Save settings form Dims: 352*149 center: 175*75   
+    Run Keyword If    ${save_before_closing}    RPA.Desktop.Move Mouse    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form
+    Run Keyword If    ${save_before_closing}    RPA.Desktop.Click With Offset    
+
+
+Button Press Upload Alarmgroup To PLC
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=25    # Upload ALARMGROUP points locator.
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_upload_btn    # Moving to the center of ALARMGROUP points locator
+    RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Alarmgroup button click
+
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+
+Button Press Upload State Text To PLC
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=25    # Upload STATETEXT points locator.
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_state_text_upload_btn    # Moving to the center of STATETEXT points locator
+    RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Statetext button click
+
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+    Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+Button Press Points Panel Resize
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_resize_btn    timeout=25    # Alarmgroup+Upload+Resize buttons locator
+
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_resize_btn    # Moving to center of Alarmgroup+Upload+Resize buttons locator
+    RPA.Desktop.Click With Offset    x=52    y=0    action=click    # Resize Button click
+
 

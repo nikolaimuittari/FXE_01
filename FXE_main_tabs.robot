@@ -27,16 +27,26 @@ Start Menu Items Walkthrough
     #Project Tab Hardware Configuration Subtab New Module
     
     #Project Tab Hardware Configuration Subtab Add Modbus Address
+
     #Project Tab Hardware Configuration Subtab Add Modbus Device
     
     #Project Tab Point Settings Subtab
     #Project Tab Settings Subtab
     
     Points Tab Select
-    #State Text Edit Form
-    #Points Tab Select Filter Create All Kinds Of Points
+    Points Tab Select Filter Create All Kinds Of Points
+    State Text Edit Form
     Alarm Group Edit Form
     
+    Button Press Upload Alarmgroup To PLC
+    Button Press Upload State Text To PLC
+    Button Press Upload Changed Points To PLC
+    Button Press Upload Displayed Points To PLC
+    Button Press Upload Selected Points To PLC
+    Button Press Points Panel Resize
+
+    
+
     #Close Opened Project Without Saving
     #Close Opened Project With Saving
 

@@ -162,7 +162,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_add_upload_btn": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_add_upload_btn-path.png",
         "source": null,
         "type": "image"
@@ -191,6 +191,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_resize_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_resize_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_select_filter_dropdown": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_select_filter_dropdown-path.png",
@@ -204,7 +210,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_statetext_edit_form": {
-        "confidence": 80.0,
+        "confidence": 10.0,
         "path": ".images\\fxe_main_points_tab_statetext_edit_form-path.png",
         "source": null,
         "type": "image"
