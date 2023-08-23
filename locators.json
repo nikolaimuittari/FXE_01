@@ -191,9 +191,39 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_import_filter_form": {
+        "confidence": 25.0,
+        "path": ".images\\fxe_main_points_tab_import_filter_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_importfilter_form_save_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_importfilter_form_save_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_importpoint_settings_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_importpoint_settings_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_panel_resize": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_panel_resize-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_resize_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_resize_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_right_panel_btn_bar": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_points_tab_right_panel_btn_bar-path.png",
         "source": null,
         "type": "image"
     },

@@ -34,18 +34,21 @@ Start Menu Items Walkthrough
     #Project Tab Settings Subtab
     
     Points Tab Select
-    Points Tab Select Filter Create All Kinds Of Points
-    State Text Edit Form
-    Alarm Group Edit Form
+    #Points Tab Select Filter Create All Kinds Of Points
+    #State Text Edit Form
+    #Alarm Group Edit Form
     
-    Button Press Upload Alarmgroup To PLC
-    Button Press Upload State Text To PLC
-    Button Press Upload Changed Points To PLC
-    Button Press Upload Displayed Points To PLC
-    Button Press Upload Selected Points To PLC
-    Button Press Points Panel Resize
+    #Button Press Upload Alarmgroup To PLC
+    #Button Press Upload State Text To PLC
+    #Button Press Upload Changed Points To PLC
+    #Button Press Upload Displayed Points To PLC
+    #Button Press Upload Selected Points To PLC
+    #Button Press Points Panel Resize
 
-    
+    Left Panel Resize
+    Points Right Panel Import Filter Edit Form
+    Points Right Panel Import Filter Edit Form NO Save
+
 
     #Close Opened Project Without Saving
     #Close Opened Project With Saving
