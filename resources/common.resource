@@ -6,6 +6,7 @@ Documentation       Common resource file
 
 Library             RPA.Desktop
 Library             RPA.Windows
+Library             RPA.Assistant
 Library             OperatingSystem
 
 *** Variables ***
