@@ -1,18 +1,16 @@
-# For more details on the format and content:
-# https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
-
 shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
 
 tasks:
   # Task names here are used when executing the bots, so renaming these is recommended.
   # Run all tasks:
   #shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+  
   FXE New project wizard:
-    robotTaskname:  FXE_new_project_wizard.robot
+    robotTaskName:  FXE_new_project_wizard.robot
   FXE Start menu items:
-    robotTaskname:  FXE_start_menu_items.robot
+    robotTaskName:  FXE_start_menu_items.robot
   FXE Open project main view through menu items:
-    robotTaskname:  FXE_main_view_menu_items.robot
+    robotTaskName:  FXE_main_view_menu_items.robot
 
 condaConfigFile: conda.yaml
 
