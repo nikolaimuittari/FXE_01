@@ -36,7 +36,7 @@
         "type": "image"
     },
     "FXE_main_NO_noicon_form_btn": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_no_noicon_form_btn-path.png",
         "source": null,
         "type": "image"
@@ -66,7 +66,7 @@
         "type": "image"
     },
     "FXE_main_YES_noicon_form_btn": {
-        "confidence": 70.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_yes_noicon_form_btn-path.png",
         "source": null,
         "type": "image"
@@ -167,6 +167,18 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_addfilter_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_addfilter_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_addfilter_name_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_addfilter_name_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_alarmgroup_edit_form": {
         "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_alarmgroup_edit_form-path.png",
@@ -174,7 +186,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_alarmgroup_edit_form_save_form": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_points_tab_alarmgroup_edit_form_save_form-path.png",
         "source": null,
         "type": "image"
@@ -191,6 +203,18 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_copyfilter_btn": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_points_tab_copyfilter_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_copyfilter_name_form": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_points_tab_copyfilter_name_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_import_filter_form": {
         "confidence": 25.0,
         "path": ".images\\fxe_main_points_tab_import_filter_form-path.png",
@@ -203,6 +227,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_importfilter_suffix_exists_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_points_tab_importfilter_suffix_exists_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_importpoint_settings_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_importpoint_settings_btn-path.png",
@@ -212,6 +242,18 @@
     "FXE_main_points_tab_panel_resize": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_panel_resize-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_pointfilter_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_pointfilter_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_pointfilter_bar_type_dd": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_points_tab_pointfilter_bar_type_dd-path.png",
         "source": null,
         "type": "image"
     },
@@ -572,6 +614,66 @@
     "FXE_new_wizard_close_wizard_btn": {
         "confidence": 63.0,
         "path": ".images\\fxe_new_wizard_close_wizard_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_AIpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_aipoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_AOpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_aopoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_DIpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_dipoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_DOpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_dopoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_alarmDIpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_alarmdipoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_alarmpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_alarmpoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_controlpoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_controlpoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_dd_items": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_dd_items-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_lookuppoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_lookuppoints_dd_item-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_points_tab_pointfilter_timepoints_dd_item": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_points_tab_pointfilter_timepoints_dd_item-path.png",
         "source": null,
         "type": "image"
     },

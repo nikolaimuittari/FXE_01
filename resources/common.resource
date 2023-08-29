@@ -6,7 +6,7 @@ Documentation       Common resource file
 
 Library             RPA.Desktop
 Library             RPA.Windows
-Library             RPA.Assistant
+# Library             RPA.Assistant
 Library             OperatingSystem
 
 *** Variables ***
@@ -16,7 +16,7 @@ ${FXE_TEST_PROJECT_PATH}    c:\\QA\\TestProjects\\${TEST_PROJECT_NAME}
 ${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 ${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 ${TEST_PROJECT_NAME}    TestProject1234
-${SLEEP_TIMEOUT_DEFAULT}    2s
+${SLEEP_TIMEOUT_DEFAULT}    1s
 
 
 
@@ -28,6 +28,7 @@ Open FXE
 
 Close All
     RPA.Desktop.Close All Applications
+    RPA.Desktop.Press Keys    alt    F4
     Log To Console    *** Close all applications OK
 
 Check Projects Common Folder Exists

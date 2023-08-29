@@ -316,9 +316,9 @@ Project Tab Point Settings Subtab
     RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_prefix_column    # Pointname settings panel, "Prefix" column header
     RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Column first line
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Click    # Column first line click after delay
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    AHU
+    #RPA.Desktop.Click    # Column first line click after delay
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #RPA.Desktop.Type Text    AHU
 
     RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_type_column    # Pointname settings panel, "Type" column header
     RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Column first line -> type dropdown

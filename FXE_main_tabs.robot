@@ -17,26 +17,29 @@ Resource            resources/points_tab.resource
 *** Tasks ***
 Start Menu Items Walkthrough
     Check Projects Common Folder Exists
-    # Check And Delete Test Project
-    # Open FXE
+    Check And Delete Test Project
+    Open FXE
+    New Project Wizard
+    Close All
+    Sleep    15s
     Open Existing Project
-    #Project Tab Project Information Subtab
-    #Project Tab Communication Settings Subtab
+    Project Tab Project Information Subtab
+    Project Tab Communication Settings Subtab
         
-    #Project Tab Hardware Configuration Subtab
-    #Project Tab Hardware Configuration Subtab New Module
+    Project Tab Hardware Configuration Subtab
+    Project Tab Hardware Configuration Subtab New Module
     
-    #Project Tab Hardware Configuration Subtab Add Modbus Address
+    Project Tab Hardware Configuration Subtab Add Modbus Address
 
-    #Project Tab Hardware Configuration Subtab Add Modbus Device
+    Project Tab Hardware Configuration Subtab Add Modbus Device
     
-    #Project Tab Point Settings Subtab
-    #Project Tab Settings Subtab
+    Project Tab Point Settings Subtab
+    Project Tab Settings Subtab
     
     Points Tab Select
-    #Points Tab Select Filter Create All Kinds Of Points
-    #State Text Edit Form
-    #Alarm Group Edit Form
+    Points Tab Select Filter Create All Kinds Of Points
+    State Text Edit Form
+    Alarm Group Edit Form
     
     #Button Press Upload Alarmgroup To PLC
     #Button Press Upload State Text To PLC
@@ -47,13 +50,18 @@ Start Menu Items Walkthrough
 
     Left Panel Resize
     Points Right Panel Import Filter Edit Form
-    Points Right Panel Import Filter Edit Form NO Save
+    Points Right Panel Button Bar Add Filter Button
+    Points Right Panel Button Bar Copy Selected Filter
+    Points Filter Name Filter field
+    Points Filter Point Type Filter
+
+    #Points Right Panel Import Filter Edit Form NO Save
 
 
     #Close Opened Project Without Saving
     #Close Opened Project With Saving
 
-    Close All
+    #Close All
 
     Log    Done.
 
