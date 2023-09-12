@@ -6,6 +6,7 @@ Library             RPA.Windows
 Library             OperatingSystem
 Resource            resources/common.resource
 Resource            resources/project_tab.resource
+Resource            resources/points_tab_point_edit.resource
 Resource            resources/points_tab.resource
 #Resource            ${CURDIR}\\resources\\common.resource
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
@@ -17,29 +18,29 @@ Resource            resources/points_tab.resource
 *** Tasks ***
 Start Menu Items Walkthrough
     Check Projects Common Folder Exists
-    Check And Delete Test Project
-    Open FXE
-    New Project Wizard
-    Close All
-    Sleep    15s
+    #Check And Delete Test Project
+    #Open FXE
+    #New Project Wizard
+    #Close All
+    #Sleep    15s
     Open Existing Project
-    Project Tab Project Information Subtab
-    Project Tab Communication Settings Subtab
+    #Project Tab Project Information Subtab
+    #Project Tab Communication Settings Subtab
         
-    Project Tab Hardware Configuration Subtab
-    Project Tab Hardware Configuration Subtab New Module
+    #Project Tab Hardware Configuration Subtab
+    #Project Tab Hardware Configuration Subtab New Module
     
-    Project Tab Hardware Configuration Subtab Add Modbus Address
+    #Project Tab Hardware Configuration Subtab Add Modbus Address
 
-    Project Tab Hardware Configuration Subtab Add Modbus Device
+    #Project Tab Hardware Configuration Subtab Add Modbus Device
     
-    Project Tab Point Settings Subtab
-    Project Tab Settings Subtab
+    #Project Tab Point Settings Subtab
+    #Project Tab Settings Subtab
     
     Points Tab Select
     Points Tab Select Filter Create All Kinds Of Points
-    State Text Edit Form
-    Alarm Group Edit Form
+    #State Text Edit Form
+    #Alarm Group Edit Form
     
     #Button Press Upload Alarmgroup To PLC
     #Button Press Upload State Text To PLC
@@ -49,11 +50,39 @@ Start Menu Items Walkthrough
     #Button Press Points Panel Resize
 
     Left Panel Resize
-    Points Right Panel Import Filter Edit Form
-    Points Right Panel Button Bar Add Filter Button
-    Points Right Panel Button Bar Copy Selected Filter
-    Points Filter Name Filter field
-    Points Filter Point Type Filter
+    Left Panel Auto Resize Button
+    Right Panel Auto Resize Button
+
+    #Points Filter Name Filter Field Select Argument-1    TE01_FM
+    #Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
+    #Points Filter Name Filter Clear And De-Select
+    
+    #Points Tab Left Panel AI Right Button Edit Argument-1    TE01_MV
+    #Points Filter Name Filter Clear And De-Select
+    
+    #Points Filter Name Filter Field Select Argument-1    TE01_I    
+    #Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
+    #Points Filter Name Filter Clear And De-Select
+
+    #Points Filter Name Filter Field Select Argument-1    TE01_FM    
+    #Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
+    #Points Filter Name Filter Clear And De-Select
+    
+    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
+    Points Filter Name Filter Clear And De-Select
+
+
+    #Points Tab Left Panel DO Right Button Edit Argument    TE04_FM
+    
+    #Points Filter Name Filter Field Deselect
+
+    #Points Tab Left Panel Right Button Menu
+
+    #Points Right Panel Import Filter Edit Form
+    #Points Right Panel Button Bar Add Filter Button
+    #Points Right Panel Button Bar Copy Selected Filter
+    #Points Filter Name Filter Field
+    #Points Filter Point Type Filter
 
     #Points Right Panel Import Filter Edit Form NO Save
 
@@ -62,11 +91,8 @@ Start Menu Items Walkthrough
     #Close Opened Project With Saving
 
     #Close All
-
+    Display Dialog and Wait for User Action
     Log    Done.
 
 
 *** Keywords ***
-Open Existing Project
-    Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
-    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp

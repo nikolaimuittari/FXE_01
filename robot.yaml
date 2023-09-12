@@ -1,5 +1,3 @@
-shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
-
 tasks:
   # Task names here are used when executing the bots, so renaming these is recommended.
   # Run all tasks:
@@ -11,6 +9,12 @@ tasks:
     robotTaskName:  FXE_start_menu_items.robot
   FXE Open project main view through menu items:
     robotTaskName:  FXE_main_view_menu_items.robot
+  FXE Main tabs:
+    robotTaskName:  FXE_main_tabs.robot
+
+shell: python -m robot --report NONE --outputdir output --logtitle "Task log" FXE_main_tabs.robot
+
+
 
 condaConfigFile: conda.yaml
 

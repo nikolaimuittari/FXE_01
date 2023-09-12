@@ -6,7 +6,8 @@ Documentation       Common resource file
 
 Library             RPA.Desktop
 Library             RPA.Windows
-# Library             RPA.Assistant
+Library             RPA.Assistant
+#Library             RPA.Dialogs
 Library             OperatingSystem
 
 *** Variables ***
@@ -21,6 +22,11 @@ ${SLEEP_TIMEOUT_DEFAULT}    1s
 
 
 *** Keywords ***
+
+#Open Existing Project
+#    Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
+#    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
+
 Open FXE
     RPA.Desktop.Open Application    ${FXEditor_app}    # "c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe"
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
@@ -46,16 +52,16 @@ Check And Delete Test Project
 Check Empty Project Name Error
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     #Run Keyword And Ignore Error    RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}    
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}    
     RPA.Desktop.Wait For Element    alias:FXE_new_project_wizard_empty_proj_name_err    timeout=10
     Log To Console    *** Empty project name error is detected OK
     #RPA.Desktop.Click With Offset    alias:FXE_new_project_wizard_empty_proj_name_err    x=280    y=90    action=click
     RPA.Desktop.Press Keys    enter
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
 Close Project Wizard
     RPA.Desktop.Click    alias:FXE_new_wizard_close_wizard_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
     Log To Console    *** Closing wizard OK
 
@@ -63,7 +69,7 @@ Close Project Wizard
 New Project Wizard
     RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_project_btn    timeout=10
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
     #Run Keyword    Close Project Wizard
 
@@ -74,70 +80,70 @@ New Project Wizard
     Run Keyword    Check Empty Project Name Error
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_location_folder_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Run Keyword And Continue On Failure    Check Projects Common Folder Exists
     RPA.Desktop.Type Text    ${FXE_TEST_PROJECTS_FOLDER_PATH}    # enter=true
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_save_folder_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    TestProject1234
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    TestProject_1234
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    1234
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to -2. Communication Settings - wizard page OK
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_back_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to previous wizard page OK
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_plc_selection_dropdn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    down    down    enter    # FX3000X select
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_btn    # default IP address
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_fld
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    10.100.1.198    # custom IP address
     RPA.Desktop.Press Keys    tab    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    22
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    SSH_user_name!    # custom SSH password    # Systemuser!  # default FX3000X SSH password
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    22
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    HUOLTO    # custom username   # system # default username
     RPA.Desktop.Press Keys    tab    
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    80
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    13579    # custom password   # 24680    # default user password
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to -3. Point Name Build Struccture OK
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_create_btn
@@ -153,7 +159,7 @@ Open Existing Project
 
 Start Page New Project Wizard Open Close
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Wait For Element    alias:FXE_new_wizard_close_wizard_btn    timeout=15
     Log To Console    *** New project wizard opens OK
     
@@ -163,24 +169,24 @@ Start Page New Project Wizard Open Close
 
 Start Page New Group Project Wizard Open Close
     RPA.Desktop.Click    alias:FXE_start_create_a_new_group_project_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    c:\\QA\\TestProjects\\Group_1234
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_start_create_a_new_group_project_save_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Move Mouse    alias:FXE_start_create_group_select_all
     RPA.Desktop.Click With Offset    x=-30    y=0    action=click
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_start_group_project_add_btn
 
 
 Start Page Open Existing Project
     RPA.Desktop.Click    alias:FXE_start_open_an_existing_project_btn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    ${FXE_TEST_PROJECT_FILENAME_PATH}    # C:\QA\TestProjects\TestProject1234\TestProject1234.fxp
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
     RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_close_btn
@@ -206,4 +212,10 @@ Close Opened Project Without Saving
     Run Keyword If    ${Saving_dialog}
     ...    RPA.Desktop.Click    alias:FXE_main_NO_noicon_form_btn
     
-       
+
+Display Dialog and Wait for User Action
+    
+    Add heading     Test is passed  size=Large
+    #Add text input  address           label=User address
+    Run dialog
+    

@@ -101,8 +101,8 @@ Points Tab Select Filter Create All Kinds Of Points
     # RPA.Desktop.Click With Offset    x=80    y=-23    action=Click    # DI Indication #2 Text field
 
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_points_form    # Moving to the form's center
-    RPA.Desktop.Click With Offset    x=-52    y=5    action=click    # DO digital output #1 checkbox
+    #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_points_form    # Moving to the form's center
+    #RPA.Desktop.Click With Offset    x=-52    y=5    action=click    # DO digital output #1 checkbox
     
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_points_form    # Moving to the form's center
@@ -154,7 +154,7 @@ Points Tab Select Filter Create All Kinds Of Points
     # 
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_points_form    # Moving to the form's center
-    RPA.Desktop.Click With Offset    x=-52    y=179    action=click    # Filter dropdown list checkbox
+    RPA.Desktop.Click With Offset    x=-52    y=177    action=click    # Filter dropdown list checkbox
 
     # Adding points button
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -561,7 +561,7 @@ Points Right Panel Import Filter Edit Form Suffix Exists Form Submit
     Run Keyword If     ${importfilter_suffix_exists_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_importfilter_suffix_exists_form    # Importfilter suffix exists form.
     Run Keyword If     ${importfilter_suffix_exists_form_exists}    RPA.Desktop.Click With Offset   x=125    y=40    action=click    # OK button form 
 
-Points Filter Name Filter Field
+Points Filter Name Filter Field Select
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
     RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
@@ -570,6 +570,48 @@ Points Filter Name Filter Field
     RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter button
     Sleep    1s
     RPA.Desktop.Click
+
+Points Filter Name Filter Field Deselect
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
+    RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter button
+    
+
+Points Filter Name Filter Field Select Argument-1
+    [Arguments]    ${text}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
+    RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
+    RPA.Desktop.Press Keys    ctrl   a     # Select all
+    RPA.Desktop.Type Text    ${text}    # Name to filter
+    
+    #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
+    #RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter  select
+    
+    ${pointfilter_active}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_tab_pointfilter_inactive_btn    timeout=5    # Active pointfilter
+    IF    ${pointfilter_active}
+        RPA.Desktop.Click    alias:FXE_main_points_tab_pointfilter_inactive_btn       
+    END
+
+    
+
+    Sleep    1s
+    # RPA.Desktop.Click
+
+
+Points Filter Name Filter Clear And De-Select
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
+    RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
+    RPA.Desktop.Press Keys    ctrl   a     # Select all
+    RPA.Desktop.Press Keys    delete     # Select all
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
+    RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter  select
+    Sleep    1s
+
 
 Points Filter Point Type Filter
     #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15

@@ -11,3 +11,5 @@ dependencies:
       - rpaframework==26.1.0    # https://rpaframework.org/releasenotes.html
       - rpaframework-recognition==5.2.0
       # - rpaframework-assitant==2.3.0
+      - rpaframework-dialogs==4.0.4
+      - rpaframework-assistant==3.0.0
