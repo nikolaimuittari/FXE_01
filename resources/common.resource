@@ -7,8 +7,9 @@ Documentation       Common resource file
 Library             RPA.Desktop
 Library             RPA.Windows
 Library             RPA.Assistant
-#Library             RPA.Dialogs
+Library             RPA.Dialogs
 Library             OperatingSystem
+
 
 *** Variables ***
 ${FXEditor_app}             c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
@@ -215,7 +216,7 @@ Close Opened Project Without Saving
 
 Display Dialog and Wait for User Action
     
-    Add heading     Test is passed  size=Large
+    RPA.Assistant.Add heading     Test passed  size=Large
     #Add text input  address           label=User address
-    Run dialog
+    RPA.Assistant.Run dialog   
     

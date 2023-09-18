@@ -30,16 +30,16 @@ ${button}
 *** Keywords ***
 
 Points Tab Select
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=10
     RPA.Desktop.Click    alias:FXE_main_points_tab
     
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_btn    timeout=25    # Waiting for Points Tab Add+Upload butttons
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_btn    timeout=10    # Waiting for Points Tab Add+Upload butttons
     RPA.Desktop.Highlight Elements    alias:FXE_main_points_tab_add_btn
 
 Points Tab Select Filter Create All Kinds Of Points
     
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=10
     RPA.Desktop.Click    alias:FXE_main_points_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
@@ -57,7 +57,7 @@ Points Tab Select Filter Create All Kinds Of Points
     
 
     # Waiting for "Add points" form
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_points_form    timeout=25    # Add point form. Dim: 392*488, center: 196*244
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_points_form    timeout=10    # Add point form. Dim: 392*488, center: 196*244
     
     # Add points form
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -165,43 +165,43 @@ Points Tab Select Filter Create All Kinds Of Points
 
 
 Button Press Upload Selected Points To PLC
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_upload_btn    timeout=25    # Add + Upload SELECTED buttons locator. Dims:  102*44 center: 51*22
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_upload_btn    timeout=10    # Add + Upload SELECTED buttons locator. Dims:  102*44 center: 51*22
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_upload_btn    # Moving to the form's center
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload points to PLC button click
 
-    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
 
 Button Press Upload Displayed Points To PLC
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_displayed_btn    timeout=25    # Upload DISPLAYED points locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_displayed_btn    timeout=10    # Upload DISPLAYED points locator.
     
     RPA.Desktop.Click    alias:FXE_main_points_tab_upload_displayed_btn    # Upload Displayed points to PLC button click
 
-    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
     
 Button Press Upload Changed Points To PLC
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_changed_btn    timeout=25    # Upload CHANGED points locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_changed_btn    timeout=10    # Upload CHANGED points locator.
     
     RPA.Desktop.Click    alias:FXE_main_points_tab_upload_changed_btn
     
-    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
 
 State Text Edit Form
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=25    # State text edit button locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=10    # State text edit button locator.
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_state_text_upload_btn    # State text edit button locator.
     RPA.Desktop.Click With Offset    x=-25    y=0    action=click    # State text EDIT FORM button
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_statetext_edit_form    timeout=25    # State text edit form locator. Dims: 527*643  center: 264*322
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_statetext_edit_form    timeout=10    # State text edit form locator. Dims: 527*643  center: 264*322
     RPA.Desktop.Click With Offset    x=-202    y=-184    action=click    # Textgroup name first line
 
     ${repeats}    Set Variable    29    # Number of repeats
@@ -235,12 +235,12 @@ State Text Edit Form
     RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn    # CANCEL button
 
 Alarm Group Edit Form
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=25    # Alarmgroup edit button locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=10    # Alarmgroup edit button locator.
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_upload_btn    # Alarmgroup edit button locator.
     RPA.Desktop.Click With Offset    x=-25    y=0    action=click    # Alarmgroup EDIT FORM button
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_edit_form    timeout=25    # Alarmgroup edit form locator. Dims: 696*593 center: 348*297
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_edit_form    timeout=10    # Alarmgroup edit form locator. Dims: 696*593 center: 348*297
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_edit_form    # Alarmgroup edit form locator.
     RPA.Desktop.Click With Offset    x=-306    y=-203    action=click    # Alarm groups panel, Name column, 1st line. Alarmgroup EDIT FORM
     RPA.Desktop.Press Keys    F2
@@ -339,39 +339,39 @@ Alarm Group Edit Form
     Sleep    2s
     RPA.Desktop.Press Keys    esc
 
-    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_edit_form_save_form  timeout=25    # Save settings form Dims: 352*149 center: 175*75 
+    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_edit_form_save_form  timeout=10    # Save settings form Dims: 352*149 center: 175*75 
     #RPA.Desktop.Move Mouse    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form
     #RPA.Desktop.Click With Offset    x=140    y=60    action=click    # No button
 
-    #${save_before_closing}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form  timeout=25    # Save settings form Dims: 352*149 center: 175*75   
+    #${save_before_closing}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form  timeout=10    # Save settings form Dims: 352*149 center: 175*75   
     #Run Keyword If    ${save_before_closing}    RPA.Desktop.Move Mouse    alias:fxe_main_points_tab_alarmgroup_edit_form_save_form
     #Run Keyword If    ${save_before_closing}    RPA.Desktop.Click With Offset    x=140    y=60    action=click    # No button
 
 Button Press Upload Alarmgroup To PLC
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=25    # Upload ALARMGROUP points locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=10    # Upload ALARMGROUP points locator.
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_upload_btn    # Moving to the center of ALARMGROUP points locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Alarmgroup button click
 
-    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
 
 
 Button Press Upload State Text To PLC
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=25    # Upload STATETEXT points locator.
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=10    # Upload STATETEXT points locator.
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_state_text_upload_btn    # Moving to the center of STATETEXT points locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Statetext button click
 
-    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=25
+    ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
 
 Button Press Points Panel Resize
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_resize_btn    timeout=25    # Alarmgroup+Upload+Resize buttons locator
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_resize_btn    timeout=10    # Alarmgroup+Upload+Resize buttons locator
 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_resize_btn    # Moving to center of Alarmgroup+Upload+Resize buttons locator
     RPA.Desktop.Click With Offset    x=52    y=0    action=click    # Resize Button click
@@ -383,36 +383,36 @@ Left Panel Resize
     RPA.Desktop.Release Mouse Button    button=left     # Release left button
 
 Left Panel Auto Resize Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_left_autoresize_btn    timeout=25    # Left panel auto resize button
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_left_autoresize_btn    timeout=10    # Left panel auto resize button
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_left_autoresize_btn    # Left Panel resize button locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Auto resize button
 
 
 Right Panel Auto Resize Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_autoresize_btn    timeout=25    # Right panel auto resize button
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_autoresize_btn    timeout=10    # Right panel auto resize button
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_autoresize_btn    # Left Panel resize button locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Auto resize button
 
 
 Points Right Panel Button Bar Import Undeclared Points Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_panel_btn_bar    # Right panel button bar locator. Dims: 410*44    Center: 205*22
     RPA.Desktop.Click With Offset    x=-130    y=0    action=click    # Import undeclared points
 
 Points Right Panel Button Bar Resize All Columns Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_panel_btn_bar    # Right panel button bar locator. Dims: 410*44    Center: 205*22
     RPA.Desktop.Click With Offset    x=180    y=0    action=click    # Resize all columns
 
 Points Right Panel Button Bar Filter Drop-down
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_panel_btn_bar    # Right panel button bar locator. Dims: 410*44    Center: 205*22
     RPA.Desktop.Click With Offset    x=0    y=0    action=click    # Filter drop-down
     RPA.Desktop.Press Keys    down
     RPA.Desktop.Press Keys    enter
 
 Points Right Panel Button Bar Refresh Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_panel_btn_bar    # Right panel button bar locator. Dims: 410*44    Center: 205*22
     RPA.Desktop.Click With Offset    x=-180    y=0    action=click     # Refresh button
     
@@ -429,15 +429,15 @@ Points Right Panel Button Bar Refresh Button
 
 Points Right Panel Button Bar Add Filter Button
     Points Right Panel Button Bar Resize All Columns Button
-    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
 
     RPA.Desktop.Click    alias:FXE_main_points_tab_addfilter_btn    # Add filter button
     #RPA.Desktop.Click    # Add filter button
     Sleep    1s
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_name_form    timeout=25    # Add filter name form
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_name_form    timeout=10    # Add filter name form
     RPA.Desktop.Type Text    NewFilter
     RPA.Desktop.Press Keys    enter
-    ${add_filter_saving_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_saving_exists_form    timeout=25s    # Add filter save form -> file exists form
+    ${add_filter_saving_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_saving_exists_form    timeout=10s    # Add filter save form -> file exists form
     #Run Keyword If    ${add_filter_saving_form_exists}    RPA.Desktop.Click    alias:FXE_main_YES_noicon_active_form_btn    # YES button
     #Run Keyword If    ${add_filter_saving_form_exists}    Log To Console    *** Add filter saving form exists
     #Run Keyword If    ${add_filter_saving_form_exists}    RPA.Desktop.Press Keys    enter
@@ -452,17 +452,17 @@ Points Right Panel Button Bar Add Filter Button
 
 Points Right Panel Button Bar Copy Selected Filter
     Points Right Panel Button Bar Resize All Columns Button
-    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Click    alias:FXE_main_points_tab_copyfilter_btn    # Copy filter button
     #RPA.Desktop.Click    # Copy filter button
     Sleep    1s
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_copyfilter_name_form    timeout=25    # Add filter name form
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_copyfilter_name_form    timeout=10    # Add filter name form
     Sleep    1s
     RPA.Desktop.Type Text    NewFilter_2
     Sleep    1s
     RPA.Desktop.Press Keys    enter
     Sleep    1s
-    ${copy_filter_saving_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_saving_exists_2_form    timeout=25s     # Add filter save form -> file exists form
+    ${copy_filter_saving_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_saving_exists_2_form    timeout=10s     # Add filter save form -> file exists form
     IF    ${copy_filter_saving_form_exists}
         RPA.Desktop.Click    alias:FXE_main_YES_noicon_under_form_btn    # YES button
         Log To Console     *** Copy Filter saving form exists
@@ -474,19 +474,19 @@ Points Right Panel Button Bar Copy Selected Filter
 
 
 Points Right Panel Import Filter Edit Form
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_right_panel_btn_bar    # Right panel button bar locator. Dims: 410*44    Center: 205*22
     RPA.Desktop.Click With Offset    x=0    y=0    action=click    # Filter drop-down
     RPA.Desktop.Press Keys    down
     RPA.Desktop.Press Keys    enter
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importpoint_settings_btn    timeout=25   # Points tab right panel button bar
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importpoint_settings_btn    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Click    alias:FXE_main_points_tab_importpoint_settings_btn    # Right panel Import point settings button
     # Sleep    4s
     
     # Point types walkthrough
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_import_filter_form    timeout=25    # Import filetr edit form. Dims: 792*610    center: 400*300 
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_import_filter_form    timeout=10    # Import filetr edit form. Dims: 792*610    center: 400*300 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_import_filter_form
     RPA.Desktop.Click With Offset    x=-270    y=-210    action=click    # Point type drop-down (Alarm is first in the list)
     RPA.Desktop.Click
@@ -549,20 +549,20 @@ Points Right Panel Import Filter Edit Form
     # RPA.Desktop.Click With Offset    x=220    y=290    action=click    # Cancel button
 
 Points Right Panel Import Filter Edit Form Save
-    ${importfilter_save_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_form_save_form    timeout=25    # Importfilter save form
+    ${importfilter_save_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_form_save_form    timeout=10    # Importfilter save form
     Run Keyword If     ${importfilter_save_form_exists}    RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_btn    # Saving form
     
 Points Right Panel Import Filter Edit Form NO Save
-    ${importfilter_save_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_form_save_form    timeout=25    # Importfilter save form
+    ${importfilter_save_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_form_save_form    timeout=10    # Importfilter save form
     Run Keyword If     ${importfilter_save_form_exists}    RPA.Desktop.Click    alias:FXE_main_NO_noicon_form_btn    # Not Saving form
     
 Points Right Panel Import Filter Edit Form Suffix Exists Form Submit
-    ${importfilter_suffix_exists_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_suffix_exists_form    timeout=25    # Importfilter suffix exists form. Dims: 350*102  center: 175*60 
+    ${importfilter_suffix_exists_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_importfilter_suffix_exists_form    timeout=10    # Importfilter suffix exists form. Dims: 350*102  center: 175*60 
     Run Keyword If     ${importfilter_suffix_exists_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_importfilter_suffix_exists_form    # Importfilter suffix exists form.
     Run Keyword If     ${importfilter_suffix_exists_form_exists}    RPA.Desktop.Click With Offset   x=125    y=40    action=click    # OK button form 
 
 Points Filter Name Filter Field Select
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
     RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
     RPA.Desktop.Type Text    _M    # Name to filter
@@ -572,7 +572,7 @@ Points Filter Name Filter Field Select
     RPA.Desktop.Click
 
 Points Filter Name Filter Field Deselect
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
@@ -581,7 +581,7 @@ Points Filter Name Filter Field Deselect
 
 Points Filter Name Filter Field Select Argument-1
     [Arguments]    ${text}
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
     RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
     RPA.Desktop.Press Keys    ctrl   a     # Select all
@@ -602,19 +602,20 @@ Points Filter Name Filter Field Select Argument-1
 
 
 Points Filter Name Filter Clear And De-Select
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar
     RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
     RPA.Desktop.Press Keys    ctrl   a     # Select all
     RPA.Desktop.Press Keys    delete     # Select all
-    
+    Sleep    5s
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
     RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter  select
-    Sleep    1s
+    Sleep    3s
 
 
 Points Filter Point Type Filter
-    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=25    # Ponts filter lower bar. Dims: 525*30 center: 263*15
+    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10    # Ponts filter lower bar. Dims: 525*30 center: 263*15
     #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
     #RPA.Desktop.Click With Offset    x=25    y=0    action=click    # All points drop-down
 
@@ -625,7 +626,7 @@ Points Filter Point Type Filter
     #RPA.Desktop.Press Keys    up     # pressing up key to keep the list visible
    
     
-    #RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25    # Point types Drop-down items. Dims: 197*389 center: 99*195
+    #RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10    # Point types Drop-down items. Dims: 197*389 center: 99*195
     #RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     #RPA.Desktop.Click With Offset    x=0    y=-180    action= click    # All points select
 
@@ -635,7 +636,7 @@ Points Filter Point Type Filter
     #RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     #RPA.Desktop.Click With Offset    x=0    y=-140    action=click    # ALARM points select
     
-    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
+    #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
     #RPA.Desktop.Move Mouse    alias:FX_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     #RPA.Desktop.Click With Offset    x=17    y=0    action=click
         
@@ -643,11 +644,11 @@ Points Filter Point Type Filter
     #RPA.Desktop.Click
     #RPA.Desktop.Click With Offset    x=-120    y=0    action=click    # Arrow for points drop-down
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-180    action=click    # ALL points select
 
@@ -655,107 +656,107 @@ Points Filter Point Type Filter
 
 
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-140    action=click    # ALARM points select
 
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-90    action=click     # DI points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-50    action=click    # ALARM + DI points select
 
     
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-20    action=click    # DO points select
 
 
     
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=20    action=click    # AI points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=55    action=click    # AO points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
     
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=95    action=click    # CONTROL POINT points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=130    action=click    # TIME SCHEDULE points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=170    action=click    # LOOKUP TABLE points select
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=25
-    RPA.Desktop.Move Mouse    alias:FXD_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_POINTS_dd    timeout=10
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_POINTS_dd    # Point filter bar activated drop-down with "points" word Dims:47*12
     RPA.Desktop.Click With Offset    x=17    y=0    action=click
 
-    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_points_tab_pointfilter_dd_items    timeout=10
     RPA.Desktop.Move Mouse    alias:FXE_points_tab_pointfilter_dd_items    # Point types Drop-down items
     RPA.Desktop.Click With Offset    x=0    y=-180    action=click    # ALL POINTS points select
 
 ###    Pointfilter right buttons
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=25    # Pointfiletr bar right part
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=10    # Pointfiletr bar right part
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_rightpart_bar    # Pointfiletr bar right part
     RPA.Desktop.Click With Offset    x=-75    y=0    action=click    # Linked points select
     Sleep    2s
@@ -764,7 +765,7 @@ Points Filter Point Type Filter
  
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=25    # Pointfiletr bar right part
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=10    # Pointfiletr bar right part
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_rightpart_bar    # Pointfiletr bar right part
     RPA.Desktop.Click With Offset    x=-50    y=0    action=click    # Physical points select
     Sleep    2s
@@ -773,7 +774,7 @@ Points Filter Point Type Filter
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=25    # Pointfiletr bar right part
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=10    # Pointfiletr bar right part
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_rightpart_bar    # Pointfiletr bar right part
     RPA.Desktop.Click With Offset    x=10    y=0    action=click    # Fictive points select
     Sleep    2s
@@ -782,7 +783,7 @@ Points Filter Point Type Filter
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=25    # Pointfiletr bar right part
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=10    # Pointfiletr bar right part
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_rightpart_bar    # Pointfiletr bar right part
     RPA.Desktop.Click With Offset    x=60    y=0    action=click    # Changed points select
     Sleep    2s
@@ -791,7 +792,7 @@ Points Filter Point Type Filter
 
 
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=25    # Pointfiletr bar right part
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_rightpart_bar    timeout=10    # Pointfiletr bar right part
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_rightpart_bar    # Pointfiletr bar right part
     RPA.Desktop.Click With Offset    x=110    y=0    action=click    # Global points select
     Sleep    2s

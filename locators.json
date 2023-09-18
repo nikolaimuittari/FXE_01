@@ -65,6 +65,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_WINDOWS_FILE_SAVE_low_bar_form": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_windows_file_save_low_bar_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_YES_noicon_form_btn": {
         "confidence": 30.0,
         "path": ".images\\fxe_main_yes_noicon_form_btn-path.png",
@@ -204,8 +210,20 @@
         "type": "image"
     },
     "FXE_main_points_tab_CONTROL_edit_form_stages_ddwn": {
-        "confidence": 80.0,
+        "confidence": 60.0,
         "path": ".images\\fxe_main_points_tab_control_edit_form_stages_ddwn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_CONTROL_edit_form_statetext_ddwn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_control_edit_form_statetext_ddwn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_CONTROL_edit_form_unit_ddwn": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_points_tab_control_edit_form_unit_ddwn-path.png",
         "source": null,
         "type": "image"
     },
@@ -239,6 +257,18 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_LOOKUP_edit_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_points_tab_lookup_edit_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_LOOKUP_low_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_lookup_low_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_RIGHT_BTN_menu": {
         "confidence": 70.0,
         "path": ".images\\fxe_main_points_tab_right_btn_menu-path.png",
@@ -260,6 +290,12 @@
     "FXE_main_points_tab_TE01_MV_line": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_points_tab_te01_mv_line-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_TIME_edit_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_points_tab_time_edit_form-path.png",
         "source": null,
         "type": "image"
     },
@@ -360,7 +396,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_panel_resize": {
-        "confidence": 80.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_points_tab_panel_resize-path.png",
         "source": null,
         "type": "image"
