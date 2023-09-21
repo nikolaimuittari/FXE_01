@@ -22,7 +22,7 @@ Resource            resources/common.resource
 #${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 #${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 #${TEST_PROJECT_NAME}    TestProject1234
-#${SLEEP_TIMEOUT_DEFAULT}    1s
+${SLEEP_TIMEOUT_DEFAULT}    500ms
 ${current_date}=    Get Current Date    result_format=%d.%m.%y
 ${button}    
 

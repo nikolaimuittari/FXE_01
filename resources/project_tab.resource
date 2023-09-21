@@ -350,4 +350,79 @@ Project Tab Settings Subtab
     RPA.Desktop.Press Keys    space    space     # activate/deactivate -> return in previous position
 
 
+Project Tab Communication Settings Subtab Arguments-4
+    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}
+
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=10
+    RPA.Desktop.Click    alias:FXE_main_project_tab
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_main_project_tab_comm_settings_subtab
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Press Keys    tab    # IP connection drop-down
+    RPA.Desktop.Press Keys    tab    # IP address field
+    RPA.Desktop.Press Keys    tab    # PLC model drop-down
+
+    ${repeats}    Set Variable    11    # Number of repeats
+    FOR    ${element}    IN RANGE   1    ${repeats}
+        RPA.Desktop.Press Keys    up    # PLC type drop-down
+        RPA.Desktop.Press Keys    tab    # Selected IP
+    END
     
+    IF    ${plc_type} == 9
+        ${repeats}    Set Variable    9    # Number of repeats
+        FOR    ${element}    IN RANGE   1    ${repeats}
+            RPA.Desktop.Press Keys    down    # PLC type drop-down
+            RPA.Desktop.Press Keys    tab    # Selected IP
+        END
+    END
+    
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_settings_subtab_selectedip_field    timeout=10    # ! text of IP address field locator 
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_comm_settings_subtab_selectedip_field
+    RPA.Desktop.Click With Offset    x=0    y=20    action=doubleclick
+   
+    RPA.Desktop.Type Text    ${ip_address}
+    
+    RPA.Desktop.Press Keys    tab    # PLC model
+    RPA.Desktop.Press Keys    tab    # Default IP button (space)
+    RPA.Desktop.Press Keys    tab    # (S)FTP Passive mode checkbox
+    RPA.Desktop.Press Keys    tab    # (S)FTP password show button (click)
+    RPA.Desktop.Press Keys    tab    # CONNECT button (space)
+    RPA.Desktop.Press Keys    tab    # (S)FTP Password field (selected)
+    
+    RPA.Desktop.Type Text    ${ftp_passw}
+    IF    ${connect} == 1
+        
+        RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_settings_subtab_connect_btn    timeout=10    # Connect button
+        RPA.Desktop.Click    alias:FXE_main_project_tab_comm_settings_subtab_connect_btn    # Connect button
+        
+        RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=20    # Running status
+
+    END
+    Sleep    2s
+
+
+    # RPA.Desktop.Press Keys    tab
+    # RPA.Desktop.Type Text    somepassword
+
+    # RPA.Desktop.Press Keys    tab    # (S)FTP Port number (selected)
+    # RPA.Desktop.Type Text    123
+
+    # RPA.Desktop.Press Keys    tab    # Web server password show button (click)
+    # RPA.Desktop.Press Keys    tab    # Web server port field (selected)
+    # RPA.Desktop.Type Text    321
+
+    # RPA.Desktop.Press Keys    tab    # Web server username field (selected)
+    # RPA.Desktop.Type Text    username
+    
+    # RPA.Desktop.Press Keys    tab    # Web server password field (selected)
+    # RPA.Desktop.Type Text    somepassword
+
+    # RPA.Desktop.Press Keys    tab    # OPC password show button (click)
+    # RPA.Desktop.Press Keys    tab    # OPC port field (selected)
+    # RPA.Desktop.Type Text    456
+
+    # RPA.Desktop.Press Keys    tab    # OPC password field (selected)
+    # RPA.Desktop.Type Text    654
+
+    # RPA.Desktop.Press Keys    tab    # OPENPCS IEC port field (selected)
+    # RPA.Desktop.Type Text    78901

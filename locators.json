@@ -41,6 +41,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_OFFLINE_status_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_offline_status_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_OK_form_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_ok_form_btn-path.png",
@@ -59,15 +65,39 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_RUNNING_status_bar": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_running_status_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_SAVE_form_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_save_form_btn-path.png",
         "source": null,
         "type": "image"
     },
+    "FXE_main_STOPPED_status_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stopped_status_bar-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_WINDOWS_FILE_SAVE_low_bar_form": {
         "confidence": 60.0,
         "path": ".images\\fxe_main_windows_file_save_low_bar_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_WIN_ADD_FILE_dialog_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_win_add_file_dialog_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_WORKING_status_bar": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_working_status_bar-path.png",
         "source": null,
         "type": "image"
     },
@@ -98,6 +128,72 @@
     "FXE_main_fidelix_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_fidelix_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_backup_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_fidelix_tab_backup_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_connect_resize_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_connect_resize_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_leftpanel_addfile_exists_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_leftpanel_addfile_exists_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_leftpanel_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_leftpanel_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_leftpanel_rightbtn_menu": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_leftpanel_rightbtn_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_leftpanel_upload_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_leftpanel_upload_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_leftpanel_www_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_leftpanel_www_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_notepad_watchdog_app": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_notepad_watchdog_app-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_rightpanel_back_navi": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_rightpanel_back_navi-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_rightpanel_rightbtn_menu": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_rightpanel_rightbtn_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fidelix_tab_rightpanel_www_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_rightpanel_www_icon-path.png",
         "source": null,
         "type": "image"
     },
@@ -623,6 +719,24 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_project_tab_comm_settings_subtab_connect_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_settings_subtab_connect_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_comm_settings_subtab_disconnect_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_settings_subtab_disconnect_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_comm_settings_subtab_selectedip_field": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_settings_subtab_selectedip_field-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_project_tab_hardware_conf_modules_form": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_hardware_conf_modules_form-path.png",
@@ -773,6 +887,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_windows_add_file_dialog_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_windows_add_file_dialog_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_new_project_wizard_back_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_new_project_wizard_back_btn-path.png",
@@ -908,6 +1028,12 @@
     "FXE_project_save_msg": {
         "confidence": 80.0,
         "path": ".images\\fxe_project_save_msg-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_project_tab_comm_subtab_selectedip_field": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_project_tab_comm_subtab_selectedip_field-path.png",
         "source": null,
         "type": "image"
     },
