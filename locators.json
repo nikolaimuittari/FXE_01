@@ -29,6 +29,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_FTP_PLC_connect_error_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_ftp_plc_connect_error_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_Graphics_tab_separate_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_graphics_tab_separate_icon-path.png",
@@ -288,7 +294,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_CONTROL_edit_form": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_control_edit_form-path.png",
         "source": null,
         "type": "image"

@@ -84,7 +84,7 @@ Points Tab
     # Points Right Panel Import Filter Edit Form NO Save
 
 Fidelix Tab    
-    Project Tab Communication Settings Subtab Arguments-4    10.100.1.200    9    demodemo    0
+    # Project Tab Communication Settings Subtab Arguments-4    10.100.1.200    9    demodemo    0
     #[Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}
 
     Sleep    2s
