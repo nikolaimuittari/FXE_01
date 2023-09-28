@@ -125,6 +125,36 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_browser_tab_FX3000C_html": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_browser_tab_fx3000c_html-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_browser_tab_FX3000Xusername_html": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_browser_tab_fx3000xusername_html-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_browser_tab_external_browser_win": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_browser_tab_external_browser_win-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_browser_tab_internal_browser_win": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_browser_tab_internal_browser_win-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_browser_tab_toolbar_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_browser_tab_toolbar_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_documents_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_documents_tab-path.png",
@@ -720,7 +750,7 @@
         "type": "image"
     },
     "FXE_main_project_tab_comm_settings_subtab": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_project_tab_comm_settings_subtab-path.png",
         "source": null,
         "type": "image"

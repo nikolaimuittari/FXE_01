@@ -350,6 +350,71 @@ Project Tab Settings Subtab
     RPA.Desktop.Press Keys    space    space     # activate/deactivate -> return in previous position
 
 
+Project Tab Communication Settings Subtab Arguments-6
+    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=10
+    RPA.Desktop.Click    alias:FXE_main_project_tab
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_main_project_tab_comm_settings_subtab
+    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Press Keys    tab    # IP connection drop-down
+    RPA.Desktop.Press Keys    tab    # IP address field
+    RPA.Desktop.Press Keys    tab    # PLC model drop-down
+
+    ${repeats}    Set Variable    11    # Number of repeats
+    FOR    ${element}    IN RANGE   1    ${repeats}
+        RPA.Desktop.Press Keys    up    # PLC type drop-down
+        RPA.Desktop.Press Keys    tab    # Selected IP
+    END
+
+    # 11 up moves in drop-down list sets FX2020 PLC type 
+
+    # ${plc_type} == 9 -> FX3000-C
+    # ${plc_type} == 11 -> FX3000-X
+
+    ${repeats}    Set Variable    ${plc_type}    # Number of repeats
+    FOR    ${element}    IN RANGE   1    ${repeats}
+        RPA.Desktop.Press Keys    down    # PLC type drop-down
+        RPA.Desktop.Press Keys    tab    # Selected IP
+    END
+
+
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_settings_subtab_selectedip_field    timeout=10    # ! text of IP address field locator 
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_comm_settings_subtab_selectedip_field
+    RPA.Desktop.Click With Offset    x=0    y=20    action=doubleclick
+   
+    RPA.Desktop.Type Text    ${ip_address}
+    
+    RPA.Desktop.Press Keys    tab    # PLC model
+    RPA.Desktop.Press Keys    tab    # Default IP button (space)
+    RPA.Desktop.Press Keys    tab    # (S)FTP Passive mode checkbox
+    RPA.Desktop.Press Keys    space
+
+    RPA.Desktop.Press Keys    tab    # (S)FTP password show button (click)
+    RPA.Desktop.Press Keys    tab    # CONNECT button (space)
+    RPA.Desktop.Press Keys    tab    # (S)FTP Password field (selected)
+    
+    RPA.Desktop.Type Text    ${ftp_passw}
+    RPA.Desktop.Press Keys    tab    # Port
+    RPA.Desktop.Press Keys    tab    # Predefined password button
+    RPA.Desktop.Press Keys    tab    # Web server SEE password button
+    RPA.Desktop.Press Keys    tab    # Web server port field
+    
+    RPA.Desktop.Press Keys    tab    #
+    
+    RPA.Desktop.Press Keys    tab    # Web server username
+
+    RPA.Desktop.Type Text    ${username}
+
+    RPA.Desktop.Press Keys    tab     # Web server password
+    RPA.Desktop.Type Text    ${password}
+
+    Sleep    2s
+
+
+
+
 Project Tab Communication Settings Subtab Arguments-4
     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}
 
