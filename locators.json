@@ -263,6 +263,36 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_label_tab_excel_signin_window": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_label_tab_excel_signin_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_label_tab_excel_task_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_label_tab_excel_task_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_label_tab_excel_window": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_label_tab_excel_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_label_tab_file_save_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_label_tab_file_save_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_label_tab_toolbar_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_label_tab_toolbar_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_modules_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_modules_tab-path.png",

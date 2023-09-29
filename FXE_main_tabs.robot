@@ -10,7 +10,9 @@ Resource            resources/common.resource
 Resource            resources/project_tab.resource
 Resource            resources/points_tab_point_edit.resource
 Resource            resources/points_tab.resource
-Resource    resources/browser_tab.resource
+Resource            resources/browser_tab.resource
+Resource            resources/label_list_tab.resource
+
 #Resource            ${CURDIR}\\resources\\common.resource
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
 
@@ -102,21 +104,26 @@ Resource    resources/browser_tab.resource
 #     Fidelix Tab Right Panel FX Folder Copy Argument-1    www
 #     Fidelix Tab Left Panel FX Folder Copy Argument-1    www
 
-Browser Tab
+# Browser Tab
 
-    Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    0    system    24680
-#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+#     Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    0    system    24680
+# #     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     
-    Browser Tab Select
-    Fidelix Tab Home Button Argument-1    9
+#     Browser Tab Select
+#     Browser Tab Home Button Argument-1    9
 
 
 
-    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    0    system    24680
-#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
-    Browser Tab Select
-    Fidelix Tab Home Button Argument-1    11
-        
+#     Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    0    system    24680
+# #     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+#     Browser Tab Select
+#     Browser Tab Home Button Argument-1    11
+
+Label List Tab
+    Label List Tab Select
+    Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
+    #    [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
+
 
 Test Finish Without Saving
     # Close Opened Project Without Saving
@@ -125,8 +132,6 @@ Test Finish Without Saving
     #Close All
     Display Dialog and Wait for User Action
     Log    Done.
-
-
 
 
  #Start Menu Items Walkthrough

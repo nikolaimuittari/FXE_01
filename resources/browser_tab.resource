@@ -42,7 +42,7 @@ Browser Tab Select
         
 
 
-Fidelix Tab Home Button Argument-1
+Browser Tab Home Button Argument-1
     [Arguments]    ${plc_type}
     RPA.Desktop.Wait For Element    alias:FXE_main_browser_tab_toolbar_btns    timeout=10    # Browser Tab buttons. Dims:   156*44
     RPA.Desktop.Move Mouse    alias:FXE_main_browser_tab_toolbar_btns
