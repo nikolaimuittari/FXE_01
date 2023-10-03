@@ -299,6 +299,96 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_modules_tab_AI_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_ai_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_ALM_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_alm_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_AO_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_ao_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_COMBI_AI8_table": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_modules_tab_combi_ai8_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_COMBI_AO8_table": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_modules_tab_combi_ao8_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_COMBI_DI12_name_table": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_modules_tab_combi_di12_name_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_COMBI_DI12_table": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_combi_di12_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_COMBI_DO8_table": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_modules_tab_combi_do8_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_DI_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_di_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_DO_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_do_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_all_ports_ddwn": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_modules_tab_all_ports_ddwn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_left_panel_lmb_menu": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_modules_tab_left_panel_lmb_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_pointlist_table": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_pointlist_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_right_panel_table": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_modules_tab_right_panel_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_toolbar_btns": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_modules_tab_toolbar_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_more_information_drop_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_more_information_drop_btn-path.png",

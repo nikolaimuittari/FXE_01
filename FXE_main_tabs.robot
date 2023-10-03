@@ -12,6 +12,8 @@ Resource            resources/points_tab_point_edit.resource
 Resource            resources/points_tab.resource
 Resource            resources/browser_tab.resource
 Resource            resources/label_list_tab.resource
+Resource            resources/modules_tab.resource
+
 
 #Resource            ${CURDIR}\\resources\\common.resource
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
@@ -119,10 +121,18 @@ Resource            resources/label_list_tab.resource
 #     Browser Tab Select
 #     Browser Tab Home Button Argument-1    11
 
-Label List Tab
-    Label List Tab Select
-    Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
+# Label List Tab
+#    Label List Tab Select
+#    Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
     #    [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
+
+
+Modules Tab
+    Modules Tab Select
+    Modules Tab Points Binding Argument-1    1
+    Modules Tab Points Disconnect Argument-1    5
+    Modules Tab Points Binding Argument-1    1
+    Modules Tab Points Disconnect Argument-1    1
 
 
 Test Finish Without Saving
