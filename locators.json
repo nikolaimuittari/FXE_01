@@ -408,7 +408,7 @@
         "type": "image"
     },
     "FXE_main_modules_tab_AI_icon": {
-        "confidence": 80.0,
+        "confidence": 60.0,
         "path": ".images\\fxe_main_modules_tab_ai_icon-path.png",
         "source": null,
         "type": "image"

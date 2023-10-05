@@ -140,6 +140,10 @@ Resource            resources/history_tab.resource
 #     Documents Tab Select
 #     Documents Tab New Folder Create And Delete
 
+History Tab
+    History Tab Select
+    History Tab New History Group Create Agrument-1    111
+
 
 Test Finish Without Saving
     # Close Opened Project Without Saving
