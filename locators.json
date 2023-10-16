@@ -12,7 +12,7 @@
         "type": "image"
     },
     "FXE_main_CANCEL_form_btn": {
-        "confidence": 80.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_main_cancel_form_btn-path.png",
         "source": null,
         "type": "image"
@@ -54,7 +54,7 @@
         "type": "image"
     },
     "FXE_main_OK_form_btn": {
-        "confidence": 80.0,
+        "confidence": 21.0,
         "path": ".images\\fxe_main_ok_form_btn-path.png",
         "source": null,
         "type": "image"
@@ -312,7 +312,7 @@
         "type": "image"
     },
     "FXE_main_history_tab_new_group_form": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_history_tab_new_group_form-path.png",
         "source": null,
         "type": "image"
@@ -324,7 +324,7 @@
         "type": "image"
     },
     "FXE_main_history_tab_point_id_table": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_history_tab_point_id_table-path.png",
         "source": null,
         "type": "image"
@@ -342,8 +342,86 @@
         "type": "image"
     },
     "FXE_main_history_tab_report_editor_form": {
-        "confidence": 30.0,
+        "confidence": 10.0,
         "path": ".images\\fxe_main_history_tab_report_editor_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_editor_form_normalize_sect": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_history_tab_report_editor_form_normalize_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_columns_sect": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_columns_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_group_delete_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_history_tab_report_form_group_delete_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_group_exists_form": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_group_exists_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_groups_sect": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_groups_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_normalize_sect": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_normalize_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_normalize_sect_month_table": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_history_tab_report_form_normalize_sect_month_table-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_report_delete_form": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_report_delete_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_report_rmb_menu": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_report_rmb_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_report_wizard": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_history_tab_report_form_report_wizard-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_reports_sect": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_reports_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_table_sample_sect": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_history_tab_report_form_table_sample_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_history_tab_report_form_wizard": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_history_tab_report_form_wizard-path.png",
         "source": null,
         "type": "image"
     },

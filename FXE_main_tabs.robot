@@ -108,10 +108,10 @@ Resource            resources/history_tab.resource
 #     Fidelix Tab Right Panel FX Folder Copy Argument-1    www
 #     Fidelix Tab Left Panel FX Folder Copy Argument-1    www
 
-# Browser Tab
+Browser Tab
 
-#     Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    0    system    24680
-# #     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+#    Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    0    system    24680
+#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     
 #     Browser Tab Select
 #     Browser Tab Home Button Argument-1    9
@@ -126,7 +126,7 @@ Resource            resources/history_tab.resource
 # Label List Tab
 #    Label List Tab Select
 #    Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
-    #    [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
+# #     [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
 
 
 # Modules Tab
@@ -143,6 +143,21 @@ Resource            resources/history_tab.resource
 History Tab
     History Tab Select
     History Tab New History Group Create Agrument-1    111
+    History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
+    #     History Tab Delete All Groups
+
+    History Tab Open Report Form
+    History Tab Report Form Group Create Agrument-1    333
+    History Tab Report Form Delete Selected Group
+    
+    History Tab Report Form Group Create Agrument-1    444
+    History Tab Report Form Report Wizard
+    #    History Tab Report Form Report Delete
+
+    History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
+    #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}
+    History Tab Report Form Normalize Change
+    History Tab Report Form Close Without Saving
 
 
 Test Finish Without Saving

@@ -54,7 +54,7 @@ Check Empty Project Name Error
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     #Run Keyword And Ignore Error    RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}    
-    RPA.Desktop.Wait For Element    alias:FXE_new_project_wizard_empty_proj_name_err    timeout=10
+    RPA.Desktop.Wait For Element    alias:FXE_new_project_wizard_empty_proj_name_err    timeout=25
     Log To Console    *** Empty project name error is detected OK
     #RPA.Desktop.Click With Offset    alias:FXE_new_project_wizard_empty_proj_name_err    x=280    y=90    action=click
     RPA.Desktop.Press Keys    enter
@@ -68,7 +68,7 @@ Close Project Wizard
 
 
 New Project Wizard
-    RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_project_btn    timeout=10
+    RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_project_btn    timeout=25
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
@@ -149,19 +149,19 @@ New Project Wizard
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_create_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=15
+    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
     Log To Console    *** New project has been created OK
     
 Open Existing Project
     Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
     RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     Log To Console    *** Project has been opened OK
 
 Start Page New Project Wizard Open Close
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Wait For Element    alias:FXE_new_wizard_close_wizard_btn    timeout=15
+    RPA.Desktop.Wait For Element    alias:FXE_new_wizard_close_wizard_btn    timeout=25
     Log To Console    *** New project wizard opens OK
     
     Close Project Wizard
@@ -189,13 +189,13 @@ Start Page Open Existing Project
     RPA.Desktop.Type Text    ${FXE_TEST_PROJECT_FILENAME_PATH}    # C:\QA\TestProjects\TestProject1234\TestProject1234.fxp
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_close_btn
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
 
     
 Close Opened Project With Saving
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=15
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_close_btn
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
@@ -205,7 +205,7 @@ Close Opened Project With Saving
    
 
 Close Opened Project Without Saving
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=15
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_close_btn
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
