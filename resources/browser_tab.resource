@@ -18,10 +18,10 @@ Library             DateTime
 Library             RPA.RobotLogListener
 Library             RPA.Excel.Application
 Library             RPA.Dialogs
-Library             RPA.JavaAccessBridge
+#Library             RPA.JavaAccessBridge
 
-Resource            resources/project_tab.resource
-Resource            resources/common.resource
+Resource            project_tab.resource
+Resource            common.resource
 
 
 *** Variables ***

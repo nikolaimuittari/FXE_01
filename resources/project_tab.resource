@@ -8,8 +8,8 @@ Library             DateTime
 Library             RPA.RobotLogListener
 
 
-Resource            resources/common.resource
-
+# Resource            resources/common.resource
+Resource            common.resource
 
 *** Variables ***
 #${FXEditor_app}             c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
@@ -26,7 +26,7 @@ ${current_date}=    Get Current Date    result_format=%d.%m.%y
 *** Keywords ***
 Project Tab Project Information Subtab
     
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_main_project_tab_project_info_subtab
@@ -65,7 +65,7 @@ Project Tab Communication Settings Subtab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab    # IP connection drop-down
     RPA.Desktop.Press Keys    tab    # Selected IP
-    RPA.Desktop.Type Text    10.10.10.10
+    RPA.Desktop.Type Text    10.100.1.198 
     RPA.Desktop.Press Keys    tab    # PLC model
     RPA.Desktop.Press Keys    tab    # Default IP button (space)
     RPA.Desktop.Press Keys    tab    # (S)FTP Passive mode checkbox
@@ -74,30 +74,30 @@ Project Tab Communication Settings Subtab
     RPA.Desktop.Press Keys    tab    # (S)FTP Password field (selected)
     
     RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Type Text    somepassword
+    RPA.Desktop.Type Text    demodemo
 
     RPA.Desktop.Press Keys    tab    # (S)FTP Port number (selected)
-    RPA.Desktop.Type Text    123
+    RPA.Desktop.Type Text    22
 
     RPA.Desktop.Press Keys    tab    # Web server password show button (click)
     RPA.Desktop.Press Keys    tab    # Web server port field (selected)
-    RPA.Desktop.Type Text    321
+    RPA.Desktop.Type Text    80
 
     RPA.Desktop.Press Keys    tab    # Web server username field (selected)
-    RPA.Desktop.Type Text    username
+    RPA.Desktop.Type Text    SYSTEM
     
     RPA.Desktop.Press Keys    tab    # Web server password field (selected)
-    RPA.Desktop.Type Text    somepassword
+    RPA.Desktop.Type Text    24680
 
     RPA.Desktop.Press Keys    tab    # OPC password show button (click)
     RPA.Desktop.Press Keys    tab    # OPC port field (selected)
-    RPA.Desktop.Type Text    456
+    RPA.Desktop.Type Text    FdxAuth
 
     RPA.Desktop.Press Keys    tab    # OPC password field (selected)
-    RPA.Desktop.Type Text    654
+    RPA.Desktop.Type Text    1235
 
     RPA.Desktop.Press Keys    tab    # OPENPCS IEC port field (selected)
-    RPA.Desktop.Type Text    78901
+    RPA.Desktop.Type Text    23042
 
 Project Tab Hardware Configuration Subtab
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_conf_subtab    timeout=25
@@ -397,12 +397,13 @@ Project Tab Communication Settings Subtab Arguments-6
     
     RPA.Desktop.Type Text    ${ftp_passw}
     RPA.Desktop.Press Keys    tab    # Port
+    RPA.Desktop.Press Keys    tab     # Telnet Port
+    
+    
     RPA.Desktop.Press Keys    tab    # Predefined password button
     RPA.Desktop.Press Keys    tab    # Web server SEE password button
     RPA.Desktop.Press Keys    tab    # Web server port field
-    
-    RPA.Desktop.Press Keys    tab    #
-    
+       
     RPA.Desktop.Press Keys    tab    # Web server username
 
     RPA.Desktop.Type Text    ${username}

@@ -20,9 +20,10 @@ Library             RPA.Excel.Application
 Library             RPA.Dialogs
 Library             RPA.JavaAccessBridge
 
-Resource            resources/project_tab.resource
-Resource            resources/common.resource
-
+#Resource            resources/project_tab.resource
+#Resource            resources/common.resource
+Resource            project_tab.resource
+Resource            common.resource
 
 *** Variables ***
 
@@ -51,7 +52,7 @@ History Tab New History Group Create Agrument-1
     RPA.Desktop.Type Text    ${group_name}
     RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
         
-    Sleep    3s
+    Sleep    2s
 
 
 History Tab New History Group Create RMB Drag-n-Drop Argument-1
@@ -77,7 +78,7 @@ History Tab New History Group Create RMB Drag-n-Drop Argument-1
     RPA.Desktop.Move Mouse    offset:0,100    # Move mouse to the table cells
     RPA.Desktop.Release Mouse Button    Left    # Releasing the point
 
-    Sleep    3s
+    Sleep    2s
 
 History Tab Delete All Groups
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_group_table    timeout=10    # History points table
@@ -92,7 +93,7 @@ History Tab Delete All Groups
     RPA.Desktop.Wait For Element    alias:FXE_main_histroy_tab_group_delete_form    timeout=10    # Delete group form
     RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_inactive_btn    # Yes button
     
-    Sleep    3s
+    Sleep    2s
 
 History Tab Resize
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_toolbar_report_btns    timeout=10    # Toolbar buttons (right)
@@ -129,7 +130,7 @@ History Tab Report Form Wizard Create Argument-1
     RPA.Desktop.Press Keys    tab    # OK button
     RPA.Desktop.Press Keys    enter    # OK button
 
-    Sleep    3s
+    Sleep    2s
 
 History Tab Open Report Form
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_toolbar_report_btns    timeout=10    # Toolbar buttons (right)
@@ -160,7 +161,7 @@ History Tab Report Form Report Delete
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_report_form_report_delete_form    timeout=10    # Report delete form
     RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_inactive_btn
 
-    Sleep    3s
+    Sleep    2s
 
 History Tab Report Form Report Wizard
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_report_form_reports_sect    timeout=10    # Report section
@@ -178,7 +179,7 @@ History Tab Report Form Report Wizard
     RPA.Desktop.Press Keys    tab    # OK button
     RPA.Desktop.Press Keys    enter    # OK button
 
-    Sleep    3s
+    Sleep    2s
     
 
 History Tab Report Form Column Create Arguments-6
@@ -205,19 +206,19 @@ History Tab Report Form Column Create Arguments-6
         RPA.Desktop.Press Keys    down
         Sleep    0.5s
     END
-    Sleep    2s
+    Sleep    0.5s
     RPA.Desktop.Press Keys    tab    # Column header
     RPA.Desktop.Type Text    ${header}
-    Sleep    2s
+    Sleep    0.5s
     RPA.Desktop.Press Keys    tab    # Graph chekbox
     IF    ${graph} == 1
         RPA.Desktop.Press Keys    space    # Graph chekbox
     END
-    Sleep    2s
+    Sleep    0.5s
     RPA.Desktop.Press Keys    tab    # Compare columns
     RPA.Desktop.Type Text    ${compare_columns}
     RPA.Desktop.Press Keys    tab    #
-    Sleep   2s
+    Sleep   0.5s
     
 
 History Tab Report Form Normalize Change

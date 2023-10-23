@@ -18,7 +18,7 @@ Resource            resources/common.resource
 #${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 #${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 #${TEST_PROJECT_NAME}    TestProject1234
-#${SLEEP_TIMEOUT_DEFAULT}    1s
+#${# Sleep_TIMEOUT_DEFAULT}    1s
 ${current_date}=    Get Current Date    result_format=%d.%m.%y
 ${button}    
 ${random_hour}    ${EMPTY}
@@ -80,7 +80,7 @@ Points Tab Point Edit Form Global Point Arguments-2
         RPA.Desktop.Type Text    ${remote_plc}     # Remote PLC name
         RPA.Desktop.Press Keys    tab
         RPA.Desktop.Type Text    ${remote_pointname}    # Remote pointname
-        Sleep    3s
+        # Sleep    3s
         RPA.Desktop.Click    alias:FXE_main_points_tab_point_edit_form_globalpoint_chkbx    # Global point deselect    
     END
 
@@ -95,7 +95,7 @@ Points Tab ALARM Point Edit Form Alarm Settings Argument-1
                 RPA.Desktop.Press Keys    down    # Limit
                 RPA.Desktop.Press Keys    down    # Conflict
                 RPA.Desktop.Press Keys    down    # Module
-                Sleep    3s
+                # Sleep    3s
                 RPA.Desktop.Press Keys    up     # Conflict
                 RPA.Desktop.Press Keys    up     # Limit       
             END
@@ -125,19 +125,19 @@ Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1
         IF    ${button}==1
             RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_point_edit_form_btns    timeout=10    # Edit form "OK-Apply-Cancel" buttons Dims: 296*29
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns    
-            #Sleep     5s
+            ## Sleep     5s
             RPA.Desktop.Click With Offset    x=-100    y=0    action=click    # OK button click
 
         ELSE IF    ${button}==2
             RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_point_edit_form_btns    timeout=10    # Edit form "OK-Apply-Cancel" buttons Dims: 296*29
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns    
-            #Sleep    5s
+            ## Sleep    5s
             RPA.Desktop.Click With Offset    x=10    y=0    action=click    # APLLY button click
 
         ELSE    
             RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_point_edit_form_btns    timeout=10    # Edit form "OK-Apply-Cancel" buttons Dims: 296*29
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns   
-            #Sleep    5s 
+            ## Sleep    5s 
             RPA.Desktop.Click With Offset    x=100    y=0    action=click    # CANCEL button click
 
         END
@@ -170,7 +170,7 @@ Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1
     IF    ${edit_exit_form_exists}
         IF    ${button} == 2            # Rename button
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_points_edit_exit_changed_form  
-            #Sleep    5s 
+            ## Sleep    5s 
             RPA.Desktop.Click With Offset    x=0    y=-30    action=click    # RENAME button click
             #RPA.Desktop.Press Keys    down
             #RPA.Desktop.Press Keys    enter
@@ -178,11 +178,11 @@ Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1
         ELSE IF    ${button} == 1       # Keep button
             #RPA.Desktop.Press Keys    enter
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_points_edit_exit_changed_form  
-            #Sleep    5s 
+            ## Sleep    5s 
             RPA.Desktop.Click With Offset    x=0    y=30    action=click    # RENAME button click
         ELSE                            # Cancel button
             RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_points_edit_exit_changed_form  
-            #Sleep    5s 
+            ## Sleep    5s 
             RPA.Desktop.Click With Offset    x=0    y=100    action=click    # RENAME button click
             #RPA.Desktop.Press Keys    down
             #RPA.Desktop.Press Keys    down
@@ -332,11 +332,11 @@ Points Tab Left Panel CONTROL Mode Drop-Down Argument-1
     RPA.Desktop.Click With Offset    x=0    y=20    action=click    # Drop-down
     IF    ${mode}==0
         RPA.Desktop.Press Keys    down    # Cascade control
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    down    # Compensation control
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    up    # Cascade control
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    up    # Constant value control
         
     END
@@ -354,82 +354,82 @@ Points Tab Left Panel CONTROL Stages Set All Values Argument-1
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_CONTROL_edit_form_stages_ddwn    timeout=10    # Stages Drop-down title
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form_stages_ddwn
     RPA.Desktop.Click With Offset    x=50    y=0    action=click    # Stages Drop-down
-    Sleep    1s
+    # Sleep    1s
     
     RPA.Desktop.Type Text    ${mode}    # Stages used number in drop-down
     RPA.Desktop.Press Keys    enter
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    tab    # Balance point drop-down
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Type Text    ${mode}    # Balance point number in drop-down
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    tab    # Balance percent drop-down  
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Type Text    50
-    #Sleep    1s
+    ## Sleep    1s
     
     FOR    ${element}    IN RANGE    ${mode}
         RPA.Desktop.Press Keys    tab    # Return water stage checkbox
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Name field
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    CONTROL_stage_${element}    # Stage name 
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # PBand
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    101    # PBand 
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # AO point drop-down
-        #Sleep    1s
+        ## Sleep    1s
         #RPA.Desktop.Type Text    TE01_SS
         RPA.Desktop.Press Keys    down    # AO point drop-down
-        #Sleep    1s
+        ## Sleep    1s
         #RPA.Desktop.Press Keys    enter    # AO point drop-down
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Min output
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    11    # Min output
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Max output  
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    91    # Max output  
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Off state value  
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    51    # Off state value   
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Outdoor temp limit
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    -91    # Outdoor temp limit
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Outdoor temp PBand  
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    101    # Outdoor temp PBand
-        #Sleep    1s
+        ## Sleep    1s
 
         RPA.Desktop.Press Keys    tab    # Limit value
-        #Sleep    1s 
+        ## Sleep    1s 
         RPA.Desktop.Type Text    1    # Limit value
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Limit measurement drop-down
-        #Sleep    1s
+        ## Sleep    1s
         #RPA.Desktop.Type Text    TE01_MV
         RPA.Desktop.Press Keys    down    # Limit measurement
-        #Sleep    1s
+        ## Sleep    1s
         #RPA.Desktop.Press Keys    enter 
-        #Sleep    1s       
+        ## Sleep    1s       
         RPA.Desktop.Press Keys    tab    # P-band
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Type Text    1001    # P-band
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    tab    # Type drop-down 
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    down    # Type drop-down
-        #Sleep    1s 
+        ## Sleep    1s 
         RPA.Desktop.Press Keys    down    # Type drop-down
-        #Sleep    1s
+        ## Sleep    1s
         RPA.Desktop.Press Keys    down    # Type drop-down 
-        #Sleep    1s
+        ## Sleep    1s
         
     END
 
@@ -452,7 +452,7 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit 
     #RPA.Desktop.Press Keys    enter
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -478,7 +478,7 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # History point checkbox
     Points Tab Point Edit Form History Point Select
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select
    
     Points Tab Point Edit Form Modbus Point Select
@@ -514,9 +514,9 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_point_edit_form_btns    timeout=10    # Edit form "OK-Apply-Cancel" buttons Dims: 296*29
     #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns    
     #RPA.Desktop.Click With Offset    x=-100    y=0    action=click    # OK button click
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -528,7 +528,7 @@ Points Tab Left Panel ALARM Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -556,7 +556,7 @@ Points Tab Left Panel ALARM Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # History point checkbox
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     Points Tab Point Edit Form Modbus Point Select    # Select checkbox
@@ -609,9 +609,9 @@ Points Tab Left Panel ALARM Right Button Edit Argument-1
     #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns    
     #RPA.Desktop.Click With Offset    x=-100    y=0    action=click    # OK button click
     
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -623,7 +623,7 @@ Points Tab Left Panel DI Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -650,7 +650,7 @@ Points Tab Left Panel DI Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # History point checkbox
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     Points Tab Point Edit Form Modbus Point Select    # Select checkbox
@@ -690,9 +690,9 @@ Points Tab Left Panel DI Right Button Edit Argument-1
        
     RPA.Desktop.Press Keys    tab    # BACnet server object
     
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -705,7 +705,7 @@ Points Tab Left Panel AI Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -732,7 +732,7 @@ Points Tab Left Panel AI Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # History point checkbox
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     Points Tab Point Edit Form Modbus Point Select    # Select checkbox
@@ -791,58 +791,58 @@ Points Tab Left Panel AI Right Button Edit Argument-1
 
     RPA.Desktop.Press Keys    tab     # Limit #1 name
     RPA.Desktop.Type Text    Limit_1
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #2    name
     RPA.Desktop.Type Text    Limit_2
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #3    name
     RPA.Desktop.Type Text    Limit_3
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #4    name
     RPA.Desktop.Type Text    Limit_4
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #4    name
     RPA.Desktop.Type Text    Limit_5
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #4    name
     RPA.Desktop.Type Text    Limit_6
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #4    name
     RPA.Desktop.Type Text    Limit_7
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    down    # Limit #4    name
     RPA.Desktop.Type Text    Limit_8
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    enter     # Names finished
     RPA.Desktop.Press Keys    right     # Limit #8    value
     RPA.Desktop.Type Text    1.23    # Limit #8    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #7    value
     RPA.Desktop.Type Text    2.34    # Limit #7    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #6   value
     RPA.Desktop.Type Text    3.45    # Limit #6    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #5    value
     RPA.Desktop.Type Text    4.56    # Limit #5    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #4    value
     RPA.Desktop.Type Text    5.67    # Limit #4    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #3    value
     RPA.Desktop.Type Text    6.78    # Limit #3    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #2    value
     RPA.Desktop.Type Text    7.89    # Limit #2    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    up    # Limit #1    value
     RPA.Desktop.Type Text    8.90    # Limit #1    value
-    #Sleep    1s
+    ## Sleep    1s
     RPA.Desktop.Press Keys    tab    # BACnet server object
 
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -856,7 +856,7 @@ Points Tab Left Panel AO Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -883,7 +883,7 @@ Points Tab Left Panel AO Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # History point checkbox
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     Points Tab Point Edit Form Modbus Point Select    # Select checkbox
@@ -923,9 +923,9 @@ Points Tab Left Panel AO Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab    # Value
     RPA.Desktop.Type Text    3.3
 
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -937,7 +937,7 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -965,7 +965,7 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab    # History point checkbox
     #Points Tab Point Edit Form History Point Select    # Select checkbox
     #Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    #Sleep    5s
+    ## Sleep    5s
     #Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     #Points Tab Point Edit Form Modbus Point Select    # Select checkbox
@@ -982,37 +982,37 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # Main measurement drop-down
     RPA.Desktop.Press Keys    right    # Main measurement pointname
     RPA.Desktop.Press Keys    enter    # Main measurement pointname
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Outdoor drop-down
     RPA.Desktop.Press Keys    right    # Outdoor measurement pointname
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Indication point drop-down
     RPA.Desktop.Press Keys    right    # Indication pointname
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Default value
     RPA.Desktop.Type Text    58    # Default value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Copy manual to default value
     RPA.Desktop.Press Keys    space    # checkbox select
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Slow speed factor
     RPA.Desktop.Type Text    3    # value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Integration time
     RPA.Desktop.Type Text    180    # value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # I term sensitivity
     RPA.Desktop.Type Text    0.5    # value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Execution interval time
     RPA.Desktop.Type Text    10    # value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Cooling dead zone
     RPA.Desktop.Type Text    2    # value
-    #Sleep    3s
+    ## Sleep    3s
 
     Points Tab Left Panel CONTROL Mode Drop-Down Argument-1    0
-    Sleep    3s
+    # Sleep    3s
 
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_CONTROL_edit_form_unit_ddwn    timeout=10    # Unit drop-down
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form_unit_ddwn
@@ -1021,14 +1021,14 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     #RPA.Desktop.Press Keys    tab    # Unit drop-down
     FOR    ${element}    IN RANGE    17
         RPA.Desktop.Press Keys    down     # C select
-        #Sleep    1s
+        ## Sleep    1s
     END
     RPA.Desktop.Press Keys    enter
     
     #RPA.Desktop.Press Keys    down
     #RPA.Desktop.Press Keys    down
     #RPA.Desktop.Press Keys    down
-    #Sleep    3s
+    ## Sleep    3s
     #RPA.Desktop.Press Keys    tab
 
 
@@ -1037,11 +1037,11 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab    # Decimals
     #FOR    ${element}    IN    3
     #    RPA.Desktop.Press Keys    down     # 4 line select
-    #    Sleep    1s
+    #    # Sleep    1s
     #END
     RPA.Desktop.Press Keys    down
     RPA.Desktop.Press Keys    down
-    #Sleep    3s
+    ## Sleep    3s
 
     #RPA.Desktop.Press Keys    enter
 
@@ -1049,25 +1049,25 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form_statetext_ddwn
     RPA.Desktop.Click With Offset    x=0    y=30    action=click
 
-    #Sleep    3s
+    ## Sleep    3s
     #RPA.Desktop.Press Keys    tab    # State text drop-down
     RPA.Desktop.Press Keys    down    # 
     RPA.Desktop.Press Keys    down    # 
     RPA.Desktop.Press Keys    down    # State text
     
-    #Sleep   3s
+    ## Sleep   3s
     RPA.Desktop.Press Keys    enter
-    #Sleep    3s
+    ## Sleep    3s
     # Control stages
     RPA.Desktop.Press Keys    tab    # Control stages drop-down (Show more)
     RPA.Desktop.Press Keys    tab    # Number of control stages drop-down
 
-    #Sleep  3s
+    ## Sleep  3s
     Points Tab Left Panel CONTROL Stages Set All Values Argument-1    2
 
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
     
 
@@ -1080,7 +1080,7 @@ Points Tab Left Panel TIMETABLE Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -1100,7 +1100,7 @@ Points Tab Left Panel TIMETABLE Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab     # History point checkbox
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
    
     RPA.Desktop.Press Keys    tab     # Use exception days
@@ -1126,12 +1126,12 @@ Points Tab Left Panel TIMETABLE Right Button Edit Argument-1
 
         RPA.Desktop.Type Text    ${hour}     # random value
         RPA.Desktop.Press Keys   tab      # next event time
-        #Sleep    1s
+        ## Sleep    1s
     END
 
-    Sleep    5s
+    # Sleep    5s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    5s
+    # Sleep    5s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
 
 
@@ -1142,7 +1142,7 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     Points Tab Left Panel First Line Right Button Menu
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
-    Sleep    1s
+    # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
         RPA.Desktop.Press Keys    enter    # Error message
@@ -1167,31 +1167,31 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
 
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Form History Point Select    # Checkbox deselect
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Click With Offset    x=115    y=-225    action=click    # Edit form click on Lookup values "Name of X axis"
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Type Text    Outdoor_Temperature
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # Name of Y axis field
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Type Text    Supply_Temperature
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab     # Offset field
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Type Text    1.2    # Value
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab     # Spider/Compact type drop-down
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    down
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab    # X-Axis resistive input checkbox
-    #Sleep    3s
+    ## Sleep    3s
     RPA.Desktop.Press Keys    tab     # Table 1 line X-Axis
-    #Sleep    3s
+    ## Sleep    3s
 
     FOR  ${element}    IN RANGE    15
         ${random_number}=    Evaluate    random.randint(1, 9)
@@ -1207,23 +1207,25 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-350    y=260    action=click    # Edit form click on Show values checkbox
-    Sleep    3s
+    # Sleep    3s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-210    y=260    action=click    # Edit form click on Zoom to fit button
-    Sleep    3s
-    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
-    RPA.Desktop.Click With Offset    x=-80    y=260    action=click    # Edit form click on Save to BMP button
-        
-    # Saving dialog
-    RPA.Desktop.Wait For Element    alias:FXE_main_WINDOWS_FILE_SAVE_low_bar_form    timeout=10
-    ${random_number}=    Evaluate    random.randint(10000, 99999)
-    ${random_number}=    Convert To String    ${random_number}
-    RPA.Desktop.Type Text    ${random_number}
-    RPA.Desktop.Press Keys    enter     # Saving BMP
+    # Sleep    3s
 
-    Sleep    3s
+    # TODO: Check correct saving process
+    # RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
+    # RPA.Desktop.Click With Offset    x=-80    y=260    action=click    # Edit form click on Save to BMP button
+        
+    # # Saving dialog
+    # RPA.Desktop.Wait For Element    alias:FXE_main_WINDOWS_FILE_SAVE_low_bar_form    timeout=10
+    # ${random_number}=    Evaluate    random.randint(10000, 99999)
+    # ${random_number}=    Convert To String    ${random_number}
+    # RPA.Desktop.Type Text    ${random_number}
+    # RPA.Desktop.Press Keys    enter     # Saving BMP
+
+    # Sleep    3s
     Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    Sleep    3s
+    # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
 
     

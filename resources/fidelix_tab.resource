@@ -35,6 +35,12 @@ Fidelix Tab Right Panel Connect Button
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_connect_resize_btns    timeout=10    # Fidleix Tab right panel connect/resize buttons. Dims: 96*48  center:48*24  
     RPA.Desktop.Move Mouse    alias:FXE_main_fidelix_tab_connect_resize_btns
     RPA.Desktop.Click With Offset    x=-20    y=0    action=click    # Connect button
+
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
     Sleep    1s
     RPA.Desktop.Click With Offset    x=40    y=0    action=click    # Resize button
     Sleep    1s
@@ -76,7 +82,7 @@ Fidelix Tab Left Panel FX Folder Copy Argument-1
 Fidelix Tab Left Panel FX Folder Upload Argument-1
     [Arguments]    ${folder}
     
-    RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_www_icon    timeout=10    # Fidelix Tab right panel www folder icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_www_icon    timeout=25    # Fidelix Tab right panel www folder icon
     RPA.Desktop.Click    alias:FXE_main_fidelix_tab_leftpanel_www_icon    action=click    # Folder select
 
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_btns    timeout=10    # Fidelix tab left panel buttons dims: 272*44    center: 136*22

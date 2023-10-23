@@ -16,15 +16,22 @@ Resource            resources/common.resource
 *** Tasks ***
 Start Menu Items Walkthrough
     Check Projects Common Folder Exists
-    #Check And Delete Test Project
+    # Check And Delete Project Folder Argument-1    c:\\QA\\TestProjects\\Test-Project_1
+    # Check And Delete Project Folder Argument-1    c:\\QA\\TestProjects\\Test-Project_2
+    # Check And Delete Test Group
+    # Clear Test Projects Folder Arguments-2    c:\\QA\\TestProjects\\    Test-Group
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+
     Open FXE
+    New Project Wizard Arguments-1    Test-Project_1
+    Close Opened Project Without Saving
+    New Project Wizard Arguments-1    Test-Project_2
+    Close Opened Project Without Saving
+
+    # Open FXE
     Start Page New Group Project Wizard Open Close
-    Start Page Open Existing Project
     
-    #Open Existing Project
-    #Close All
-
-    Log    Done.
-
+    Log   Start Menu Items Walkthrough Done.
+    Display Dialog and Wait for User Action
 
 *** Keywords ***

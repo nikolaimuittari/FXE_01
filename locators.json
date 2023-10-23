@@ -54,13 +54,19 @@
         "type": "image"
     },
     "FXE_main_OK_form_btn": {
-        "confidence": 21.0,
+        "confidence": 15.0,
         "path": ".images\\fxe_main_ok_form_btn-path.png",
         "source": null,
         "type": "image"
     },
+    "FXE_main_OK_noicon_active_form_btn": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_ok_noicon_active_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_OK_noicon_form_btn": {
-        "confidence": 70.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_main_ok_noicon_form_btn-path.png",
         "source": null,
         "type": "image"
@@ -204,7 +210,7 @@
         "type": "image"
     },
     "FXE_main_fidelix_tab_backup_form": {
-        "confidence": 50.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_fidelix_tab_backup_form-path.png",
         "source": null,
         "type": "image"
@@ -234,13 +240,13 @@
         "type": "image"
     },
     "FXE_main_fidelix_tab_leftpanel_upload_form": {
-        "confidence": 80.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_main_fidelix_tab_leftpanel_upload_form-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_fidelix_tab_leftpanel_www_icon": {
-        "confidence": 80.0,
+        "confidence": 60.0,
         "path": ".images\\fxe_main_fidelix_tab_leftpanel_www_icon-path.png",
         "source": null,
         "type": "image"
@@ -269,9 +275,27 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_fx-edit_tab_left_panel_variables_rmb_menu": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_fxedit_tab_left_panel_variables_rmb_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_fxonline_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_fxonline_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fxonline_tab_toolbar_conn_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fxonline_tab_toolbar_conn_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_fxonline_tab_toolbar_noconn_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_fxonline_tab_toolbar_noconn_btn-path.png",
         "source": null,
         "type": "image"
     },
@@ -486,7 +510,7 @@
         "type": "image"
     },
     "FXE_main_modules_tab_AI_icon": {
-        "confidence": 60.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_modules_tab_ai_icon-path.png",
         "source": null,
         "type": "image"
@@ -804,7 +828,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_import_filter_form": {
-        "confidence": 25.0,
+        "confidence": 10.0,
         "path": ".images\\fxe_main_points_tab_import_filter_form-path.png",
         "source": null,
         "type": "image"
@@ -1079,6 +1103,24 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_project_tab_comm_subtab_conn_failed_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_subtab_conn_failed_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_comm_subtab_ssh_key_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_comm_subtab_ssh_key_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_comm_subtab_ssh_key_form_opened": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_project_tab_comm_subtab_ssh_key_form_opened-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_project_tab_hardware_conf_modules_form": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_project_tab_hardware_conf_modules_form-path.png",
@@ -1205,21 +1247,147 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_st-edit-tab_search_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_stedittab_search_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_st-edit_icon_tab": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_stedit_icon_tab-path.png",
         "source": null,
         "type": "image"
     },
-    "FXE_main_st-edit_tab": {
+    "FXE_main_st-edit_import_pou_form": {
         "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_import_pou_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_separate_window_position_btns": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_stedit_separate_window_position_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab": {
+        "confidence": 50.0,
         "path": ".images\\fxe_main_stedit_tab-path.png",
         "source": null,
         "type": "image"
     },
-    "FXE_main_st-edit_tab_separate_icon": {
+    "FXE_main_st-edit_tab_clean_unused_found_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_stedit_tab_clean_unused_found_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_code_subtab_rmb_menu": {
         "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_code_subtab_rmb_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_left_panel_add_variable_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_left_panel_add_variable_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_left_panel_subtabs": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_stedit_tab_left_panel_subtabs-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_new_file_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_new_file_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_block_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_block_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_delete_form": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_delete_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_function_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_function_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_program_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_program_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_rmb_menu": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_rmb_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_right_panel_subtabs": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_stedit_tab_right_panel_subtabs-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_separate_icon": {
+        "confidence": 50.0,
         "path": ".images\\fxe_main_stedit_tab_separate_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_separate_window_icon": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_stedit_tab_separate_window_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_toolbar_build_upload_conn_btns": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_stedit_tab_toolbar_build_upload_conn_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_toolbar_clean_search_btns": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_stedit_tab_toolbar_clean_search_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_toolbar_new_import_btns": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_stedit_tab_toolbar_new_import_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_toolbar_save_saveas_syntax_btns": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_toolbar_save_saveas_syntax_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_toolbar_start_stop_close_btns": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_stedit_tab_toolbar_start_stop_close_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_st-edit_tab_variables_rmb_menu": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_stedit_tab_variables_rmb_menu-path.png",
         "source": null,
         "type": "image"
     },
@@ -1434,8 +1602,14 @@
         "type": "image"
     },
     "FXE_start_group_project_add_btn": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_start_group_project_add_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_group_save_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_group_save_form-path.png",
         "source": null,
         "type": "image"
     },

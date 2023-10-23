@@ -15,33 +15,38 @@ Resource            resources/label_list_tab.resource
 Resource            resources/modules_tab.resource
 Resource            resources/documents_tab.resource
 Resource            resources/history_tab.resource
-       
+Resource            resources/fxonline_tab.resource
+Resource            resources/st_edit_tab.resource
+
 
 #Resource            ${CURDIR}\\resources\\common.resource
 #Test Teardown        RPA.Desktop.Close Application    ${FXEditor_app}
 
 *** Variables ***
 #${FXEditor_app}     c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
+${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
+${TEST_PROJECT_NAME}    Test-Project_1
 
-
-*** Tasks ***
+*** Test Cases ***
  
  Open Existing Project
      Open Existing Project
 
-#  Project Tab
-#      Project Tab Project Information Subtab
-#      Project Tab Communication Settings Subtab
-        
-#      Project Tab Hardware Configuration Subtab
-#      Project Tab Hardware Configuration Subtab New Module
+Project Tab
+    Project Tab Project Information Subtab
+    # Project Tab Communication Settings Subtab
+    # Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+    #    plc_type 10 = 3000X, 9=3000C   
+    #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+    # Project Tab Hardware Configuration Subtab
+    # Project Tab Hardware Configuration Subtab New Module
     
-#      Project Tab Hardware Configuration Subtab Add Modbus Address
+    # Project Tab Hardware Configuration Subtab Add Modbus Address
 
-#      Project Tab Hardware Configuration Subtab Add Modbus Device
+    # Project Tab Hardware Configuration Subtab Add Modbus Device
     
-#      Project Tab Point Settings Subtab
-#      Project Tab Settings Subtab
+    # Project Tab Point Settings Subtab
+    # Project Tab Settings Subtab
 
 # Points Tab
 #      Points Tab Select
@@ -79,66 +84,69 @@ Resource            resources/history_tab.resource
 #     Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
 #     Points Filter Name Filter Clear And De-Select
 
-#     Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
-#     Points Filter Name Filter Clear And De-Select
+#     # Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
+#     # Points Filter Name Filter Clear And De-Select
 
-#     Points Right Panel Import Filter Edit Form
-#     Points Right Panel Button Bar Add Filter Button
-#     Points Right Panel Button Bar Copy Selected Filter
-#     #Points Filter Name Filter Field
-#     Points Filter Point Type Filter
+#     # Points Right Panel Import Filter Edit Form
+#     # Points Right Panel Button Bar Add Filter Button
+#     # Points Right Panel Button Bar Copy Selected Filter
+#     # Points Filter Name Filter Field
+#     # Points Filter Point Type Filter
 
 #     # Points Right Panel Import Filter Edit Form NO Save
 
-# Fidelix Tab    
-#     # Project Tab Communication Settings Subtab Arguments-4    10.100.1.200    9    demodemo    0
-#     #[Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}
+Fidelix Tab    
+    
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+    #    plc_type 10 = 3000X, 9 = 3000C   
+    #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
 
-#     Sleep    2s
-#     Fidelix Tab Select
-#     Sleep    2s
+    #    Sleep    2s
+    Fidelix Tab Select
+    #    Sleep    2s
     
-#     Fidelix Tab Right Panel Connect Button
-#     Fidelix Tab Left Panel Backup PLC Argument-1    5
-#     Fidelix Tab Left Panel Watchdog
-#     Fidelix Tab Left Panel Add Files Argument-1    C:\\QA\\TestProjects\\TestProject1234\\Log.txt
+    Fidelix Tab Right Panel Connect Button
+    Fidelix Tab Left Panel Backup PLC Argument-1    5
+    Fidelix Tab Left Panel Watchdog
+    Fidelix Tab Left Panel Add Files Argument-1    C:\\QA\\TestProjects\\Test-Project_1\\Log.txt
     
-#     Sleep    2s
-#     Fidelix Tab Left Panel FX Folder Upload Argument-1    www
-#     Fidelix Tab Right Panel FX Folder Copy Argument-1    www
-#     Fidelix Tab Left Panel FX Folder Copy Argument-1    www
+    #    Sleep    2s
+    Fidelix Tab Left Panel FX Folder Upload Argument-1    www
+    Fidelix Tab Right Panel FX Folder Copy Argument-1    www
+    Fidelix Tab Left Panel FX Folder Copy Argument-1    www
 
 Browser Tab
 
-#    Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    0    system    24680
-#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    1    system    24680
+    #    plc_type 10 = 3000X, 9 = 3000C   
+    #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     
-#     Browser Tab Select
-#     Browser Tab Home Button Argument-1    9
+    Browser Tab Select
+    Browser Tab Home Button Argument-1    9
 
 
-
-#     Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    0    system    24680
-# #     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
-#     Browser Tab Select
-#     Browser Tab Home Button Argument-1    11
-
-# Label List Tab
-#    Label List Tab Select
-#    Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
-# #     [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+    Browser Tab Select
+    Browser Tab Home Button Argument-1    11
 
 
-# Modules Tab
-#     Modules Tab Select
-#     Modules Tab Points Binding Argument-1    1
-#     Modules Tab Points Disconnect Argument-1    5
-#     Modules Tab Points Binding Argument-1    1
-#     Modules Tab Points Disconnect Argument-1    1
+Label List Tab
+   Label List Tab Select
+   Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
+#     [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
 
-# Documents Tab
-#     Documents Tab Select
-#     Documents Tab New Folder Create And Delete
+
+Modules Tab
+    Modules Tab Select
+    Modules Tab Points Binding Argument-1    1
+    Modules Tab Points Disconnect Argument-1    5
+    Modules Tab Points Binding Argument-1    1
+    Modules Tab Points Disconnect Argument-1    1
+
+Documents Tab
+    Documents Tab Select
+    Documents Tab New Folder Create And Delete
 
 History Tab
     History Tab Select
@@ -159,14 +167,41 @@ History Tab
     History Tab Report Form Normalize Change
     History Tab Report Form Close Without Saving
 
+Fxonline Tab
+    Fxonline Tab Select
+    Fxonline Tab Resize
+    Fxonline Tab Connect-Disconnect
+
+ST-Edit Tab
+    ST-Edit Tab Select
+    # ST-Edit Tab Separate Window Operations
+    
+    # ST-Edit Tab New ST Function Random Name
+    # Close Opened ST File
+    # ST-Edit Tab ST Functioin Delete
+
+    # ST-Edit Tab New ST Function Block Random Name
+    # Close Opened ST File
+    # ST-Edit Tab ST Functioin Block Delete
+
+    # ST-Edit Tab New ST Program Random Name
+    # Close Opened ST File
+    # ST-Edit Tab ST Program Delete
+           
+    # ST-Edit Tab New ST Program Random Name
+    ST-Edit Tab ST Program Modification
+    ST-Edit Tab Clean Unused Variables
+    ST-Edit Tab Syntax Check
+    ST-Edit Tab Search Arguments-1    Variable
+
 
 Test Finish Without Saving
-    # Close Opened Project Without Saving
+    Close Opened Project Without Saving
     # Close Opened Project With Saving
 
-    #Close All
+    #    Close All
     Display Dialog and Wait for User Action
-    Log    Done.
+    Log    Done.    
 
 
  #Start Menu Items Walkthrough
@@ -252,3 +287,4 @@ Test Finish Without Saving
 
 
 *** Keywords ***
+Set Global Variable    ${RESOURCES}    ${CURDIR}/../resources
