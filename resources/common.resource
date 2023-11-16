@@ -156,7 +156,7 @@ New Project Wizard
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to -2. Communication Settings - wizard page OK
-
+    RPA.Desktop.Wait For Element    alias:FXE_new_project_wizard_back_btn    timeout=10
     RPA.Desktop.Click    alias:FXE_new_project_wizard_back_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to previous wizard page OK
@@ -199,7 +199,7 @@ New Project Wizard
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_create_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Wait For Element    alias:FXE_project_main_project_info_bar    timeout=25
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab   timeout=25
     Log To Console    *** New project has been created OK
     
 
@@ -268,19 +268,19 @@ New Project Wizard Arguments-1
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    ctrl    a
-    RPA.Desktop.Type Text    SSH_user_name!    # custom SSH password    # Systemuser!  # default FX3000X SSH password
+    RPA.Desktop.Type Text    demodemo    # custom SSH password    # Systemuser!  # default FX3000X SSH password
     RPA.Desktop.Press Keys    tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    22
     RPA.Desktop.Press Keys    tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    HUOLTO    # custom username   # system # default username
+    RPA.Desktop.Type Text    SYSTEM    # custom username   # system # default username
     RPA.Desktop.Press Keys    tab    
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    80
     RPA.Desktop.Press Keys    tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    13579    # custom password   # 24680    # default user password
+    RPA.Desktop.Type Text    24680    # custom password   # 24680    # default user password
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -301,11 +301,11 @@ Open Existing Project
     Log To Console    *** Project has been opened OK
 
 Open Existing Project Arguments-2
-    [Arguments]    ${PROJECTS_FOLDER}    ${PROJECT_PATH}
-    Log To Console    Trying to open project from: ${PROJECTS_FOLDER}\\${PROJECT_PATH}.fxp
-    RPA.Desktop.Open File    ${PROJECTS_FOLDER}${PROJECT_PATH}.fxp
+    [Arguments]    ${PROJECTS_FOLDER}    ${PROJECT_NAME}
+    Log To Console    Trying to open project from: ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp
+    RPA.Desktop.Open File    ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
-    Log To Console    *** Project ${PROJECTS_FOLDER}\\${PROJECT_PATH}.fxp has been opened OK
+    Log To Console    *** Project ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp has been opened OK
 
 Start Page New Project Wizard Open Close
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
@@ -369,7 +369,7 @@ Close Opened Project Without Saving
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=45
     Log To Console    Project is opened    
     RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=45
-    RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    RPA.Desktop.Click With Offset   alias:FXE_main_project_close_btn    x=70    y=0    action=click    # project close button
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
     # Pressing NO

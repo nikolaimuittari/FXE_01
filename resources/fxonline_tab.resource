@@ -39,9 +39,25 @@ Fxonline Tab Resize
     RPA.Desktop.Click With Offset    alias:FXE_main_fxonline_tab_toolbar_noconn_btn    x=25    y=0    action=Click    # Resize button
 
 Fxonline Tab Connect-Disconnect
+    ${running_status}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_conn_btn   timeout=5    # Toolbar buttons. CONNECTED
+    
+    IF    ${running_status}
+        Log To Console    PLC is already connected
+        RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_conn_btn    timeout=10    # Toolbar buttons. CONNECTED
+        RPA.Desktop.Click With Offset    alias:FXE_main_fxonline_tab_toolbar_conn_btn    x=-25    y=0    action=Click    # Click on Connect button to disconnect
+        
+        RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_noconn_btn   timeout=5    # OFFLINE status
+        Log To Console    PLC is disconnected
+    END
+
     RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_noconn_btn    timeout=10    # Toolbar buttons. NOT connected
     RPA.Desktop.Click With Offset    alias:FXE_main_fxonline_tab_toolbar_noconn_btn    x=-25    y=0    action=Click    # Connect button
+    
     RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_conn_btn    timeout=10    # Toolbar buttons. CONNECTED
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AI_icon    timeout=15    # AI icon symbol
-    RPA.Desktop.Click With Offset    alias:FXE_main_fxonline_tab_toolbar_conn_btn    x=-25    y=0    action=Click    # Click on Connect button
-    RPA.Desktop.Wait For Element    alias:FXE_main_fxonline_tab_toolbar_noconn_btn    timeout=10    # Toolbar buttons. NOT connected
+    RPA.Desktop.Click With Offset    alias:FXE_main_fxonline_tab_toolbar_conn_btn    x=-25    y=0    action=Click    # Connect button
+    Log To Console    PLC is connected
+    
+    #    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AI_icon    timeout=15    # AI icon symbol
+    
+    RPA.Desktop.Wait For Element     alias:FXE_main_fxonline_tab_toolbar_noconn_btn    timeout=10    # Toolbar buttons. NOT Connected
+    Log To Console    PLC is disconnected

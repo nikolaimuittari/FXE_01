@@ -47,8 +47,8 @@ Modules Tab Points Binding Argument-1
 
     RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_COMBI_DI12_table    timeout=10    # Combi-36 DI12. Dims: 240*20
     
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_DI_icon    timeout=10    # DI Point list table: Dims:
-    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_DI_icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_DI_type    timeout=10    # DI Point list table: Dims:
+    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_DI_type
     Sleep    0.5s
     RPA.Desktop.Press Mouse Button    left
     Sleep    0.5s
@@ -58,8 +58,8 @@ Modules Tab Points Binding Argument-1
     RPA.Desktop.Release Mouse Button    left
     Sleep    0.5s
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_ALM_icon    timeout=10    # DI Point list table: Dims:
-    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_ALM_icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_ALM_type    timeout=10    # DI Point list table: Dims:
+    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_ALM_type
     Sleep    0.5s
     RPA.Desktop.Press Mouse Button    left
     Sleep    0.5s
@@ -72,8 +72,8 @@ Modules Tab Points Binding Argument-1
 
 
     RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_COMBI_DO8_table    timeout=10    # Modules Tab toolbar buttons. Dims:   218*43
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_DO_icon    timeout=10    # DI Point list table: Dims:
-    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_DO_icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_DO_type    timeout=10    # DI Point list table: Dims:
+    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_DO_type
     Sleep    0.5s
     RPA.Desktop.Press Mouse Button    left
     Sleep    0.5s
@@ -86,8 +86,8 @@ Modules Tab Points Binding Argument-1
 
 
     RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_COMBI_AI8_table    timeout=10    # Modules Tab toolbar buttons. Dims:   218*43
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AI_icon    timeout=10    # DI Point list table: Dims:
-    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_AI_icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AI_type    timeout=10    # DI Point list table: Dims:
+    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_AI_type
     Sleep    0.5s
     RPA.Desktop.Press Mouse Button    left
     Sleep    0.5s
@@ -99,8 +99,8 @@ Modules Tab Points Binding Argument-1
 
 
     RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_COMBI_AO8_table    timeout=10    # Modules Tab toolbar buttons. Dims:   218*43
-    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AO_icon    timeout=10    # DI Point list table: Dims:
-    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_AO_icon
+    RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AO_type    timeout=10    # DI Point list table: Dims:
+    RPA.Desktop.Move Mouse    alias:FXE_main_modules_tab_AO_type
     Sleep    0.5s
     RPA.Desktop.Press Mouse Button    left
     Sleep    0.5s

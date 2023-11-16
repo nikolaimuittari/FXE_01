@@ -140,7 +140,45 @@ Project Tab Hardware Configuration Subtab New Module
     RPA.Desktop.Click With Offset    x=0    y=16    action=click    # Module address 4     
     
     RPA.Desktop.Click    alias:FXE_main_OK_form_btn    # Saving form
+
+
+Project Tab Hardware Configuration Subtab New Module Arguments-3
+    [Arguments]    ${port}    ${address}    ${module_type}
+    RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_conf_subtab_modules_settings_btn
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_conf_modules_form    timeout=5
+    # Initial active element is "module address" checkbox list
     
+    # Coordinates of elements
+    # Project -> Hardw Conf -> Modules form dims: 516*623    central point:258*312
+    # 
+    RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_hardware_conf_modules_form    # Project -> Hardw Conf -> Modules -> Form -> Central point  
+    ${mouse_position}   RPA.Desktop.Get Mouse Position    # Getting mouse position for current form
+    
+    RPA.Desktop.Click With Offset    x=-215    y=-218    action=Click    # Port drop down
+
+    RPA.Desktop.Type Text    ${port}
+    RPA.Desktop.Press Keys    enter    # Port is set 
+
+    RPA.Desktop.Move Mouse    ${mouse_position}    # Project -> Hardw Conf -> Modules -> Form -> Central point  
+    # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_hardware_conf_modules_form    # Project -> Hardw Conf -> Modules -> Form -> Central point  
+    RPA.Desktop.Click With Offset    x=-128    y=-218    action=click    # Module type drop down
+
+    # Module type select (MBUS requires port 0 or 6..10)
+    # Combi36 = 1
+    ${repeats}    Set Variable    ${module_type}    # Module type drop down(empty -> MBUS 17 down keys) 6=DI16C
+    FOR    ${index}    IN RANGE    ${repeats}
+        RPA.Desktop.Press Keys    down
+    END
+    RPA.Desktop.Press Keys    enter    # Module type set 
+
+    RPA.Desktop.Click    alias:FXE_main_project_tab_hardware_conf_subtab_modules_addr_list    action=click
+    ${repeats}    Set Variable    ${address}    # Module type drop down(empty -> MBUS 17 down keys) 6=DI16C
+    FOR    ${index}    IN RANGE    ${repeats}
+        RPA.Desktop.Press Keys    down
+    END
+    RPA.Desktop.Press Keys    space    # Module address select
+    
+    RPA.Desktop.Click    alias:FXE_main_OK_form_btn    # Saving form
 
 Project Tab Hardware Configuration Subtab Add Modbus Address
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_hardware_conf_subtab_ports_list    timeout=5
@@ -362,7 +400,7 @@ Project Tab Communication Settings Subtab Arguments-6
     RPA.Desktop.Press Keys    tab    # IP address field
     RPA.Desktop.Press Keys    tab    # PLC model drop-down
 
-    ${repeats}    Set Variable    11    # Number of repeats
+    ${repeats}    Set Variable    12    # Number of repeats
     FOR    ${element}    IN RANGE   1    ${repeats}
         RPA.Desktop.Press Keys    up    # PLC type drop-down
         RPA.Desktop.Press Keys    tab    # Selected IP

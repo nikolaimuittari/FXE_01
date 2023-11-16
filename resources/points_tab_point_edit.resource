@@ -495,6 +495,9 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab    # 230V checkbox
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
+
+
     RPA.Desktop.Press Keys    tab    # Multi24 checkbox
 
     RPA.Desktop.Press Keys    tab    # Start deyay (sec) field
@@ -572,6 +575,8 @@ Points Tab Left Panel ALARM Right Button Edit Argument-1
 
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
+
     RPA.Desktop.Press Keys    tab    # Multi24 checkbox
 
     RPA.Desktop.Press Keys    tab    # Alarm group drop-down
@@ -674,6 +679,8 @@ Points Tab Left Panel DI Right Button Edit Argument-1
 
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
+   
     RPA.Desktop.Press Keys    tab    # Multi24 checkbox
     
     RPA.Desktop.Press Keys    tab    # Start delay
@@ -697,9 +704,9 @@ Points Tab Left Panel DI Right Button Edit Argument-1
     
 
 
-Points Tab Left Panel AI Right Button Edit Argument-1
+Points Tab Left Panel AI Right Button Edit Arguments-2
 
-    [Arguments]    ${pointname}
+    [Arguments]    ${pointname}    ${history}
     
     Points Filter Name Filter Field Select Argument-1    ${pointname}
     Points Tab Left Panel First Line Right Button Menu
@@ -733,9 +740,13 @@ Points Tab Left Panel AI Right Button Edit Argument-1
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
     # Sleep    3s
-    Points Tab Point Edit Form History Point Select    # Checkbox deselect
+    
+    IF    ${history} != 1
+        Points Tab Point Edit Form History Point Select    # Checkbox deselect
+    END
    
-    Points Tab Point Edit Form Modbus Point Select    # Select checkbox
+    # Points Tab Point Edit Form Modbus Point Select    # Select checkbox
+    
     Points Tab Point Edit Form Modbus Section Arguments-13    "6"    "10"    "247"    "40001"    "100"    ${FALSE}    16    Group_1234    ${TRUE}    ${TRUE}    ${TRUE}    ${TRUE}    3
     # ${Register_Type}=3    ${Port}=4    ${Address}=20    ${Register}=1    ${Multiplier}=100    ${Bitmask}=${FALSE}    ${Size}=16    ${Group}=Group_1234    ${Float}=${TRUE}    ${Byte_Swap}=${TRUE}    ${Word_swap}=${TRUE}    ${Unsigned}=${TRUE}    ${Access}=3
     Points Tab Point Edit Form Modbus Point Select    # Checkbox deselect
@@ -754,6 +765,8 @@ Points Tab Left Panel AI Right Button Edit Argument-1
 
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
+
     RPA.Desktop.Press Keys    tab    # Multi24 checkbox
     
     RPA.Desktop.Press Keys    tab    # Set value
@@ -848,9 +861,9 @@ Points Tab Left Panel AI Right Button Edit Argument-1
 
 
 
-Points Tab Left Panel AO Right Button Edit Argument-1
+Points Tab Left Panel AO Right Button Edit Arguments-2
 
-    [Arguments]    ${pointname}
+    [Arguments]    ${pointname}    ${history}
     
     Points Filter Name Filter Field Select Argument-1    ${pointname}
     Points Tab Left Panel First Line Right Button Menu
@@ -884,7 +897,9 @@ Points Tab Left Panel AO Right Button Edit Argument-1
     Points Tab Point Edit Form History Point Select    # Select checkbox
     Points Tab Point Edit Form History Section Arguments-6   3000    15    "Seconds"    0.6    "Day"    "Consumption"
     # Sleep    3s
-    Points Tab Point Edit Form History Point Select    # Checkbox deselect
+    IF    ${history} != 1
+        Points Tab Point Edit Form History Point Select    # Checkbox deselect
+    END
    
     Points Tab Point Edit Form Modbus Point Select    # Select checkbox
     Points Tab Point Edit Form Modbus Section Arguments-13    "6"    "10"    "247"    "40001"    "100"    ${FALSE}    16    Group_1234    ${TRUE}    ${TRUE}    ${TRUE}    ${TRUE}    3
@@ -905,6 +920,8 @@ Points Tab Left Panel AO Right Button Edit Argument-1
 
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
+
     RPA.Desktop.Press Keys    tab    # Multi24 checkbox
     
     RPA.Desktop.Press Keys    tab    # Min voltage

@@ -17,7 +17,7 @@ Start Menu Items Walkthrough
     #Check And Delete Test Project
     #Open FXE
     Open Existing Project
-    Close All
+    Close Opened Project Without Saving
 
     Log    Done.
 

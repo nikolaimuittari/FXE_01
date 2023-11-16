@@ -59,8 +59,8 @@ History Tab New History Group Create RMB Drag-n-Drop Argument-1
     [Arguments]    ${group_name}
     RPA.Desktop.Wait For Element    alias:FXE_main_modules_tab_AI_icon    timeout=10    # AI point icon
     RPA.Desktop.Click With Offset    alias:FXE_main_modules_tab_AI_icon    x=0    y=0    action=click    # AI point select
-
-    RPA.Desktop.Click With Offset    alias:FXE_main_modules_tab_AI_icon    x=0    y=0    action=rightclick    # History point right button menu
+    RPA.Desktop.Click    action=rightclick
+    # RPA.Desktop.Click With Offset    alias:FXE_main_modules_tab_AI_icon    x=0    y=0    action=rightclick    # History point right button menu
     
     RPA.Desktop.Wait For Element    alias:FXE_main_history_tab_points_rmb_menu    timeout=10    # RMB menu Dims:  187*87
     RPA.Desktop.Click With Offset    alias:FXE_main_history_tab_points_rmb_menu    x=0    y=0    action=click    # Create group menu item

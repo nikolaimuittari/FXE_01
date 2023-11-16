@@ -31,20 +31,38 @@ Fidelix Tab Select
     RPA.Desktop.Click    alias:FXE_main_fidelix_tab
         
     
-Fidelix Tab Right Panel Connect Button
-    RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_connect_resize_btns    timeout=10    # Fidleix Tab right panel connect/resize buttons. Dims: 96*48  center:48*24  
-    RPA.Desktop.Move Mouse    alias:FXE_main_fidelix_tab_connect_resize_btns
-    RPA.Desktop.Click With Offset    x=-20    y=0    action=click    # Connect button
+Fidelix Tab Right Panel Connect Button Argument-1
+    [Arguments]    ${connect}
+    IF    ${connect} == 1
+        ${running_status}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar   timeout=5    # RUNNING status
+        Log To Console    PLC already connected
+        IF    ${running_status} == ${False}
+                        
+            RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_connect_resize_btns    timeout=5    # Fidelix Tab right panel connect/resize buttons. Dims: 96*48  center:48*24  
+            RPA.Desktop.Move Mouse    alias:FXE_main_fidelix_tab_connect_resize_btns
+            RPA.Desktop.Click With Offset    x=-20    y=0    action=click    # Connect button
 
-    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
-    IF    ${ssh_key_form}
-        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+            ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+            IF    ${ssh_key_form}
+                RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+            END
+
+            # Sleep    1s
+            RPA.Desktop.Click With Offset    x=40    y=0    action=click    # Resize button
+            # Sleep    1s
+        
+        END 
+    
+        RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=5     # Connection status Running
+        Log To Console    PLC connected
+    ELSE
+        RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_connect_resize_btns_CONNECTED    timeout=10    # Fidleix Tab right panel connect/resize buttons. Dims: 96*48  center:48*24  
+        RPA.Desktop.Move Mouse    alias:FXE_main_fidelix_tab_connect_resize_btns_CONNECTED
+        RPA.Desktop.Click With Offset    x=-20    y=0    action=click    # Connect button
+        RPA.Desktop.Wait For Element    alias:FXE_main_OFFLINE_status_bar    # Connection status Offline
+        Log To Console    PLC disconnected
     END
-
-    Sleep    1s
-    RPA.Desktop.Click With Offset    x=40    y=0    action=click    # Resize button
-    Sleep    1s
-    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    # Connection status
+    # RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    # Connection status
 
 
 Fidelix Tab Right Panel FX Folder Copy Argument-1
@@ -53,30 +71,33 @@ Fidelix Tab Right Panel FX Folder Copy Argument-1
     RPA.Desktop.Click    alias:FXE_main_fidelix_tab_rightpanel_www_icon    action=rightclick
 
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_rightpanel_rightbtn_menu    timeout=10    # Fidelix Tab right panel right button menu
-    Sleep    1s
+    # Sleep    1s
     RPA.Desktop.Press Keys    down    #     Download menu
-    Sleep    1s
+    # Sleep    1s
     RPA.Desktop.Press Keys    enter    # Return button
-    Sleep    1s
+    # Sleep    1s
 
 
 Fidelix Tab Left Panel FX Folder Copy Argument-1
     [Arguments]    ${folder}
+    RPA.Desktop.Wait For Element     alias:FXE_main_fidelix_tab_leftpanel_btns    timeout=10    # Left panel buttons
+    RPA.Desktop.Click With Offset    alias:FXE_main_fidelix_tab_leftpanel_btns    x=135    y=0    action=click    # Resize button
+
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_www_icon    timeout=10    # Fidelix Tab right panel www folder icon
     RPA.Desktop.Click    alias:FXE_main_fidelix_tab_leftpanel_www_icon    action=rightclick
 
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_rightbtn_menu    timeout=10    # Fidelix Tab right panel right button menu
-    Sleep    1s
+    # Sleep    1s
     RPA.Desktop.Press Keys    down    #     Download menu
-    Sleep    1s
+    # Sleep    1s
     RPA.Desktop.Press Keys    enter    # Return button
-    Sleep    1s
+    # Sleep    1s
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_upload_form    timeout=10    # Upload files form    dims: 356*154  center:178*77 
     RPA.Desktop.Click With Offset    alias:FXE_main_fidelix_tab_leftpanel_upload_form    x=60    y=55    action=click    # Yes button
 
-    RPA.Desktop.Wait For Element    alias:FXE_main_WORKING_status_bar    timeout=10    # Working status
-    Sleep    15s
-    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=10    # Running status
+    # RPA.Desktop.Wait For Element    alias:FXE_main_WORKING_status_bar    timeout=10    # Working status
+    # Sleep    15s
+    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=25    # Running status
     
 
 Fidelix Tab Left Panel FX Folder Upload Argument-1
@@ -89,11 +110,19 @@ Fidelix Tab Left Panel FX Folder Upload Argument-1
     RPA.Desktop.Click With Offset    alias:FXE_main_fidelix_tab_leftpanel_btns    x=-110    y=0    action=click
 
     RPA.Desktop.Wait For Element    alias:FXE_main_fidelix_tab_leftpanel_upload_form    timeout=10    # Upload files form    dims: 356*154  center:178*77 
-    RPA.Desktop.Click With Offset    alias:FXE_main_fidelix_tab_leftpanel_upload_form    x=60    y=55    action=click    # Yes button
-
-    RPA.Desktop.Wait For Element    alias:FXE_main_WORKING_status_bar    timeout=10    # Working status
-    Sleep    15s
-    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=10    # Running status
+    # RPA.Desktop.Click With Offset    alias:FXE_main_fidelix_tab_leftpanel_upload_form    x=60    y=55    action=click    # Yes button
+    # RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_inactive_btn    action=click
+    RPA.Desktop.Press Keys    tab
+    Sleep    1s
+    RPA.Desktop.Press Keys    enter
+    Sleep    1s
+    #    ERROR MESSAGE 2.0.3.6beta (2023-10-23)
+    # To get rid of this pressing enter key and commented the WORKING status waiting line
+    RPA.Desktop.Press Keys    enter
+    Sleep    1s
+    # RPA.Desktop.Wait For Element    alias:FXE_main_WORKING_status_bar    timeout=10    # Working status
+    
+    RPA.Desktop.Wait For Element    alias:FXE_main_RUNNING_status_bar    timeout=25    # Running status
 
 
 Upload To PLC Working-Running Status Waiting Argument-1

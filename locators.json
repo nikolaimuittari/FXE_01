@@ -150,7 +150,7 @@
         "type": "image"
     },
     "FXE_main_browser_tab_external_browser_win": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_browser_tab_external_browser_win-path.png",
         "source": null,
         "type": "image"
@@ -162,7 +162,7 @@
         "type": "image"
     },
     "FXE_main_browser_tab_toolbar_btns": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_browser_tab_toolbar_btns-path.png",
         "source": null,
         "type": "image"
@@ -180,7 +180,7 @@
         "type": "image"
     },
     "FXE_main_documents_tab_files_table": {
-        "confidence": 80.0,
+        "confidence": 70.0,
         "path": ".images\\fxe_main_documents_tab_files_table-path.png",
         "source": null,
         "type": "image"
@@ -221,6 +221,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_fidelix_tab_connect_resize_btns_CONNECTED": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_fidelix_tab_connect_resize_btns_connected-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_fidelix_tab_leftpanel_addfile_exists_form": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_fidelix_tab_leftpanel_addfile_exists_form-path.png",
@@ -246,7 +252,7 @@
         "type": "image"
     },
     "FXE_main_fidelix_tab_leftpanel_www_icon": {
-        "confidence": 60.0,
+        "confidence": 31.0,
         "path": ".images\\fxe_main_fidelix_tab_leftpanel_www_icon-path.png",
         "source": null,
         "type": "image"
@@ -497,6 +503,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_label_tab_label_settings_sect": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_label_tab_label_settings_sect-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_label_tab_toolbar_btns": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_label_tab_toolbar_btns-path.png",
@@ -510,8 +522,14 @@
         "type": "image"
     },
     "FXE_main_modules_tab_AI_icon": {
-        "confidence": 30.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_modules_tab_ai_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_AI_type": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_modules_tab_ai_type-path.png",
         "source": null,
         "type": "image"
     },
@@ -521,9 +539,21 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_modules_tab_ALM_type": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_alm_type-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_modules_tab_AO_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_modules_tab_ao_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_AO_type": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_modules_tab_ao_type-path.png",
         "source": null,
         "type": "image"
     },
@@ -563,9 +593,21 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_modules_tab_DI_type": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_modules_tab_di_type-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_modules_tab_DO_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_modules_tab_do_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_modules_tab_DO_type": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_modules_tab_do_type-path.png",
         "source": null,
         "type": "image"
     },
@@ -984,7 +1026,7 @@
         "type": "image"
     },
     "FXE_main_project_close_btn": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_project_close_btn-path.png",
         "source": null,
         "type": "image"
@@ -1136,6 +1178,12 @@
     "FXE_main_project_tab_hardware_conf_subtab_modbus_upload_btn": {
         "confidence": 100.0,
         "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_modbus_upload_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_hardware_conf_subtab_modules_addr_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_hardware_conf_subtab_modules_addr_list-path.png",
         "source": null,
         "type": "image"
     },

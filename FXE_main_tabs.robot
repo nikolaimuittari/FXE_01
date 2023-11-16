@@ -34,17 +34,14 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 
 Project Tab
     Project Tab Project Information Subtab
-    # Project Tab Communication Settings Subtab
-    # Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+    Project Tab Communication Settings Subtab
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    1    system    24680
     #    plc_type 10 = 3000X, 9=3000C   
     #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     # Project Tab Hardware Configuration Subtab
-    # Project Tab Hardware Configuration Subtab New Module
-    
+    # Project Tab Hardware Configuration Subtab New Module Arguments-3    4    20    1
     # Project Tab Hardware Configuration Subtab Add Modbus Address
-
-    # Project Tab Hardware Configuration Subtab Add Modbus Device
-    
+    # Project Tab Hardware Configuration Subtab Add Modbus Device    
     # Project Tab Point Settings Subtab
     # Project Tab Settings Subtab
 
@@ -55,11 +52,11 @@ Project Tab
 #      State Text Edit Form
 #      Alarm Group Edit Form
     
-#     # Button Press Upload Alarmgroup To PLC
-#     # Button Press Upload State Text To PLC
-#     # Button Press Upload Changed Points To PLC
-#     # Button Press Upload Displayed Points To PLC
-#     # Button Press Upload Selected Points To PLC
+#     Button Press Upload Alarmgroup To PLC
+#     Button Press Upload State Text To PLC
+#     Button Press Upload Changed Points To PLC
+#     Button Press Upload Displayed Points To PLC
+#     Button Press Upload Selected Points To PLC
 #     Button Press Points Panel Resize
  
 #     Left Panel Auto Resize Button
@@ -69,13 +66,16 @@ Project Tab
 #     Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
 #     Points Filter Name Filter Clear And De-Select
     
-#     Points Tab Left Panel AI Right Button Edit Argument-1    TE01_MV
+#     Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_MV    1
 #     Points Filter Name Filter Clear And De-Select
          
 #     Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
 #     Points Filter Name Filter Clear And De-Select
 
 #     Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
+#     Points Filter Name Filter Clear And De-Select
+
+#     Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_SS    1
 #     Points Filter Name Filter Clear And De-Select
     
 #     Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
@@ -95,9 +95,39 @@ Project Tab
 
 #     # Points Right Panel Import Filter Edit Form NO Save
 
+# Modules Tab
+#     Modules Tab Select
+#     Modules Tab Points Binding Argument-1    1
+#     Modules Tab Points Disconnect Argument-1    5
+#     Modules Tab Points Binding Argument-1    1
+#     Modules Tab Points Disconnect Argument-1    1
+
+
+
+
+# History Tab
+#     History Tab Select
+#     History Tab New History Group Create Agrument-1    111
+#     History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
+#     #     History Tab Delete All Groups
+
+#     History Tab Open Report Form
+#     History Tab Report Form Group Create Agrument-1    333
+#     History Tab Report Form Delete Selected Group
+    
+#     History Tab Report Form Group Create Agrument-1    444
+#     History Tab Report Form Report Wizard
+#     #    History Tab Report Form Report Delete
+
+#     History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
+#     #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}
+#     History Tab Report Form Normalize Change
+#     History Tab Report Form Close Without Saving
+
+
 Fidelix Tab    
     
-    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+    #    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
     #    plc_type 10 = 3000X, 9 = 3000C   
     #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
 
@@ -105,7 +135,8 @@ Fidelix Tab
     Fidelix Tab Select
     #    Sleep    2s
     
-    Fidelix Tab Right Panel Connect Button
+    Fidelix Tab Right Panel Connect Button Argument-1    1
+    # [Argument] 1= connect, other=disconnect
     Fidelix Tab Left Panel Backup PLC Argument-1    5
     Fidelix Tab Left Panel Watchdog
     Fidelix Tab Left Panel Add Files Argument-1    C:\\QA\\TestProjects\\Test-Project_1\\Log.txt
@@ -114,8 +145,15 @@ Fidelix Tab
     Fidelix Tab Left Panel FX Folder Upload Argument-1    www
     Fidelix Tab Right Panel FX Folder Copy Argument-1    www
     Fidelix Tab Left Panel FX Folder Copy Argument-1    www
+    Fidelix Tab Right Panel Connect Button Argument-1    0
 
 Browser Tab
+
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    1    system    24680
+    #     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+    Browser Tab Select
+    Browser Tab Home Button Argument-1    11
+
 
     Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    1    system    24680
     #    plc_type 10 = 3000X, 9 = 3000C   
@@ -125,47 +163,14 @@ Browser Tab
     Browser Tab Home Button Argument-1    9
 
 
-    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
-#     [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
-    Browser Tab Select
-    Browser Tab Home Button Argument-1    11
-
-
 Label List Tab
    Label List Tab Select
-   Label List Save List To File Arguments-5    -    //    ROW_1    ROW_2    ROW_3
+   Label List Save List To File Arguments-5    -    BB    ROW_1    ROW_2    ROW_3
 #     [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}    ${labelrow_1}
-
-
-Modules Tab
-    Modules Tab Select
-    Modules Tab Points Binding Argument-1    1
-    Modules Tab Points Disconnect Argument-1    5
-    Modules Tab Points Binding Argument-1    1
-    Modules Tab Points Disconnect Argument-1    1
 
 Documents Tab
     Documents Tab Select
     Documents Tab New Folder Create And Delete
-
-History Tab
-    History Tab Select
-    History Tab New History Group Create Agrument-1    111
-    History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
-    #     History Tab Delete All Groups
-
-    History Tab Open Report Form
-    History Tab Report Form Group Create Agrument-1    333
-    History Tab Report Form Delete Selected Group
-    
-    History Tab Report Form Group Create Agrument-1    444
-    History Tab Report Form Report Wizard
-    #    History Tab Report Form Report Delete
-
-    History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
-    #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}
-    History Tab Report Form Normalize Change
-    History Tab Report Form Close Without Saving
 
 Fxonline Tab
     Fxonline Tab Select
@@ -174,21 +179,21 @@ Fxonline Tab
 
 ST-Edit Tab
     ST-Edit Tab Select
-    # ST-Edit Tab Separate Window Operations
+    ST-Edit Tab Separate Window Operations
     
-    # ST-Edit Tab New ST Function Random Name
-    # Close Opened ST File
-    # ST-Edit Tab ST Functioin Delete
+    ST-Edit Tab New ST Function Random Name
+    Close Opened ST File
+    ST-Edit Tab ST Functioin Delete
 
-    # ST-Edit Tab New ST Function Block Random Name
-    # Close Opened ST File
-    # ST-Edit Tab ST Functioin Block Delete
+    ST-Edit Tab New ST Function Block Random Name
+    Close Opened ST File
+    ST-Edit Tab ST Functioin Block Delete
 
-    # ST-Edit Tab New ST Program Random Name
-    # Close Opened ST File
-    # ST-Edit Tab ST Program Delete
+    ST-Edit Tab New ST Program Random Name
+    Close Opened ST File
+    ST-Edit Tab ST Program Delete
            
-    # ST-Edit Tab New ST Program Random Name
+    ST-Edit Tab New ST Program Random Name
     ST-Edit Tab ST Program Modification
     ST-Edit Tab Clean Unused Variables
     ST-Edit Tab Syntax Check

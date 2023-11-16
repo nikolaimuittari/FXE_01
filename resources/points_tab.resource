@@ -170,30 +170,104 @@ Button Press Upload Selected Points To PLC
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_upload_btn    # Moving to the form's center
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload points to PLC button click
 
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+Button Press Upload Selected Points To PLC Arguments-1
+    [Arguments]    ${upload}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_upload_btn    timeout=10    # Add + Upload SELECTED buttons locator. Dims:  102*44 center: 51*22
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_add_upload_btn    # Moving to the form's center
+    IF    ${upload} == 1
+        RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload points to PLC button click
+
+        ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+        IF    ${ssh_key_form}
+            RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+        END
+
+
+        ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+    END
+    
 
 Button Press Upload Displayed Points To PLC
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_displayed_btn    timeout=10    # Upload DISPLAYED points locator.
     
     RPA.Desktop.Click    alias:FXE_main_points_tab_upload_displayed_btn    # Upload Displayed points to PLC button click
 
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
     
+Button Press Upload Displayed Points To PLC Arguments-1
+    [Arguments]    ${upload}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_displayed_btn    timeout=10    # Upload DISPLAYED points locator.
+    
+    IF    ${upload} == 1
+        
+        RPA.Desktop.Click    alias:FXE_main_points_tab_upload_displayed_btn    # Upload Displayed points to PLC button click
+        
+        ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+        IF    ${ssh_key_form}
+            RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+        END
+
+        ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+    END
+
+
 Button Press Upload Changed Points To PLC
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_changed_btn    timeout=10    # Upload CHANGED points locator.
     
     RPA.Desktop.Click    alias:FXE_main_points_tab_upload_changed_btn
     
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+Button Press Upload Changed Points To PLC Arguments-1
+    [Arguments]    ${upload}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_upload_changed_btn    timeout=10    # Upload CHANGED points locator.
+    IF    ${upload} == 1
+        RPA.Desktop.Click    alias:FXE_main_points_tab_upload_changed_btn
+        
+        ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+        IF    ${ssh_key_form}
+            RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+        END
+
+        ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+    END
+
 
 State Text Edit Form
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=10    # State text edit button locator.
@@ -353,10 +427,36 @@ Button Press Upload Alarmgroup To PLC
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_upload_btn    # Moving to the center of ALARMGROUP points locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Alarmgroup button click
 
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
+
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+Button Press Upload Alarmgroup To PLC Arguments-1
+    [Arguments]    ${upload}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=10    # Upload ALARMGROUP points locator.
+
+    IF    ${upload} == 1
+        RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_alarmgroup_upload_btn    # Moving to the center of ALARMGROUP points locator
+        RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Alarmgroup button click
+
+        ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+        IF    ${ssh_key_form}
+            RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+        END
+
+        ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+    END
 
 
 Button Press Upload State Text To PLC
@@ -365,10 +465,36 @@ Button Press Upload State Text To PLC
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_state_text_upload_btn    # Moving to the center of STATETEXT points locator
     RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Statetext button click
 
+    ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+    IF    ${ssh_key_form}
+        RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+    END
+
     ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
     Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+
+Button Press Upload State Text To PLC Arguments-1
+    [Arguments]    ${upload}
+    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_state_text_upload_btn    timeout=10    # Upload STATETEXT points locator.
+
+    IF    ${upload} == 1
+        RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_state_text_upload_btn    # Moving to the center of STATETEXT points locator
+        RPA.Desktop.Click With Offset    x=25    y=0    action=click    # Upload Statetext button click
+
+        ${ssh_key_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_comm_subtab_ssh_key_form    timeout=10    # SSH key form
+        IF    ${ssh_key_form}
+            RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn    action=click    # Ok click on SSH form     
+        END
+
+        ${connection_failed_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_connection_failed_form    timeout=10
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_connection_failed_form
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_more_information_drop_btn   # Connection failed form information button
+        Run Keyword If    ${connection_failed_form_exists}    RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn   # Connection failed form OK
+    END
+
+
 
 Button Press Points Panel Resize
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_resize_btn    timeout=10    # Alarmgroup+Upload+Resize buttons locator
@@ -594,8 +720,6 @@ Points Filter Name Filter Field Select Argument-1
     IF    ${pointfilter_active}
         RPA.Desktop.Click    alias:FXE_main_points_tab_pointfilter_inactive_btn       
     END
-
-    
 
     Sleep    1s
     # RPA.Desktop.Click

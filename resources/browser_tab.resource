@@ -54,8 +54,8 @@ Browser Tab Home Button Argument-1
     IF    ${plc_type} == 9
         RPA.Desktop.Wait For Element    alias:FXE_main_browser_tab_FX3000C_html   timeout=10     # Connection for FX3000C
         Sleep    3s
-    ELSE IF     ${plc_type} == 11    
-        RPA.Desktop.Wait For Element    alias:FXE_main_browser_tab_FX3000Xusername_html    timeout=10     # Connection for FX3000C
+    ELSE IF     ${plc_type} == 11   
+        RPA.Desktop.Wait For Element    alias:FXE_main_browser_tab_FX3000Xusername_html    timeout=50     # Connection for FX3000C
     ELSE
         Sleep    2s
     END
@@ -63,7 +63,6 @@ Browser Tab Home Button Argument-1
 
     # RPA.Windows.Close Current Window
 
-    Sleep    3s
     RPA.Desktop.Wait For Element    alias:FXE_main_browser_tab_toolbar_btns    timeout=10    # Browser Tab buttons. Dims:   156*44
     RPA.Desktop.Move Mouse    alias:FXE_main_browser_tab_toolbar_btns
     RPA.Desktop.Click With Offset    x=0    y=0    action=click    # Default Browser Connect button

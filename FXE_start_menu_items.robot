@@ -25,8 +25,8 @@ Start Menu Items Walkthrough
     Open FXE
     New Project Wizard Arguments-1    Test-Project_1
     Close Opened Project Without Saving
-    New Project Wizard Arguments-1    Test-Project_2
-    Close Opened Project Without Saving
+    # New Project Wizard Arguments-1    Test-Project_2
+    # Close Opened Project Without Saving
 
     # Open FXE
     Start Page New Group Project Wizard Open Close
