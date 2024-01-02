@@ -50,7 +50,7 @@ Points Tab
     Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
     Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel AI Right Button Edit Argument-1    TE01_MV
+    Points Tab Left Panel AI Right Button Edit Arguments-2   TE01_MV    1
     Points Filter Name Filter Clear And De-Select
          
     Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I

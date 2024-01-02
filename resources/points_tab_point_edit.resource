@@ -7,8 +7,8 @@ Library             OperatingSystem
 Library             DateTime
 Library             RPA.RobotLogListener
 
-Resource            resources/points_tab.resource
-Resource            resources/common.resource
+Resource            points_tab.resource
+Resource            common.resource
 
 
 *** Variables ***
@@ -433,17 +433,7 @@ Points Tab Left Panel CONTROL Stages Set All Values Argument-1
         
     END
 
-
-
-
-
-
-
-
-
-
 ### DIFFERENT POINT TYPES EDIT FORMS
-
     
 Points Tab Left Panel DO Right Button Edit Argument-1
 

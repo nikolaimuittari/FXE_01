@@ -28,9 +28,51 @@ ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
 
 *** Test Cases ***
- 
- Open Existing Project
-     Open Existing Project
+
+###### FXE_start_menu_items.robot
+Start Menu Items Walkthrough
+    Check Projects Common Folder Exists
+    # Check And Delete Project Folder Argument-1    c:\\QA\\TestProjects\\Test-Project_1
+    # Check And Delete Project Folder Argument-1    c:\\QA\\TestProjects\\Test-Project_2
+    # Check And Delete Test Group
+    # Clear Test Projects Folder Arguments-2    c:\\QA\\TestProjects\\    Test-Group
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1
+    Close Opened Project Without Saving
+    New Project Wizard Arguments-1    Test-Project_2
+    Close Opened Project Without Saving
+    
+    Start Page New Group Project Wizard Open Close
+    
+    Log   Start Menu Items Walkthrough Done.
+    Close All
+    Display Dialog and Wait for User Action
+
+####### FXE_start_menu_items.robot
+
+
+####### FXE_FXE_new_project_wizard.robot
+
+New Project Uisng Wizard    
+    Check Projects Common Folder Exists
+    #    Check And Delete Test Project
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1
+    Close Opened Project Without Saving
+    Log  New project creation using wizard done.
+
+####### FXE_FXE_new_project_wizard.robot
+
+
+Fresh Start
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1 
+Open Existing Project
+    Open Existing Project
 
 Project Tab
     Project Tab Project Information Subtab
@@ -38,91 +80,91 @@ Project Tab
     Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    1    system    24680
     #    plc_type 10 = 3000X, 9=3000C   
     #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
-    # Project Tab Hardware Configuration Subtab
-    # Project Tab Hardware Configuration Subtab New Module Arguments-3    4    20    1
-    # Project Tab Hardware Configuration Subtab Add Modbus Address
-    # Project Tab Hardware Configuration Subtab Add Modbus Device    
-    # Project Tab Point Settings Subtab
-    # Project Tab Settings Subtab
+    Project Tab Hardware Configuration Subtab
+    Project Tab Hardware Configuration Subtab New Module Arguments-3    4    20    1
+    Project Tab Hardware Configuration Subtab Add Modbus Address
+    Project Tab Hardware Configuration Subtab Add Modbus Device    
+    Project Tab Point Settings Subtab
+    Project Tab Settings Subtab
 
-# Points Tab
-#      Points Tab Select
-#      Left Panel Resize
-#      Points Tab Select Filter Create All Kinds Of Points
-#      State Text Edit Form
-#      Alarm Group Edit Form
+Points Tab
+     Points Tab Select
+     Left Panel Resize
+     Points Tab Select Filter Create All Kinds Of Points
+     State Text Edit Form
+     Alarm Group Edit Form
     
-#     Button Press Upload Alarmgroup To PLC
-#     Button Press Upload State Text To PLC
-#     Button Press Upload Changed Points To PLC
-#     Button Press Upload Displayed Points To PLC
-#     Button Press Upload Selected Points To PLC
-#     Button Press Points Panel Resize
+    Button Press Upload Alarmgroup To PLC
+    Button Press Upload State Text To PLC
+    Button Press Upload Changed Points To PLC
+    Button Press Upload Displayed Points To PLC
+    Button Press Upload Selected Points To PLC
+    Button Press Points Panel Resize
  
-#     Left Panel Auto Resize Button
-#     Right Panel Auto Resize Button
+    Left Panel Auto Resize Button
+    Right Panel Auto Resize Button
 
     
-#     Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
-#     Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
+    Points Filter Name Filter Clear And De-Select
     
-#     Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_MV    1
-#     Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_MV    1
+    Points Filter Name Filter Clear And De-Select
          
-#     Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
-#     Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
+    # Points Filter Name Filter Clear And De-Select
 
-#     Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
-#     Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
+    # Points Filter Name Filter Clear And De-Select
 
-#     Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_SS    1
-#     Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_SS    1
+    # Points Filter Name Filter Clear And De-Select
     
-#     Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
-#     Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
+    Points Filter Name Filter Clear And De-Select
     
-#     Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
-#     Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
+    Points Filter Name Filter Clear And De-Select
 
-#     # Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
-#     # Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
+    Points Filter Name Filter Clear And De-Select
 
-#     # Points Right Panel Import Filter Edit Form
-#     # Points Right Panel Button Bar Add Filter Button
-#     # Points Right Panel Button Bar Copy Selected Filter
-#     # Points Filter Name Filter Field
-#     # Points Filter Point Type Filter
+    # Points Right Panel Import Filter Edit Form
+    # Points Right Panel Button Bar Add Filter Button
+    # Points Right Panel Button Bar Copy Selected Filter
+    # Points Filter Name Filter Field
+    # Points Filter Point Type Filter
 
-#     # Points Right Panel Import Filter Edit Form NO Save
+    # Points Right Panel Import Filter Edit Form NO Save
 
-# Modules Tab
-#     Modules Tab Select
-#     Modules Tab Points Binding Argument-1    1
-#     Modules Tab Points Disconnect Argument-1    5
-#     Modules Tab Points Binding Argument-1    1
-#     Modules Tab Points Disconnect Argument-1    1
-
-
+Modules Tab
+    Modules Tab Select
+    Modules Tab Points Binding Argument-1    1
+    Modules Tab Points Disconnect Argument-1    5
+    # Modules Tab Points Binding Argument-1    1
+    # Modules Tab Points Disconnect Argument-1    1
 
 
-# History Tab
-#     History Tab Select
-#     History Tab New History Group Create Agrument-1    111
-#     History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
-#     #     History Tab Delete All Groups
 
-#     History Tab Open Report Form
-#     History Tab Report Form Group Create Agrument-1    333
-#     History Tab Report Form Delete Selected Group
+
+History Tab
+    History Tab Select
+    History Tab New History Group Create Agrument-1    111
+    History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
+    #     History Tab Delete All Groups
+
+    History Tab Open Report Form
+    History Tab Report Form Group Create Agrument-1    333
+    History Tab Report Form Delete Selected Group
     
-#     History Tab Report Form Group Create Agrument-1    444
-#     History Tab Report Form Report Wizard
-#     #    History Tab Report Form Report Delete
+    History Tab Report Form Group Create Agrument-1    444
+    History Tab Report Form Report Wizard
+    #    History Tab Report Form Report Delete
 
-#     History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
-#     #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}
-#     History Tab Report Form Normalize Change
-#     History Tab Report Form Close Without Saving
+    History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
+    #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}
+    History Tab Report Form Normalize Change
+    History Tab Report Form Close Without Saving
 
 
 Fidelix Tab    
@@ -142,9 +184,9 @@ Fidelix Tab
     Fidelix Tab Left Panel Add Files Argument-1    C:\\QA\\TestProjects\\Test-Project_1\\Log.txt
     
     #    Sleep    2s
-    Fidelix Tab Left Panel FX Folder Upload Argument-1    www
-    Fidelix Tab Right Panel FX Folder Copy Argument-1    www
-    Fidelix Tab Left Panel FX Folder Copy Argument-1    www
+    # Fidelix Tab Left Panel FX Folder Upload Argument-1    www
+    # Fidelix Tab Right Panel FX Folder Copy Argument-1    www
+    # Fidelix Tab Left Panel FX Folder Copy Argument-1    www
     Fidelix Tab Right Panel Connect Button Argument-1    0
 
 Browser Tab
@@ -175,6 +217,8 @@ Documents Tab
 Fxonline Tab
     Fxonline Tab Select
     Fxonline Tab Resize
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    11    demodemo    1    system    24680    
+    # [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     Fxonline Tab Connect-Disconnect
 
 ST-Edit Tab

@@ -13,7 +13,7 @@ Library             RPA.FileSystem
 
 
 *** Variables ***
-${FXEditor_app}             c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
+${FXEditor_app}             FxEditor.exe    # c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
 ${FXE_TEST_PROJECTS_FOLDER_PATH}    c:\\QA\\TestProjects
 ${FXE_TEST_PROJECT_PATH}    c:\\QA\\TestProjects\\${TEST_PROJECT_NAME}
 ${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
@@ -33,14 +33,27 @@ ${SLEEP_TIMEOUT_DEFAULT}    1s
 #    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 
 Open FXE
-    RPA.Desktop.Open Application    ${FXEditor_app}    # "c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe"
+    ${app_instance}=    RPA.Desktop.Open Application    FxEditor.exe
+    [Return]    ${app_instance}
+    # RPA.Desktop.Open Application    ${FXEditor_app}    # "c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe"
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
-    RPA.Desktop.Highlight Elements    alias:FXE_start_right_down_logo
+    # RPA.Desktop.Highlight Elements    alias:FXE_start_right_down_logo
 
 Close All
-    RPA.Desktop.Close All Applications
-    RPA.Desktop.Press Keys    alt    F4
+    [Arguments]    ${app_instance}
+    RPA.Desktop.Close Application    ${app_instance}
+    # RPA.Desktop.Close Application    FxEditor.exe
+    # RPA.Desktop.Close All Applications
+    # RPA.Desktop.Press Keys    alt    F4
     Log To Console    *** Close all applications OK
+
+Close FXE Arguments-1
+    [Arguments]    ${app_instance}
+    RPA.Desktop.Close Application    ${app_instance}
+    # RPA.Desktop.Close Application    FxEditor.exe
+    # RPA.Desktop.Close All Applications
+    # RPA.Desktop.Press Keys    alt    F4
+    Log To Console    *** Close FXE application ${app_instance} OK
 
 Recreate Test Projects folder Arguments-1
     [Arguments]    ${PROJECTS_PATH}
@@ -296,6 +309,7 @@ New Project Wizard Arguments-1
 Open Existing Project
     # 
     Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
+    # Set Global Variable    \${FXE_instance}    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
     RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     Log To Console    *** Project has been opened OK
@@ -369,7 +383,7 @@ Close Opened Project Without Saving
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=45
     Log To Console    Project is opened    
     RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=45
-    RPA.Desktop.Click With Offset   alias:FXE_main_project_close_btn    x=70    y=0    action=click    # project close button
+    RPA.Desktop.Click With Offset   alias:FXE_main_project_close_btn    x=60    y=0    action=click    # project close button
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
     # Pressing NO

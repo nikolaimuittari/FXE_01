@@ -52,7 +52,7 @@ ST-Edit Tab Separate Window Operations
 
     RPA.Desktop.Wait For Element    alias:FXE_main_st-edit_tab    timeout=10    # ST-Edit tab
     RPA.Desktop.Move Mouse    alias:FXE_main_st-edit_tab    # 
-    Sleep    0.5s
+    #    Sleep    0.5s
     RPA.Desktop.Click    alias:FXE_main_st-edit_tab_separate_icon    # Separate window icon
     Sleep    1s
     RPA.Desktop.Wait For Element    alias:FXE_main_st-edit_tab_separate_window_icon    # Separate window header icon

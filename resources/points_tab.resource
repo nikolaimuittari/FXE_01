@@ -12,7 +12,7 @@ Library    RPA.Browser.Selenium
 
 
 
-Resource            resources/common.resource
+Resource            common.resource
 
 
 *** Variables ***

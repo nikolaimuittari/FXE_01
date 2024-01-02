@@ -10,8 +10,8 @@ Library             RPA.Excel.Application
 Library             RPA.Dialogs
 
 
-Resource            resources/project_tab.resource
-Resource            resources/common.resource
+Resource            project_tab.resource
+Resource            common.resource
 
 
 *** Variables ***
