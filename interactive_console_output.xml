@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20231019 10:47:15.266" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20240102 13:12:00.408" rpa="false" schemaversion="3">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\nikolai.zhukov\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
 <kw name="Project Tab Project Information Subtab">
-<msg timestamp="20231019 10:47:16.223" level="FAIL">No keyword with name 'Project Tab Project Information Subtab' found.</msg>
-<status status="FAIL" starttime="20231019 10:47:16.222" endtime="20231019 10:47:16.223"/>
+<msg timestamp="20240102 13:12:01.298" level="FAIL">No keyword with name 'Project Tab Project Information Subtab' found.</msg>
+<status status="FAIL" starttime="20240102 13:12:01.298" endtime="20240102 13:12:01.298"/>
 </kw>
 <kw name="Project Tab Communication Settings Subtab">
-<status status="NOT RUN" starttime="20231019 10:47:16.227" endtime="20231019 10:47:16.227"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.300" endtime="20240102 13:12:01.300"/>
+</kw>
+<kw name="Project Tab Communication Settings Subtab Arguments-6">
+<arg>10.100.1.198</arg>
+<arg>10</arg>
+<arg>demodemo</arg>
+<arg>1</arg>
+<arg>system</arg>
+<arg>24680</arg>
+<status status="NOT RUN" starttime="20240102 13:12:01.302" endtime="20240102 13:12:01.302"/>
 </kw>
 <kw name="Project Tab Hardware Configuration Subtab">
-<status status="NOT RUN" starttime="20231019 10:47:16.229" endtime="20231019 10:47:16.229"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.303" endtime="20240102 13:12:01.303"/>
 </kw>
 <kw name="Project Tab Hardware Configuration Subtab New Module">
-<status status="NOT RUN" starttime="20231019 10:47:16.232" endtime="20231019 10:47:16.233"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.305" endtime="20240102 13:12:01.305"/>
 </kw>
 <kw name="Project Tab Hardware Configuration Subtab Add Modbus Address">
-<status status="NOT RUN" starttime="20231019 10:47:16.235" endtime="20231019 10:47:16.235"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.309" endtime="20240102 13:12:01.309"/>
 </kw>
 <kw name="Project Tab Hardware Configuration Subtab Add Modbus Device">
-<status status="NOT RUN" starttime="20231019 10:47:16.237" endtime="20231019 10:47:16.237"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.311" endtime="20240102 13:12:01.312"/>
 </kw>
 <kw name="Project Tab Point Settings Subtab">
-<status status="NOT RUN" starttime="20231019 10:47:16.237" endtime="20231019 10:47:16.237"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.313" endtime="20240102 13:12:01.314"/>
 </kw>
 <kw name="Project Tab Settings Subtab">
-<status status="NOT RUN" starttime="20231019 10:47:16.238" endtime="20231019 10:47:16.239"/>
+<status status="NOT RUN" starttime="20240102 13:12:01.316" endtime="20240102 13:12:01.316"/>
 </kw>
-<status status="PASS" starttime="20231019 10:47:15.326" endtime="20231019 10:47:19.562"/>
+<kw name="Close Opened Project Without Saving">
+<status status="NOT RUN" starttime="20240102 13:12:01.318" endtime="20240102 13:12:01.318"/>
 </kw>
-<status status="PASS" starttime="20231019 10:47:15.326" endtime="20231019 10:47:19.562"/>
+<status status="PASS" starttime="20240102 13:12:00.433" endtime="20240102 13:12:04.429"/>
+</kw>
+<status status="PASS" starttime="20240102 13:12:00.433" endtime="20240102 13:12:04.429"/>
 </test>
-<status status="PASS" starttime="20231019 10:47:15.269" endtime="20231019 10:47:19.563"/>
+<status status="PASS" starttime="20240102 13:12:00.409" endtime="20240102 13:12:04.430"/>
 </suite>
 <statistics>
 <total>

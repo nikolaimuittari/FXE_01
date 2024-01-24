@@ -33,28 +33,39 @@ Project Tab Project Information Subtab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    Test project name
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    Address line 1
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    Address line 2
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    PLCname
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    Cabinetname
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    11.12.2022    #result_format=%d.%m.%y    #${current_date}
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    1234
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    12.12.2022
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    New user
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    13.12.2022
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Type Text    Test project description
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    tab
 
 Project Tab Communication Settings Subtab

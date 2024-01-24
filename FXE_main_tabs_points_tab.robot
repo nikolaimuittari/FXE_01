@@ -30,6 +30,12 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 
 *** Test Cases ***
 Points Tab
+
+#     Check Projects Common Folder Exists
+#     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+#     Open FXE
+#     New Project Wizard Arguments-1    Test-Project_1
+
      Points Tab Select
      Left Panel Resize
      Points Tab Select Filter Create All Kinds Of Points
@@ -65,8 +71,8 @@ Points Tab
     Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
     Points Filter Name Filter Clear And De-Select
 
-    # Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
-    # Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
+    Points Filter Name Filter Clear And De-Select
 
     # Points Right Panel Import Filter Edit Form
     # Points Right Panel Button Bar Add Filter Button

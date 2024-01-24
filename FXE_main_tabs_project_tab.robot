@@ -36,9 +36,15 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 #      Open Existing Project
 
 Project Tab
+
+    Check Projects Common Folder Exists
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1
+
     Project Tab Project Information Subtab
     Project Tab Communication Settings Subtab
-    Project Tab Communication Settings Subtab Arguments-6    10.100.1.198    10    demodemo    1    system    24680
+    Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    1    system    24680
     #    plc_type 10 = 3000X, 9=3000C   
     #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
     Project Tab Hardware Configuration Subtab

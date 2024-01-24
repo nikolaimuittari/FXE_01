@@ -6,10 +6,8 @@ Library             RPA.Windows
 Library             OperatingSystem
 Library             DateTime
 Library             RPA.RobotLogListener
-Library    RPA.Excel.Application
-Library    RPA.Browser.Selenium
-#Library             RPA.Dialogs
-
+Library             RPA.Excel.Application
+Library             RPA.Browser.Selenium
 
 
 Resource            common.resource
@@ -22,7 +20,7 @@ Resource            common.resource
 #${FXE_TEST_PROJECT_FILENAME_PATH}    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 #${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 #${TEST_PROJECT_NAME}    TestProject1234
-${SLEEP_TIMEOUT_DEFAULT}    500ms
+${SLEEP_TIMEOUT_DEFAULT}    300ms
 ${current_date}=    Get Current Date    result_format=%d.%m.%y
 ${button}    
 
@@ -43,9 +41,15 @@ Points Tab Select Filter Create All Kinds Of Points
     RPA.Desktop.Click    alias:FXE_main_points_tab
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
-    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_select_filter_dropdown    # "Select filter" dropdown. Dims: 115*41    central: 57*20
-    RPA.Desktop.Click With Offset    x=49    y=0    action=click    # Text field offset  
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # FXE_main_points_tab_filter_edit_btn
+    # FXE_main_points_tab_filter_select_dropdown
+
+    # RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_select_filter_dropdown    # "Select filter" dropdown. Dims: 115*41    central: 57*20
+    # RPA.Desktop.Click With Offset    x=49    y=0    action=click    # Text field offset  
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    
+    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_filter_edit_btn    # "Edit filter" icon. 
+    RPA.Desktop.Click With Offset    x=-40    y=0    action=click    # Filter dropdown 
 
     RPA.Desktop.Press Keys    down    # "Default" filter select
     RPA.Desktop.Press Keys    enter    # Select filter 
@@ -53,8 +57,8 @@ Points Tab Select Filter Create All Kinds Of Points
 
     # "Adding new points" button
     RPA.Desktop.Click    alias:FXE_main_points_tab_add_btn    # "Add point" button
-    
-    
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+ 
 
     # Waiting for "Add points" form
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_add_points_form    timeout=10    # Add point form. Dim: 392*488, center: 196*244

@@ -621,6 +621,7 @@ Points Tab Left Panel DI Right Button Edit Argument-1
     # Sleep    1s
     ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
     IF    ${error_message}
+        Sleep    2s
         RPA.Desktop.Press Keys    enter    # Error message
     END
     #RPA.Desktop.Press Keys    enter
@@ -628,6 +629,7 @@ Points Tab Left Panel DI Right Button Edit Argument-1
 
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_DI_edit_form    timeout=10    # DI point edit form   Dims: 520*697  center: 260*299
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_DI_edit_form    # DI point edit form
+
     RPA.Desktop.Click    
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    ${pointname}  # Point name field
@@ -668,6 +670,7 @@ Points Tab Left Panel DI Right Button Edit Argument-1
 
 
     RPA.Desktop.Press Keys    tab    # Include point to label list checkbox
+    RPA.Desktop.Press Keys    space    # checkbox select
     RPA.Desktop.Press Keys    tab    # Physical point checkbox
     RPA.Desktop.Press Keys    space    # checkbox select
    

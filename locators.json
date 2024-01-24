@@ -1,4 +1,10 @@
 {
+    "FXE_Save_Cancel_btn": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_save_cancel_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_ADD_form_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_add_form_btn-path.png",
@@ -660,7 +666,7 @@
         "type": "image"
     },
     "FXE_main_points_edit_property_missing_error_form": {
-        "confidence": 50.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_points_edit_property_missing_error_form-path.png",
         "source": null,
         "type": "image"
@@ -672,7 +678,7 @@
         "type": "image"
     },
     "FXE_main_points_tab": {
-        "confidence": 80.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_points_tab-path.png",
         "source": null,
         "type": "image"
@@ -732,7 +738,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_DI_edit_form": {
-        "confidence": 50.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_di_edit_form-path.png",
         "source": null,
         "type": "image"
@@ -866,6 +872,18 @@
     "FXE_main_points_tab_copyfilter_name_form": {
         "confidence": 30.0,
         "path": ".images\\fxe_main_points_tab_copyfilter_name_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_filter_edit_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_points_tab_filter_edit_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_filter_select_dropdown": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_points_tab_filter_select_dropdown-path.png",
         "source": null,
         "type": "image"
     },
@@ -1595,6 +1613,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_splash_img": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_splash_img-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_Fidelix_manual_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_fidelix_manual_btn-path.png",
@@ -1637,15 +1661,33 @@
         "source": null,
         "type": "image"
     },
+    "FXE_start_explore_fx_editor_data_window": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_explore_fx_editor_data_window-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_favorites_delete_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_favorites_delete_btn-path.png",
         "source": null,
         "type": "image"
     },
+    "FXE_start_fidelix_manual_window": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_fidelix_manual_window-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_fxeditor_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_fxeditor_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_fxeditor_manual_window": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_fxeditor_manual_window-path.png",
         "source": null,
         "type": "image"
     },
@@ -1661,15 +1703,69 @@
         "source": null,
         "type": "image"
     },
+    "FXE_start_import_new_plc_firmware_arm_success_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_arm_success_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_import_new_plc_firmware_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_import_new_plc_firmware_btn-path.png",
         "source": null,
         "type": "image"
     },
+    "FXE_start_import_new_plc_firmware_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_import_new_plc_firmware_linux_folder_window": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_linux_folder_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_import_new_plc_firmware_wince_folder_window": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_wince_folder_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_import_new_plc_firmware_wince_folder_window_title": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_import_new_plc_firmware_wince_folder_window_title-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_license_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_license_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_license_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_license_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_license_info_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_license_info_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_license_txt_notepad_window": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_license_txt_notepad_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_license_update_form": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_license_update_form-path.png",
         "source": null,
         "type": "image"
     },
@@ -1685,6 +1781,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_start_openpcs_infoteam_img": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_start_openpcs_infoteam_img-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_right_down_logo": {
         "confidence": 71.0,
         "path": ".images\\fxe_start_right_down_logo-path.png",
@@ -1692,8 +1794,92 @@
         "type": "image"
     },
     "FXE_start_settings_btn": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_settings_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_apply_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_start_settings_form_apply_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_company_tab": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_company_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_delete_btn": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_delete_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_modules_tab": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_modules_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_modules_tab_table_header": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_modules_tab_table_header-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_new_btn": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_new_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_settings_tab": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_settings_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_tabs": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_start_settings_form_tabs-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_tools_delete_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_tools_delete_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_tools_tab": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_tools_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_tools_tab_table_header": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_start_settings_form_tools_tab_table_header-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_form_units_tab": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_settings_form_units_tab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_settings_save_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_start_settings_save_form-path.png",
         "source": null,
         "type": "image"
     },
@@ -1709,9 +1895,45 @@
         "source": null,
         "type": "image"
     },
+    "FXE_start_updates_txt_notepad_window": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_updates_txt_notepad_window-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_version_number_form": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_version_number_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_window_system_btn": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_start_window_system_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_your_version_is_up_to_date_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_your_version_is_up_to_date_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_system_file_open_form_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_system_file_open_form_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_system_window_black_btns": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_system_window_black_btns-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "alias:FXE_start_import_new_plc_firmware_linux_folder_window": {
+        "confidence": 30.0,
+        "path": ".images\\aliasfxe_start_import_new_plc_firmware_linux_folder_window-path.png",
         "source": null,
         "type": "image"
     }

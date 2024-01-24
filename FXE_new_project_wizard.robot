@@ -3,8 +3,8 @@ Documentation       FXE new project with wizard
 Library             RPA.Desktop
 Library             RPA.Windows
 Library             OperatingSystem
-Resource            ${CURDIR}\\resources\\common.resource
-
+Resource            common.resource
+Resource            start_menu.resource
 
 *** Variables ***
 #${FXEditor_app}     c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
