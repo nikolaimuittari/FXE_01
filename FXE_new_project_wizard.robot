@@ -13,9 +13,14 @@ Resource            start_menu.resource
 *** Test Cases ***
 New Project Uisng Wizard    
     Check Projects Common Folder Exists
-    #    Check And Delete Test Project
     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
     Open FXE
     New Project Wizard Arguments-1    Test-Project_1
     Close Opened Project Without Saving
-    Log  New project creation using wizard done.
+    New Project Wizard Arguments-1    Test-Project_2
+    Close Opened Project Without Saving
+    Start Page New Group Project Wizard Open Close
+    Start Page Add Delete Favorites
+    Current Window System Force Close X Button
+    Splash Screen Check
+    Log To Console    New project creation using wizard done.

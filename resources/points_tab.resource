@@ -310,7 +310,7 @@ State Text Edit Form
     RPA.Desktop.Click With Offset    x=-247    y=304    action=click    # Checkbox click
     
     # RPA.Desktop.Click    alias:FXE_main_OK_round_form_btn    # OK button (Round)
-    RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn    # CANCEL button
+    RPA.Desktop.Click    alias:FXE_main_CANCEL_form_active_btn    # CANCEL button
 
 Alarm Group Edit Form
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_upload_btn    timeout=10    # Alarmgroup edit button locator.

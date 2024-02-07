@@ -69,10 +69,10 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 # ####### END OF FXE_new_project_wizard.robot
 
 
-# Fresh Start
-#     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
-#     Open FXE
-#     New Project Wizard Arguments-1    Test-Project_1 
+Fresh Start
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1 
 Open Existing Project
     Open Existing Project
 
@@ -220,6 +220,8 @@ Fxonline Tab
     Fxonline Tab Resize
     Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    1    system    24680    
     # [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
+    Fxonline Tab Select
+    Fxonline Tab Resize
     Fxonline Tab Connect-Disconnect
 
 ST-Edit Tab

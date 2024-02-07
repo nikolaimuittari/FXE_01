@@ -65,23 +65,45 @@ Start Page New Group Project Wizard Open Close
 
 Start Page Open Existing Project
     RPA.Desktop.Click    alias:FXE_start_open_an_existing_project_btn
-    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    ${FXE_TEST_PROJECT_FILENAME_PATH}    # C:\QA\TestProjects\TestProject1234\TestProject1234.fxp
-    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     RPA.Desktop.Click    alias:FXE_main_project_close_btn
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
+
+
+Start Page Add Delete Favorites
+    ${project_list}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_add_to_favorites_btn    timeout=10
+    IF    ${project_list}
+        Log To Console    Project in the Open Recent list
+        RPA.Desktop.Click    alias:FXE_start_add_to_favorites_btn
+        RPA.Desktop.Click With Offset    alias:FXE_start_favorites_header    x=0    y=50    action=click
+        Splash Screen Check
+        Close Opened Project Without Saving
+        Log To Console    Project from favorites opened OK
+    ELSE
+       Log To Console    No project in the list     
+    END
+    
+    ${project_favorites}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_favorites_delete_btn    timeout=10
+    IF    ${project_favorites}
+        RPA.Desktop.Click    alias:FXE_start_favorites_delete_btn
+        ${project_favorites_deleted}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_favorites_delete_btn    timeout=10
+        IF    ${project_favorites_deleted} == ${False}
+            Log To Console    Project has been deleted from the favorites list
+        END
+    ELSE
+        Log To Console    No project in the favorites list
+    END
+
+    
+
 
 Start Page Settings Form
     RPA.Desktop.Click    alias:FXE_start_settings_btn
     RPA.Desktop.Wait For Element    alias:FXE_start_settings_form    timeout=10
     Log To Console    Settings form visible
     RPA.Desktop.Click With Offset    alias:FXE_Save_Cancel_btn    x=50    y=0    action=click
-#    RPA.Desktop.Wait For Element    alias:FXE_start_settings_save_form    timeout=10
-#    RPA.Desktop.Click    alias:alias:FXE_main_NO_noicon_form_btn
-
-
 
     
 Start Page Settings Project Tab Walkthrough
@@ -477,3 +499,13 @@ Start Page Import New PLC Firmware Button Arguments-2
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_main_OK_noicon_active_form_btn
     Log To Console    WinCE firmware is imported
+
+Start Logo Screen
+    RPA.Desktop.Wait For Element    alias:FXE_start_logo_img    timeout=10
+    RPA.Desktop.Click    alias:FXE_start_logo_img
+    RPA.Desktop.Wait For Element    alias:FXE_start_logo_screen_form    timeout=10
+    RPA.Desktop.Click With Offset    alias:FXE_start_logo_screen_form    x=300    y=100    action=click
+    # Computer icon
+    Log To Console    License screen visible
+    RPA.Desktop.Click With Offset    alias:FXE_start_logo_screen_form    x=250    y=200    action=click
+    # OK button

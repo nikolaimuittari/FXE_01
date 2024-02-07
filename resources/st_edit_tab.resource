@@ -144,6 +144,7 @@ ST-Edit Tab New ST Function Random Name
     RPA.Desktop.Press Keys    down
     Sleep    0.5s
     RPA.Desktop.Press Keys    enter
+    Sleep    0.5s
     RPA.Desktop.Wait For Element    alias:FXE_main_st-edit_tab_left_panel_subtabs
         
 

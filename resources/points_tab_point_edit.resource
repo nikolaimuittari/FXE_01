@@ -1217,10 +1217,10 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-350    y=260    action=click    # Edit form click on Show values checkbox
-    # Sleep    3s
+    Sleep    3s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-210    y=260    action=click    # Edit form click on Zoom to fit button
-    # Sleep    3s
+    Sleep    3s
 
     # TODO: Check correct saving process
     # RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
@@ -1232,13 +1232,23 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     # ${random_number}=    Convert To String    ${random_number}
     # RPA.Desktop.Type Text    ${random_number}
     # RPA.Desktop.Press Keys    enter     # Saving BMP
-
-    # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
-    # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
-
     
+    RPA.Desktop.Click    alias:FXE_main_OK_form_btn
+
+    # Sleep    3s
+    # Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  3    # 1=OK, 2=APPLY, other=Cancel
+    # Sleep    3s
+    # Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
+
+    # ${properties_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_LOOKUP_properties_form    timeout=10
+    
+    # IF    ${properties_form}
+    #     Log To Console    Properties save form visible
+    #     RPA.Desktop.Click With Offset    alias:FXE_main_points_tab_LOOKUP_properties_form    x=-20    y=55    action=click
+    # ELSE
+    #     Log To Console    Properties save form NOT visible
+    # END
+
     
 ### END OF DIFFERENT POINT TYPES EDIT FORMS
 

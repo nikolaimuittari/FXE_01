@@ -42,7 +42,6 @@ Label List Tab Label Settings Section Arguments-5
     # [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}
     RPA.Desktop.Wait For Element    alias:FXE_main_label_tab_label_settings_sect    timeout=10    # Label settings section
     RPA.Desktop.Click With Offset    alias:FXE_main_label_tab_label_settings_sect     x=-32    y=-76    action=doubleclick    # Point separator field  
-    Sleep    5s
 
 Label List Save List To File Arguments-5
     [Arguments]    ${point_separator}    ${label_separator}    ${labelrow_1}    ${labelrow_2}    ${labelrow_3}
@@ -52,9 +51,9 @@ Label List Save List To File Arguments-5
     RPA.Desktop.Move Mouse    alias:FXE_main_label_tab_toolbar_btns
     RPA.Desktop.Click With Offset    x=50    y=0    action=click    # Refresh labels button
    
-    Label List Tab Label Settings Section Arguments-5
-
-    # RPA.Desktop.Press Keys    tab    # Point separator field
+    # Label List Tab Label Settings Section Arguments-5
+    
+    RPA.Desktop.Press Keys    tab    # Point separator field
     RPA.Desktop.Type Text    ${point_separator}
 
     RPA.Desktop.Press Keys    tab    # Label separator field

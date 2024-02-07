@@ -26,11 +26,11 @@ Start Menu Items Walkthrough
     ${app_instance}=    Open FXE
     Splash Screen Check
    
-    New Project Wizard Arguments-1    Test-Project_1
-    Close Opened Project Without Saving
-    New Project Wizard Arguments-1    Test-Project_2
-    Close Opened Project Without Saving
-    Start Page New Group Project Wizard Open Close
+    # New Project Wizard Arguments-1    Test-Project_1
+    # Close Opened Project Without Saving
+    # New Project Wizard Arguments-1    Test-Project_2
+    # Close Opened Project Without Saving
+    # Start Page New Group Project Wizard Open Close
     
     Start Page Settings Form
     Start Page Settings Project Tab Walkthrough
@@ -45,11 +45,10 @@ Start Menu Items Walkthrough
     Start Page Update History Button
     Start Page Import New PLC Firmware Button Arguments-2    2    V123010
     Start Page Import New PLC Firmware Button Arguments-2    1    fidelix-fx3000x-20.0.37-prod.raucb
-    # Log To Console    Start Menu Items Walkthrough Done.
-    
-    Current Window System Force Close X Button
+    Start Logo Screen
     Splash Screen Check
-    # Log To Console    FXE is closed
+    Log To Console    Start Menu Items Walkthrough Done
+    Current Window System Force Close X Button
     Display Dialog and Wait for User Action
 
 *** Keywords ***

@@ -31,10 +31,10 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 *** Test Cases ***
 Points Tab
 
-#     Check Projects Common Folder Exists
-#     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
-#     Open FXE
-#     New Project Wizard Arguments-1    Test-Project_1
+    Check Projects Common Folder Exists
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard Arguments-1    Test-Project_1
 
      Points Tab Select
      Left Panel Resize
@@ -81,4 +81,8 @@ Points Tab
     # Points Filter Point Type Filter
 
     # Points Right Panel Import Filter Edit Form NO Save
+    Close Opened Project Without Saving
+    Splash Screen Check
+    Current Window System Force Close X Button
+    Splash Screen Check
 
