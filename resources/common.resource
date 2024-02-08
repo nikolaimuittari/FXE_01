@@ -34,7 +34,7 @@ ${SLEEP_TIMEOUT_DEFAULT}    1s
 #    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 
 Open FXE
-    ${app_instance}=    RPA.Desktop.Open Application    FxEditor.exe
+    ${app_instance}=    RPA.Desktop.Open Application    c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
     [Return]    ${app_instance}
     # RPA.Desktop.Open Application    ${FXEditor_app}    # "c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe"
     RPA.Desktop.Wait For Element    alias:FXE_start_right_down_logo    timeout=20
