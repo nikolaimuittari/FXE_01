@@ -1469,9 +1469,87 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_template_AHU_1_icon": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_template_ahu_1_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_browser_browse_btn": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_browser_browse_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_browser_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_browser_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_browser_form_filled": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_template_browser_form_filled-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_browser_select_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_browser_select_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_exhaust_1_icon": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_exhaust_1_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_filter_select_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_filter_select_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_template_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_template_icon-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_manager_add_cancel_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_manager_add_cancel_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_manager_points_buttons": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_manager_points_buttons-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_manager_tabs": {
+        "confidence": 15.0,
+        "path": ".images\\fxe_main_template_manager_tabs-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_manager_zoom_btn": {
+        "confidence": 20.0,
+        "path": ".images\\fxe_main_template_manager_zoom_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_open_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_open_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_replace_new_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_template_replace_new_form-path.png",
         "source": null,
         "type": "image"
     },
@@ -1512,7 +1590,7 @@
         "type": "image"
     },
     "FXE_new_project_wizard_location_folder_btn": {
-        "confidence": 80.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_new_project_wizard_location_folder_btn-path.png",
         "source": null,
         "type": "image"
@@ -1650,7 +1728,7 @@
         "type": "image"
     },
     "FXE_start_create_a_new_group_project_save_btn": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_create_a_new_group_project_save_btn-path.png",
         "source": null,
         "type": "image"
@@ -1674,7 +1752,7 @@
         "type": "image"
     },
     "FXE_start_explore_fx_editor_data_window": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_explore_fx_editor_data_window-path.png",
         "source": null,
         "type": "image"
@@ -1746,7 +1824,7 @@
         "type": "image"
     },
     "FXE_start_import_new_plc_firmware_wince_folder_window": {
-        "confidence": 30.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_start_import_new_plc_firmware_wince_folder_window-path.png",
         "source": null,
         "type": "image"
@@ -1776,7 +1854,7 @@
         "type": "image"
     },
     "FXE_start_license_txt_notepad_window": {
-        "confidence": 80.0,
+        "confidence": 20.0,
         "path": ".images\\fxe_start_license_txt_notepad_window-path.png",
         "source": null,
         "type": "image"
@@ -1812,7 +1890,7 @@
         "type": "image"
     },
     "FXE_start_openpcs_infoteam_img": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_openpcs_infoteam_img-path.png",
         "source": null,
         "type": "image"
@@ -1961,9 +2039,15 @@
         "source": null,
         "type": "image"
     },
-    "alias:FXE_start_import_new_plc_firmware_linux_folder_window": {
-        "confidence": 30.0,
-        "path": ".images\\aliasfxe_start_import_new_plc_firmware_linux_folder_window-path.png",
+    "FXE_template_existed_add_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_template_existed_add_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "Win11_search_input": {
+        "confidence": 50.0,
+        "path": ".images\\win11_search_input-path.png",
         "source": null,
         "type": "image"
     }

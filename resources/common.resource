@@ -21,7 +21,7 @@ ${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 ${TEST_PROJECT_NAME}    Test-Project_1
 ${FXE_TEST_PROJECT_GROUP_PATH}    c:\\QA\\TestProjects\\Test-Group_12
 ${FXE_TEMPLATE_FOLDER_PATH}    C:\\ProgramData\\FX-Editor\\Templates\\FXT Templates\\
-${SLEEP_TIMEOUT_DEFAULT}    1s
+${SLEEP_TIMEOUT_DEFAULT}    0.5s
 
 
 
@@ -34,6 +34,11 @@ ${SLEEP_TIMEOUT_DEFAULT}    1s
 #    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 
 Open FXE
+    # RPA.Desktop.Click      alias:Win11_search_input
+    # Sleep    3s
+    # RPA.Desktop.Type Text    FX-Editor
+    # Sleep    3s
+    # RPA.Desktop.Press Keys    enter
     ${app_instance}=    RPA.Desktop.Open Application    c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
     [Return]    ${app_instance}
     # RPA.Desktop.Open Application    ${FXEditor_app}    # "c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe"

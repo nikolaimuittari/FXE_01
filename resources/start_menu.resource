@@ -301,7 +301,7 @@ Start Page Settings Project Tab Walkthrough
     RPA.Desktop.Wait For Element    alias:FXE_system_file_open_form_btn    timeout=10
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
-    RPA.Desktop.Type Text    C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe
+    RPA.Desktop.Type Text    C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\FoxitReader.exe
     Sleep    5s 
     RPA.Desktop.Click With Offset    alias:FXE_system_file_open_form_btn    x=-50    y=0    action=click
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -310,7 +310,7 @@ Start Page Settings Project Tab Walkthrough
     # Display name
     RPA.Desktop.Type Text    Test Tool 
     RPA.Desktop.Press Keys    tab    # INPUT Extern Program path
-    RPA.Desktop.Type Text    C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader.exe
+    RPA.Desktop.Type Text    C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\FoxitReader.exe
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
 
@@ -403,7 +403,7 @@ Start Page License Button
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
     RPA.Desktop.Wait For Element    alias:FXE_system_file_open_form_btn    timeout=10
-    RPA.Desktop.Type Text    c:\\Users\\nikolai.zhukov\\Downloads\\FxTool.lic
+    RPA.Desktop.Type Text    c:\\QA\\FxTool.lic
     RPA.Desktop.Click With Offset    alias:FXE_system_file_open_form_btn    x=-30    y=0    action=click
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
@@ -444,7 +444,7 @@ Start Page OpenPCS Manual Button
     RPA.Desktop.Click    alias:FXE_start_openpcs_btn
     RPA.Desktop.Wait For Element    alias:FXE_start_openpcs_infoteam_img
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Press Keys    esc
+    RPA.Desktop.Press Keys    alt   F4
     # RPA.Desktop.Wait For Element    alias:FXE_start_openpcs_btn    timeout=10
     Log To Console    OpenPCS manual is visible
 
@@ -479,7 +479,8 @@ Start Page Import New PLC Firmware Button Arguments-2
             OperatingSystem.Remove File    c:\\ProgramData\\FX-Editor\\Fidelix-IMX6\\${FX_name}
             RPA.Desktop.Click With Offset    alias:FXE_start_import_new_plc_firmware_form    x=0    y=-30    action=click    # Linux option
             RPA.Desktop.Wait For Element    alias:FXE_start_import_new_plc_firmware_linux_folder_window    timeout=10
-            RPA.Desktop.Type Text    c:\\Users\\nikolai.zhukov\\Downloads\\${FX_name}
+            RPA.Desktop.Type Text    c:\\Users\\USER\\Downloads\\${FX_name}
+            
             RPA.Desktop.Click With Offset    alias:FXE_start_import_new_plc_firmware_linux_folder_window    x=180    y=20     action=click    # Select folder button   
             Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
@@ -487,7 +488,8 @@ Start Page Import New PLC Firmware Button Arguments-2
             Check And Delete Test Project Argument-1    c:\\ProgramData\\FX-Editor\\Fidelix-ARM\\${FX_name}
             RPA.Desktop.Click With Offset    alias:FXE_start_import_new_plc_firmware_form    x=0    y=30    action=click    # Windows CE option
             RPA.Desktop.Wait For Element    alias:FXE_start_import_new_plc_firmware_wince_folder_window    timeout=10
-            RPA.Desktop.Type Text    c:\\Users\\nikolai.zhukov\\Downloads\\${FX_name}
+            RPA.Desktop.Type Text    c:\\Users\\USER\\Downloads\\${FX_name}
+            RPA.Desktop.Press Keys    enter
             RPA.Desktop.Click With Offset    alias:FXE_start_import_new_plc_firmware_wince_folder_window    x=150    y=10     action=click    # Select folder button   
             Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 

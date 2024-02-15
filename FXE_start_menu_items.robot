@@ -44,11 +44,11 @@ Start Menu Items Walkthrough
     Start Page Version Up To Date Button
     Start Page Update History Button
     Start Page Import New PLC Firmware Button Arguments-2    2    V123010
-    Start Page Import New PLC Firmware Button Arguments-2    1    fidelix-fx3000x-20.0.37-prod.raucb
+    Start Page Import New PLC Firmware Button Arguments-2    1    fidelix-fx3000x-20.0.43-prod.raucb
     Start Logo Screen
     Splash Screen Check
     Log To Console    Start Menu Items Walkthrough Done
-    Current Window System Force Close X Button
+    Current Window System Force Close X Button    
     Display Dialog and Wait for User Action
 
 *** Keywords ***
