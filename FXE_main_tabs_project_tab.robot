@@ -30,7 +30,7 @@ Test Setup            Open Existing Project
 ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
 
-*** Test Cases ***
+*** Tasks ***
  
 #  Open Existing Project
 #      Open Existing Project

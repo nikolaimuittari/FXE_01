@@ -414,7 +414,7 @@ Project Tab Communication Settings Subtab Arguments-6
     ${repeats}    Set Variable    12    # Number of repeats
     FOR    ${element}    IN RANGE   1    ${repeats}
         RPA.Desktop.Press Keys    up    # PLC type drop-down
-        RPA.Desktop.Press Keys    tab    # Selected IP
+        RPA.Desktop.Press Keys    tab    #
     END
 
     # 11 up moves in drop-down list sets FX2020 PLC type 
@@ -425,7 +425,10 @@ Project Tab Communication Settings Subtab Arguments-6
     ${repeats}    Set Variable    ${plc_type}    # Number of repeats
     FOR    ${element}    IN RANGE   1    ${repeats}
         RPA.Desktop.Press Keys    down    # PLC type drop-down
-        RPA.Desktop.Press Keys    tab    # Selected IP
+        RPA.Desktop.Press Keys    tab    #
+        IF    ${repeats} >= 11
+            Project Tab Communication Settings Subtab Validation            
+        END
     END
 
 
@@ -541,3 +544,18 @@ Project Tab Communication Settings Subtab Arguments-4
 
     # RPA.Desktop.Press Keys    tab    # OPENPCS IEC port field (selected)
     # RPA.Desktop.Type Text    78901
+
+
+Project Tab Communication Settings Subtab Validation
+    ${validation_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_validation_form    timeout=10
+    IF    ${validation_exists}
+        RPA.Desktop.Click    alias:FXE_main_project_tab_validation_start_btn
+        Splash Screen Check
+        ${validation_success}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_validation_success_txt    timeout=30
+        IF    ${validation_success}
+            Log To Console    Validation successful
+        ELSE
+            Log To Console    Validation is NOT successful
+        END
+        RPA.Desktop.Click    alias:FXE_main_project_tab_validation_cancel_btn
+    END   

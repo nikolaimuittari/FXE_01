@@ -160,7 +160,7 @@ Close Project Wizard
     Log To Console    *** Closing wizard OK
 
 
-New Project Wizard
+New Project Wizard Default
     RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_project_btn    timeout=25
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
     #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -246,8 +246,8 @@ New Project Wizard
     Log To Console    *** New project has been created OK
     
 
-New Project Wizard Arguments-1
-    [Arguments]    ${PROJECT_NAME}
+New Project Wizard
+    [Arguments]    ${PROJECT_NAME}    ${PLC_TYPE}
     RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_project_btn    timeout=25
     RPA.Desktop.Click    alias:FXE_start_create_a_new_project_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
@@ -293,38 +293,78 @@ New Project Wizard Arguments-1
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Click    alias:FXE_new_project_wizard_plc_selection_dropdn
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Press Keys    down
-    RPA.Desktop.Press Keys    down
-    RPA.Desktop.Press Keys    enter    # FX3000X select
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_btn    # default IP address
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_fld
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Press Keys    ctrl    a
-    RPA.Desktop.Type Text    10.100.1.198    # custom IP address
-    RPA.Desktop.Press Keys    tab    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    22
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    ctrl    a
-    RPA.Desktop.Type Text    demodemo    # custom SSH password    # Systemuser!  # default FX3000X SSH password
-    RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    22
-    RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    SYSTEM    # custom username   # system # default username
-    RPA.Desktop.Press Keys    tab    
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    80
-    RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Type Text    24680    # custom password   # 24680    # default user password
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    
+    IF    "${PLC_TYPE}" == "FX3000X"
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_plc_selection_dropdn
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    down
+        RPA.Desktop.Press Keys    down
+        RPA.Desktop.Press Keys    enter    # FX3000X select
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_btn    # default IP address
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_fld
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    ctrl    a
+        RPA.Desktop.Type Text    10.100.1.198    # custom IP address
+        RPA.Desktop.Press Keys    tab    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    22
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    tab
+        RPA.Desktop.Press Keys    ctrl    a
+        RPA.Desktop.Type Text    demodemo    # custom SSH password    # Systemuser!  # default FX3000X SSH password
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    22
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    SYSTEM    # custom username   # system # default username
+        RPA.Desktop.Press Keys    tab    
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    80
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    24680    # custom password   # 24680    # default user password
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        Log To Console    *** FX3000X comm settings
+    ELSE IF    "${PLC_TYPE}" == "FX3000C"
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_plc_selection_dropdn
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    enter    # FX3000C select
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_btn    # default IP address
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Click    alias:FXE_new_project_wizard_local_ip_fld
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    ctrl    a
+        RPA.Desktop.Type Text    10.100.1.200    # custom IP address
+        RPA.Desktop.Press Keys    tab    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    21
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Press Keys    tab
+        RPA.Desktop.Press Keys    ctrl    a
+        RPA.Desktop.Type Text    demodemo    # custom Telnet password
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    21
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    SYSTEM    # custom username   # system # default username
+        RPA.Desktop.Press Keys    tab    
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    80
+        RPA.Desktop.Press Keys    tab
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        RPA.Desktop.Type Text    24680    # custom password   # 24680    # default user password
+        Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+        Log To Console    *** FX3000C comm settings 
+    ELSE
+        Log To Console    *** PLC type is not detected
+    END
+
+
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     Log To Console    *** Navigate to -3. Point Name Build Structure OK

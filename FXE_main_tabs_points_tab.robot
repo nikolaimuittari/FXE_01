@@ -28,7 +28,7 @@ Resource            resources/st_edit_tab.resource
 ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
 
-*** Test Cases ***
+*** Tasks ***
 Points Tab
 
     Check Projects Common Folder Exists

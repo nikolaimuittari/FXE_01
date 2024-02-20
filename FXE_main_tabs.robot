@@ -27,7 +27,7 @@ Resource            resources/st_edit_tab.resource
 ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
 
-*** Test Cases ***
+*** Tasks ***
 
 ###### FXE_start_menu_items.robot
 # Start Menu Items Walkthrough
@@ -90,18 +90,18 @@ Project Tab
 #     Project Tab Settings Subtab
 
 Points Tab
-     Points Tab Select
-     Left Panel Resize
-     Points Tab Select Filter Create All Kinds Of Points
-    #  State Text Edit Form
-    #  Alarm Group Edit Form
+    Points Tab Select
+    Left Panel Resize
+    Points Tab Select Filter Create All Kinds Of Points
+    State Text Edit Form
+    Alarm Group Edit Form
     
-    # Button Press Upload Alarmgroup To PLC
-    # Button Press Upload State Text To PLC
-    # Button Press Upload Changed Points To PLC
-    # Button Press Upload Displayed Points To PLC
-    # Button Press Upload Selected Points To PLC
-    # Button Press Points Panel Resize
+    Button Press Upload Alarmgroup To PLC
+    Button Press Upload State Text To PLC
+    Button Press Upload Changed Points To PLC
+    Button Press Upload Displayed Points To PLC
+    Button Press Upload Selected Points To PLC
+    Button Press Points Panel Resize
  
     Left Panel Auto Resize Button
     Right Panel Auto Resize Button
@@ -121,14 +121,14 @@ Points Tab
     Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_SS    1
     Points Filter Name Filter Clear And De-Select
     
-    # Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
-    # Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
+    Points Filter Name Filter Clear And De-Select
     
-    # Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
-    # Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
+    Points Filter Name Filter Clear And De-Select
 
-    # Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
-    # Points Filter Name Filter Clear And De-Select
+    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
+    Points Filter Name Filter Clear And De-Select
 
     # Points Right Panel Import Filter Edit Form
     # Points Right Panel Button Bar Add Filter Button
@@ -152,7 +152,7 @@ History Tab
     History Tab Select
     History Tab New History Group Create Agrument-1    111
     History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
-    #     History Tab Delete All Groups
+    History Tab Delete All Groups
 
     History Tab Open Report Form
     History Tab Report Form Group Create Agrument-1    333
@@ -160,7 +160,7 @@ History Tab
     
     History Tab Report Form Group Create Agrument-1    444
     History Tab Report Form Report Wizard
-    #    History Tab Report Form Report Delete
+    History Tab Report Form Report Delete
 
     History Tab Report Form Column Create Arguments-6    0    17    2    HEADER    0    2&3
     #    [Arguments]    ${column_type}    ${units}    ${decimals}    ${header}    ${graph}    ${compare_columns}

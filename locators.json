@@ -1319,6 +1319,30 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_project_tab_validation_cancel_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_validation_cancel_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_validation_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_validation_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_validation_start_btn": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_validation_start_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_validation_success_txt": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_project_tab_validation_success_txt-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_project_yab_point_set_subtab_prefix_column": {
         "confidence": 90.0,
         "path": ".images\\fxe_main_project_yab_point_set_subtab_prefix_column-path.png",
@@ -1721,6 +1745,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_start_create_a_new_group_name_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_start_create_a_new_group_name_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_start_create_a_new_group_project_btn": {
         "confidence": 80.0,
         "path": ".images\\fxe_start_create_a_new_group_project_btn-path.png",
@@ -1740,7 +1770,7 @@
         "type": "image"
     },
     "FXE_start_create_group_select_all": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_create_group_select_all-path.png",
         "source": null,
         "type": "image"
@@ -1776,7 +1806,7 @@
         "type": "image"
     },
     "FXE_start_fxeditor_btn": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_start_fxeditor_btn-path.png",
         "source": null,
         "type": "image"

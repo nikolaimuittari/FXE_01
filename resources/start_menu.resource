@@ -41,10 +41,12 @@ Start Page New Group Project Wizard Open Close
     RPA.Desktop.Wait For Element     alias:FXE_start_create_a_new_group_project_btn    timeout=25    # New Group button
     RPA.Desktop.Click    alias:FXE_start_create_a_new_group_project_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_group_name_form    timeout=10
+    RPA.Desktop.Click    alias:FXE_start_create_a_new_group_name_form
     RPA.Desktop.Type Text    ${FXE_TEST_PROJECT_GROUP_PATH}    # c:\\QA\\TestProjects\\Group_1234
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
-    RPA.Desktop.Press Keys    tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # RPA.Desktop.Press Keys    tab
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click    alias:FXE_start_create_a_new_group_project_save_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Move Mouse    alias:FXE_start_create_group_select_all
