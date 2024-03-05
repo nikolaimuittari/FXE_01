@@ -508,9 +508,9 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     #RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_btns    
     #RPA.Desktop.Click With Offset    x=-100    y=0    action=click    # OK button click
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
     
 
 Points Tab Left Panel ALARM Right Button Edit Argument-1
@@ -605,9 +605,9 @@ Points Tab Left Panel ALARM Right Button Edit Argument-1
     #RPA.Desktop.Click With Offset    x=-100    y=0    action=click    # OK button click
     
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
     
 
 Points Tab Left Panel DI Right Button Edit Argument-1
@@ -691,9 +691,9 @@ Points Tab Left Panel DI Right Button Edit Argument-1
     RPA.Desktop.Press Keys    tab    # BACnet server object
     
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
     
 
 
@@ -847,9 +847,9 @@ Points Tab Left Panel AI Right Button Edit Arguments-2
     RPA.Desktop.Press Keys    tab    # BACnet server object
 
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
     
 
 
@@ -1076,9 +1076,9 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     Points Tab Left Panel CONTROL Stages Set All Values Argument-1    2
 
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  1    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    1    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
     
 
 
@@ -1236,9 +1236,9 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     RPA.Desktop.Click    alias:FXE_main_OK_form_btn
 
     # Sleep    3s
-    # Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1  3    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
-    # Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
+    Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
 
     # ${properties_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_LOOKUP_properties_form    timeout=10
     

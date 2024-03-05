@@ -659,6 +659,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_new_project_no_name_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_new_project_no_name_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_point_tab_ALARM_edit_form_alarmsetting_section": {
         "confidence": 50.0,
         "path": ".images\\fxe_main_point_tab_alarm_edit_form_alarmsetting_section-path.png",
@@ -1499,6 +1505,18 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_template_add_active_btn": {
+        "confidence": 90.0,
+        "path": ".images\\fxe_main_template_add_active_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_add_modify_form": {
+        "confidence": 40.0,
+        "path": ".images\\e3e3f142-5969-4c14-a3be-eef40925fcc5.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_template_browser_browse_btn": {
         "confidence": 40.0,
         "path": ".images\\fxe_main_template_browser_browse_btn-path.png",
@@ -1535,6 +1553,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_template_form_AHU_1_btn": {
+        "confidence": 40.0,
+        "path": ".images\\f78f2f1c-9392-40bc-a303-7cc6968f0e94.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_template_icon": {
         "confidence": 80.0,
         "path": ".images\\fxe_main_template_icon-path.png",
@@ -1565,6 +1589,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_template_new_modify_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_new_modify_form-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_template_open_btn": {
         "confidence": 50.0,
         "path": ".images\\fxe_main_template_open_btn-path.png",
@@ -1574,6 +1604,78 @@
     "FXE_main_template_replace_new_form": {
         "confidence": 50.0,
         "path": ".images\\fxe_main_template_replace_new_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_unused_form_SAVE_inactive_btn": {
+        "confidence": 80.0,
+        "path": ".images\\fxe_main_template_unused_form_save_inactive_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_unused_from_SAVE_active_btn": {
+        "confidence": 70.0,
+        "path": ".images\\fxe_main_template_unused_from_save_active_btn-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_unused_points_form_header": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_unused_points_form_header-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_template_unused_select_all_chbx": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_main_template_unused_select_all_chbx-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_edit_menu_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_edit_menu_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_fidelix_XML_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_fidelix_xml_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_fidelix_menu_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_fidelix_menu_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_file_menu_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_file_menu_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_menu": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_upper_menu-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_new_project_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_new_project_form-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_points_menu_list": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_upper_points_menu_list-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_upper_tools_menu_list": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_upper_tools_menu_list-path.png",
         "source": null,
         "type": "image"
     },
@@ -1806,7 +1908,7 @@
         "type": "image"
     },
     "FXE_start_fxeditor_btn": {
-        "confidence": 50.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_start_fxeditor_btn-path.png",
         "source": null,
         "type": "image"
@@ -2074,6 +2176,27 @@
         "path": ".images\\fxe_template_existed_add_form-path.png",
         "source": null,
         "type": "image"
+    },
+    "Inspector_FXE_main_template_add_form": {
+        "screenshot": null,
+        "type": "windows",
+        "value": "control:\"TitleBarControl\"",
+        "version": 1,
+        "window": "C:\\QA\\TestProjects\\Test-Project_1\\Test-Project_1.fxp"
+    },
+    "Inspector_FXE_main_template_add_form_OK_btn": {
+        "screenshot": null,
+        "type": "windows",
+        "value": "control:\"TitleBarControl\" > name:\"Add a new template (Template browser)\"",
+        "version": 1,
+        "window": "C:\\QA\\TestProjects\\Test-Project_1\\Test-Project_1.fxp"
+    },
+    "Inspector_FXE_main_template_add_form_add_radio": {
+        "screenshot": null,
+        "type": "windows",
+        "value": "control:\"TitleBarControl\" > name:\"Add a new template (Template browser)\"",
+        "version": 1,
+        "window": "C:\\QA\\TestProjects\\Test-Project_1\\Test-Project_1.fxp"
     },
     "Win11_search_input": {
         "confidence": 50.0,

@@ -34,13 +34,13 @@ Points Tab
     Check Projects Common Folder Exists
     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
     Open FXE
-    New Project Wizard Arguments-1    Test-Project_1
+    New Project Wizard    Test-Project_1    FX3000C
 
-     Points Tab Select
-     Left Panel Resize
-     Points Tab Select Filter Create All Kinds Of Points
-     State Text Edit Form
-     Alarm Group Edit Form
+    Points Tab Select
+    Left Panel Resize
+    Points Tab Select Filter Create All Kinds Of Points
+    State Text Edit Form
+    Alarm Group Edit Form
     
     # Button Press Upload Alarmgroup To PLC
     # Button Press Upload State Text To PLC
@@ -53,25 +53,25 @@ Points Tab
     Right Panel Auto Resize Button
 
     
-    Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
+    Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_H
     Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel AI Right Button Edit Arguments-2   TE01_MV    1
+    Points Tab Left Panel AI Right Button Edit Arguments-2   TE01_M    1
     Points Filter Name Filter Clear And De-Select
          
     Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
     Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
+    # Points Tab Left Panel DO Right Button Edit Argument-1    TE01_O
+    # Points Filter Name Filter Clear And De-Select
+    
+    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_C
     Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
-    Points Filter Name Filter Clear And De-Select
-    
-    Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
+    Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_T
     Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
+    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_L
     Points Filter Name Filter Clear And De-Select
 
     # Points Right Panel Import Filter Edit Form

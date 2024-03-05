@@ -69,13 +69,6 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 # ####### END OF FXE_new_project_wizard.robot
 
 
-Fresh Start
-    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
-    Open FXE
-    New Project Wizard Arguments-1    Test-Project_1 
-Open Existing Project
-    Open Existing Project
-
 Project Tab
 #     Project Tab Project Information Subtab
      Project Tab Communication Settings Subtab

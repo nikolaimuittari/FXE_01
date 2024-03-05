@@ -40,7 +40,7 @@ Project Tab
     Check Projects Common Folder Exists
     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
     Open FXE
-    New Project Wizard Arguments-1    Test-Project_1
+    New Project Wizard    Test-Project_1    FX3000C
 
     Project Tab Project Information Subtab
     Project Tab Communication Settings Subtab

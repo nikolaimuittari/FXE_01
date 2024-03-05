@@ -33,6 +33,14 @@ ${SLEEP_TIMEOUT_DEFAULT}    0.5s
 #    Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 #    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
 
+
+Fresh Start
+    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
+    Open FXE
+    New Project Wizard    Test-Project_1    FX3000C
+
+
+
 Open FXE
     # RPA.Desktop.Click      alias:Win11_search_input
     # Sleep    3s
@@ -133,8 +141,7 @@ Check And Delete Project Folder Argument-1
     Run Keyword If    ${folder_exists}    OperatingSystem.Remove Directory    ${PROJECT_FOLDER_PATH}    recursive=${True}
     ${folder_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Not Exist    ${PROJECT_FOLDER_PATH}
     Run Keyword If    ${folder_exists}    Log To Console    *** Folder ${PROJECT_FOLDER_PATH} has been deleted OK
-
-
+    Run Keyword If    ${folder_exists}==${False}    Log To Console    *** Folder ${PROJECT_FOLDER_PATH} still exists
 Check And Delete Test Group
     #OperatingSystem.Directory Should Not Exist    ${FXE_TEST_PROJECT_PATH}
     
@@ -375,21 +382,24 @@ New Project Wizard
     Log To Console    *** New project ${PROJECT_NAME} has been created OK
     
 
+Copy Project From
+    [Arguments]    ${PROJECT_NAME}    ${FOLDER_FROM}    ${FOLDER_TO}
+     
+    ${folder_to_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Exist    ${FOLDER_TO}${PROJECT_NAME}\\
+    Log To Console    Project ${FOLDER_TO}${PROJECT_NAME}\\ exists: ${folder_to_exists}
+    Run Keyword If    ${folder_to_exists}==${False}    OperatingSystem.Copy Directory    ${FOLDER_FROM}${PROJECT_NAME}\\    ${FOLDER_TO}${PROJECT_NAME}\\
+    ${folder_to_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Exist    ${FOLDER_TO}${PROJECT_NAME}\\
+    Log To Console    Project ${FOLDER_TO}${PROJECT_NAME}\\ exists: ${folder_to_exists}
+
 
 Open Existing Project
-    # 
-    Log To Console    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
-    # Set Global Variable    \${FXE_instance}    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
-    RPA.Desktop.Open File    ${FXE_TEST_PROJECT_PATH}\\${TEST_PROJECT_NAME}.fxp
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
-    Log To Console    *** Project has been opened OK
-
-Open Existing Project Arguments-2
     [Arguments]    ${PROJECTS_FOLDER}    ${PROJECT_NAME}
-    Log To Console    Trying to open project from: ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp
-    RPA.Desktop.Open File    ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp
+    Log To Console    Trying to open project from: ${PROJECTS_FOLDER}${PROJECT_NAME}\\${PROJECT_NAME}.fxp
+    RPA.Desktop.Open File    ${PROJECTS_FOLDER}${PROJECT_NAME}\\${PROJECT_NAME}.fxp
+    Splash Screen Check
+    Sleep    5s
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
-    Log To Console    *** Project ${PROJECTS_FOLDER}\\${PROJECT_NAME}.fxp has been opened OK
+    Log To Console    *** Project ${PROJECTS_FOLDER}${PROJECT_NAME}\\${PROJECT_NAME}.fxp has been opened OK
 
     
 Close Opened Project With Saving
@@ -404,9 +414,9 @@ Close Opened Project With Saving
    
 
 Close Opened Project Without Saving
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=45
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     Log To Console    Project is opened    
-    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=45
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=25
     RPA.Desktop.Click With Offset   alias:FXE_main_project_close_btn    x=60    y=0    action=click    # project close button
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15

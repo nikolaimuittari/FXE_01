@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation       FXE main view tabs walkthrough
-                    # Project Tab tests
 
 Library             RPA.Desktop
 Library             RPA.Windows
@@ -18,7 +17,6 @@ Resource            resources/documents_tab.resource
 Resource            resources/history_tab.resource
 Resource            resources/fxonline_tab.resource
 Resource            resources/st_edit_tab.resource
-Resource            resources/template.resource
 Resource            resources/upper_menu.resource
 
 #Resource            ${CURDIR}\\resources\\common.resource
@@ -28,20 +26,26 @@ Resource            resources/upper_menu.resource
 #${FXEditor_app}     c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
 ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
+${TEST_PROJECT_NAME_2}    Test-Project_2
 
 *** Tasks ***
-Points Tab
 
-    Check Projects Common Folder Exists
-    Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
-    Open FXE
-    New Project Wizard    Test-Project_1    FX3000C
+Upper Menu Walkthrough
+    Copy Project From    ${TEST_PROJECT_NAME}    c:\\QA\\Backup\\    ${TEST_PROJECTS_PATH}
+    Open Existing Project    ${TEST_PROJECTS_PATH}    ${TEST_PROJECT_NAME}
 
-    Template Selection And Import
-    Template Selection And Import AHU     
+    Upper Menu File Submenu Walkthrough
+    Upper Menu Edit Submenu Walkthrough
+    Upper Menu Fidelix Submenu Walkthrough
+    Upper Menu Points Submenu Walkthrough
+    Upper Menu Tools Submenu Walkthrough
+
+    Upper Menu File New Project    2    ${TEST_PROJECT_NAME_2}
+    Check And Delete Project Folder Argument-1    ${TEST_PROJECTS_PATH}${TEST_PROJECT_NAME_2}    
     
+    
+
     Close Opened Project Without Saving
     Splash Screen Check
     Current Window System Force Close X Button
     Splash Screen Check
-
