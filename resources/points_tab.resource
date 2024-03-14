@@ -39,7 +39,7 @@ Points Tab Select Filter Create All Kinds Of Points
     
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab    timeout=10
     RPA.Desktop.Click    alias:FXE_main_points_tab
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     
     # FXE_main_points_tab_filter_edit_btn
     # FXE_main_points_tab_filter_select_dropdown
@@ -53,11 +53,11 @@ Points Tab Select Filter Create All Kinds Of Points
 
     RPA.Desktop.Press Keys    down    # "Default" filter select
     RPA.Desktop.Press Keys    enter    # Select filter 
-    #Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
     # "Adding new points" button
     RPA.Desktop.Click    alias:FXE_main_points_tab_add_btn    # "Add point" button
-    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
  
 
     # Waiting for "Add points" form
@@ -414,7 +414,7 @@ Alarm Group Edit Form
     
     # RPA.Desktop.Click    alias:FXE_main_SAVE_form_btn 
     RPA.Desktop.Click    alias:FXE_main_CANCEL_form_btn
-    Sleep    2s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    esc
 
     #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_alarmgroup_edit_form_save_form  timeout=10    # Save settings form Dims: 352*149 center: 175*75 
@@ -563,7 +563,7 @@ Points Right Panel Button Bar Add Filter Button
 
     RPA.Desktop.Click    alias:FXE_main_points_tab_addfilter_btn    # Add filter button
     #RPA.Desktop.Click    # Add filter button
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_name_form    timeout=10    # Add filter name form
     RPA.Desktop.Type Text    NewFilter
     RPA.Desktop.Press Keys    enter
@@ -585,13 +585,13 @@ Points Right Panel Button Bar Copy Selected Filter
     #RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_right_panel_btn_bar    timeout=10   # Points tab right panel button bar
     RPA.Desktop.Click    alias:FXE_main_points_tab_copyfilter_btn    # Copy filter button
     #RPA.Desktop.Click    # Copy filter button
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_copyfilter_name_form    timeout=10    # Add filter name form
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Type Text    NewFilter_2
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Press Keys    enter
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     ${copy_filter_saving_form_exists}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_addfilter_saving_exists_2_form    timeout=10s     # Add filter save form -> file exists form
     IF    ${copy_filter_saving_form_exists}
         RPA.Desktop.Click    alias:FXE_main_YES_noicon_under_form_btn    # YES button
@@ -645,19 +645,19 @@ Points Right Panel Import Filter Edit Form
     RPA.Desktop.Click With Offset    x=-270    y=-92    action=click    # Suffix Add button
     RPA.Desktop.Type Text    ALM
     RPA.Desktop.Press Keys    enter
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
     Points Right Panel Import Filter Edit Form Suffix Exists Form Submit
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_import_filter_form
     RPA.Desktop.Click With Offset    x=-218    y=-213    action=click    # Defaults first checkbox
-    Sleep   1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click
 
     #Sleep    1s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_import_filter_form
     RPA.Desktop.Click With Offset    x=-110    y=-150    action=click    # Defaults drop-down
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     # RPA.Desktop.Press Keys    down    # 1
     # RPA.Desktop.Press Keys    down    # 2
     # RPA.Desktop.Press Keys    down    # 3
@@ -698,7 +698,7 @@ Points Filter Name Filter Field Select
     RPA.Desktop.Type Text    _M    # Name to filter
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
     RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter button
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Click
 
 Points Filter Name Filter Field Deselect
@@ -725,7 +725,7 @@ Points Filter Name Filter Field Select Argument-1
         RPA.Desktop.Click    alias:FXE_main_points_tab_pointfilter_inactive_btn       
     END
 
-    Sleep    1s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     # RPA.Desktop.Click
 
 
@@ -735,11 +735,11 @@ Points Filter Name Filter Clear And De-Select
     RPA.Desktop.Click With Offset    x=-200    y=0    action=click    # Name field
     RPA.Desktop.Press Keys    ctrl   a     # Select all
     RPA.Desktop.Press Keys    delete     # Select all
-    Sleep    5s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_pointfilter_bar    timeout=10 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_pointfilter_bar    # Point filter bar
     RPA.Desktop.Click With Offset    x=-70    y=0    action=click    # Point Filter  select
-    Sleep    3s
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
 
 
 Points Filter Point Type Filter

@@ -24,8 +24,6 @@ Resource            resources/st_edit_tab.resource
 
 *** Variables ***
 #${FXEditor_app}     c:\\Program Files (x86)\\FX-Editor\\FxEditor.exe
-${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
-${TEST_PROJECT_NAME}    Test-Project_1
 
 *** Tasks ***
 
@@ -62,30 +60,32 @@ ${TEST_PROJECT_NAME}    Test-Project_1
 #     #    Check And Delete Test Project
 #     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
 #     Open FXE
-#     New Project Wizard Arguments-1    Test-Project_1
+#     New Project Wizard    Test-Project_1    FX3000C
 #     Close Opened Project Without Saving
 #     Log  New project creation using wizard done.
 
 # ####### END OF FXE_new_project_wizard.robot
-
+Starting Procedure
+    Open FXE
+    Open Existing Project    ${TEST_PROJECTS_PATH}    ${TEST_PROJECT_NAME}
 
 Project Tab
-#     Project Tab Project Information Subtab
+     Project Tab Project Information Subtab
      Project Tab Communication Settings Subtab
      Project Tab Communication Settings Subtab Arguments-6    10.100.1.200    9    demodemo    1    system    24680
 #     #    plc_type 10 = 3000X, 9=3000C   
 #     #    [Arguments]    ${ip_address}    ${plc_type}    ${ftp_passw}    ${connect}    ${username}    ${password}
      Project Tab Hardware Configuration Subtab
      Project Tab Hardware Configuration Subtab New Module Arguments-3    4    20    1
-#     Project Tab Hardware Configuration Subtab Add Modbus Address
-#     Project Tab Hardware Configuration Subtab Add Modbus Device    
-#     Project Tab Point Settings Subtab
-#     Project Tab Settings Subtab
+     Project Tab Hardware Configuration Subtab Add Modbus Address
+     Project Tab Hardware Configuration Subtab Add Modbus Device    
+     Project Tab Point Settings Subtab
+     Project Tab Settings Subtab
 
 Points Tab
     Points Tab Select
     Left Panel Resize
-    Points Tab Select Filter Create All Kinds Of Points
+    # Points Tab Select Filter Create All Kinds Of Points
     State Text Edit Form
     Alarm Group Edit Form
     
@@ -99,29 +99,29 @@ Points Tab
     Left Panel Auto Resize Button
     Right Panel Auto Resize Button
     
-    Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_L
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_H
+    # Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_MV    1
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_M    1
+    # Points Filter Name Filter Clear And De-Select
          
-    Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
+    # Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FM
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FO
+    # Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_SS    1
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_A    1
+    # Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_RG
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_C
+    # Points Filter Name Filter Clear And De-Select
     
-    Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_TK
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel TIMETABLE Right Button Edit Argument-1    TE01_T
+    # Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_KRV
-    Points Filter Name Filter Clear And De-Select
+    # Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_L
+    # Points Filter Name Filter Clear And De-Select
 
     # Points Right Panel Import Filter Edit Form
     # Points Right Panel Button Bar Add Filter Button
@@ -132,6 +132,7 @@ Points Tab
     # Points Right Panel Import Filter Edit Form NO Save
 
 Modules Tab
+
     Modules Tab Select
     Modules Tab Points Binding Argument-1    1
     Modules Tab Points Disconnect Argument-1    5
@@ -143,6 +144,7 @@ Modules Tab
 
 History Tab
     History Tab Select
+    History Tab Resize
     History Tab New History Group Create Agrument-1    111
     History Tab New History Group Create RMB Drag-n-Drop Argument-1    222
     History Tab Delete All Groups

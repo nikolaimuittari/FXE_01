@@ -1,4 +1,4 @@
-** Settings ***
+*** Settings ***
 Documentation       Common resource file
 # Display parameters:
 # Physical resolution: 1920 * 1080
@@ -199,6 +199,8 @@ Upper Menu Tools Submenu Walkthrough
 
 Upper Menu File New Project
     [Arguments]    ${new_window}    ${project_name}
+    
+    # Preset: Opened FXE, opened project
     Wait For Element    alias:FXE_main_upper_menu    timeout=30
     RPA.Desktop.Click With Offset    alias:FXE_main_upper_menu    x=-85    y=0    action=click    # File submenu
 
@@ -246,4 +248,45 @@ Upper Menu File New Project
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
     RPA.Desktop.Wait For Element    alias:FXE_new_project_wizard_create_btn    timeout=5   
     RPA.Desktop.Click    alias:FXE_new_project_wizard_create_btn
+
+Upper Menu File New Group
+    [Arguments]    ${new_window}    ${group_path}    ${group_name}
+
+    # Preset: Opened FXE, opened project
+    
+    Delete Group    ${group_path}    ${group_name}   
+
+    Wait For Element    alias:FXE_main_upper_menu    timeout=30
+    RPA.Desktop.Click With Offset    alias:FXE_main_upper_menu    x=-85    y=0    action=click    # File submenu
+
+    Wait For Element    alias:FXE_main_upper_file_menu_list    timeout=10
+    
+    Move Mouse    alias:FXE_main_upper_file_menu_list
+    Move Mouse    offset:0,-250    # New group
+    RPA.Desktop.Click
+
+    RPA.Desktop.Wait For Element    alias:FXE_start_create_a_new_group_name_form    timeout=10
+    RPA.Desktop.Click    alias:FXE_start_create_a_new_group_name_form
+    RPA.Desktop.Type Text    ${group_path}${group_name}
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    # RPA.Desktop.Press Keys    tab
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_start_create_a_new_group_project_save_btn
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Move Mouse    alias:FXE_start_create_group_select_all
+    RPA.Desktop.Click With Offset    x=-30    y=0    action=click
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_start_group_project_add_btn
+    RPA.Desktop.Type Text    Test Group name
+    RPA.Desktop.Press Keys    tab 
+    RPA.Desktop.Type Text    Test Group address
+    RPA.Desktop.Press Keys    tab 
+    RPA.Desktop.Type Text    123456
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Press Keys    alt    F4
+    ${folder_existed}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_group_save_form    timeout=10    # Saving changes form
+    Run Keyword If    ${folder_existed}    RPA.Desktop.Click    alias:FXE_main_YES_noicon_form_inactive_btn    action=click
+    Log To Console    Group has been saved OK
+
+
 

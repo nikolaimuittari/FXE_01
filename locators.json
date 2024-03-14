@@ -366,7 +366,7 @@
         "type": "image"
     },
     "FXE_main_history_tab_point_id_table": {
-        "confidence": 50.0,
+        "confidence": 30.0,
         "path": ".images\\fxe_main_history_tab_point_id_table-path.png",
         "source": null,
         "type": "image"
@@ -708,19 +708,19 @@
         "type": "image"
     },
     "FXE_main_points_tab_AO_edit_form": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_points_tab_ao_edit_form-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_points_tab_CONTROL_edit_form": {
-        "confidence": 40.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_points_tab_control_edit_form-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_points_tab_CONTROL_edit_form_main_measurement_ddwn": {
-        "confidence": 60.0,
+        "confidence": 70.0,
         "path": ".images\\fxe_main_points_tab_control_edit_form_main_measurement_ddwn-path.png",
         "source": null,
         "type": "image"
@@ -797,6 +797,12 @@
         "source": null,
         "type": "image"
     },
+    "FXE_main_points_tab_POINTNAME_txt": {
+        "confidence": 60.0,
+        "path": ".images\\fxe_main_points_tab_pointname_txt-path.png",
+        "source": null,
+        "type": "image"
+    },
     "FXE_main_points_tab_RIGHT_BTN_menu": {
         "confidence": 70.0,
         "path": ".images\\fxe_main_points_tab_right_btn_menu-path.png",
@@ -822,7 +828,7 @@
         "type": "image"
     },
     "FXE_main_points_tab_TIME_edit_form": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_time_edit_form-path.png",
         "source": null,
         "type": "image"
@@ -942,13 +948,13 @@
         "type": "image"
     },
     "FXE_main_points_tab_point_edit_form_btns": {
-        "confidence": 50.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_points_tab_point_edit_form_btns-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_points_tab_point_edit_form_globalpoint_chkbx": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_points_tab_point_edit_form_globalpoint_chkbx-path.png",
         "source": null,
         "type": "image"
@@ -962,6 +968,12 @@
     "FXE_main_points_tab_point_edit_form_history_modbus_chkbx": {
         "confidence": 50.0,
         "path": ".images\\fxe_main_points_tab_point_edit_form_history_modbus_chkbx-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_points_tab_point_edit_form_save_form": {
+        "confidence": 50.0,
+        "path": ".images\\fxe_main_points_tab_point_edit_form_save_form-path.png",
         "source": null,
         "type": "image"
     },
@@ -1068,13 +1080,13 @@
         "type": "image"
     },
     "FXE_main_project_hardware_conf_modbus_add_address_form": {
-        "confidence": 80.0,
+        "confidence": 40.0,
         "path": ".images\\fxe_main_project_hardware_conf_modbus_add_address_form-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_project_hardware_conf_modbus_add_device_form": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_project_hardware_conf_modbus_add_device_form-path.png",
         "source": null,
         "type": "image"
@@ -1152,7 +1164,7 @@
         "type": "image"
     },
     "FXE_main_project_tab": {
-        "confidence": 80.0,
+        "confidence": 25.0,
         "path": ".images\\fxe_main_project_tab-path.png",
         "source": null,
         "type": "image"
@@ -1200,7 +1212,7 @@
         "type": "image"
     },
     "FXE_main_project_tab_hardware_conf_modules_form": {
-        "confidence": 30.0,
+        "confidence": 25.0,
         "path": ".images\\fxe_main_project_tab_hardware_conf_modules_form-path.png",
         "source": null,
         "type": "image"
@@ -1278,7 +1290,7 @@
         "type": "image"
     },
     "FXE_main_project_tab_point_set_subtab_filter_icons": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_project_tab_point_set_subtab_filter_icons-path.png",
         "source": null,
         "type": "image"
@@ -1314,14 +1326,20 @@
         "type": "image"
     },
     "FXE_main_project_tab_project_info_subtab": {
-        "confidence": 80.0,
+        "confidence": 35.0,
         "path": ".images\\fxe_main_project_tab_project_info_subtab-path.png",
         "source": null,
         "type": "image"
     },
     "FXE_main_project_tab_settings_subtab": {
-        "confidence": 80.0,
+        "confidence": 50.0,
         "path": ".images\\fxe_main_project_tab_settings_subtab-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_main_project_tab_settings_subtab_autosave_chkbx": {
+        "confidence": 30.0,
+        "path": ".images\\fxe_main_project_tab_settings_subtab_autosave_chkbx-path.png",
         "source": null,
         "type": "image"
     },
@@ -1874,6 +1892,12 @@
     "FXE_start_create_group_select_all": {
         "confidence": 50.0,
         "path": ".images\\fxe_start_create_group_select_all-path.png",
+        "source": null,
+        "type": "image"
+    },
+    "FXE_start_date_format_info_form": {
+        "confidence": 40.0,
+        "path": ".images\\fxe_start_date_format_info_form-path.png",
         "source": null,
         "type": "image"
     },

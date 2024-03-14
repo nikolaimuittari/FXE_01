@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.12 on win32)" generated="20240229 08:41:28.118" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.12 on win32)" generated="20240313 15:59:21.606" rpa="false" schemaversion="3">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\USER\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20240229 08:41:28.185" endtime="20240229 08:41:35.671"/>
+<kw name="History Tab Select">
+<msg timestamp="20240313 15:59:22.403" level="FAIL">No keyword with name 'History Tab Select' found.</msg>
+<status status="FAIL" starttime="20240313 15:59:22.403" endtime="20240313 15:59:22.403"/>
 </kw>
-<status status="PASS" starttime="20240229 08:41:28.184" endtime="20240229 08:41:35.671"/>
+<kw name="History Tab New History Group Create Agrument-1">
+<arg>111</arg>
+<status status="NOT RUN" starttime="20240313 15:59:22.406" endtime="20240313 15:59:22.407"/>
+</kw>
+<kw name="History Tab New History Group Create RMB Drag-n-Drop Argument-1">
+<arg>222</arg>
+<status status="NOT RUN" starttime="20240313 15:59:22.411" endtime="20240313 15:59:22.411"/>
+</kw>
+<kw name="History Tab Delete All Groups">
+<status status="NOT RUN" starttime="20240313 15:59:22.413" endtime="20240313 15:59:22.413"/>
+</kw>
+<kw name="History Tab Open Report Form">
+<status status="NOT RUN" starttime="20240313 15:59:22.415" endtime="20240313 15:59:22.415"/>
+</kw>
+<kw name="History Tab Report Form Group Create Agrument-1">
+<arg>333</arg>
+<status status="NOT RUN" starttime="20240313 15:59:22.416" endtime="20240313 15:59:22.416"/>
+</kw>
+<kw name="History Tab Report Form Delete Selected Group">
+<status status="NOT RUN" starttime="20240313 15:59:22.418" endtime="20240313 15:59:22.418"/>
+</kw>
+<kw name="History Tab Report Form Group Create Agrument-1">
+<arg>444</arg>
+<status status="NOT RUN" starttime="20240313 15:59:22.419" endtime="20240313 15:59:22.419"/>
+</kw>
+<kw name="History Tab Report Form Report Wizard">
+<status status="NOT RUN" starttime="20240313 15:59:22.420" endtime="20240313 15:59:22.421"/>
+</kw>
+<kw name="History Tab Report Form Report Delete">
+<status status="NOT RUN" starttime="20240313 15:59:22.422" endtime="20240313 15:59:22.422"/>
+</kw>
+<kw name="History Tab Report Form Column Create Arguments-6">
+<arg>0</arg>
+<arg>17</arg>
+<arg>2</arg>
+<arg>HEADER</arg>
+<arg>0</arg>
+<arg>2&amp;3</arg>
+<status status="NOT RUN" starttime="20240313 15:59:22.423" endtime="20240313 15:59:22.423"/>
+</kw>
+<kw name="History Tab Report Form Normalize Change">
+<status status="NOT RUN" starttime="20240313 15:59:22.426" endtime="20240313 15:59:22.426"/>
+</kw>
+<kw name="History Tab Report Form Close Without Saving">
+<status status="NOT RUN" starttime="20240313 15:59:22.430" endtime="20240313 15:59:22.430"/>
+</kw>
+<status status="PASS" starttime="20240313 15:59:21.649" endtime="20240313 15:59:24.034"/>
+</kw>
+<status status="PASS" starttime="20240313 15:59:21.648" endtime="20240313 15:59:24.034"/>
 </test>
-<status status="PASS" starttime="20240229 08:41:28.121" endtime="20240229 08:41:35.673"/>
+<status status="PASS" starttime="20240313 15:59:21.608" endtime="20240313 15:59:24.036"/>
 </suite>
 <statistics>
 <total>

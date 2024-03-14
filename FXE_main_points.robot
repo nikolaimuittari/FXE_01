@@ -29,8 +29,8 @@ ${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
 ${TEST_PROJECT_NAME}    Test-Project_1
 
 *** Tasks ***
-Points Tab
 
+Points Tab Temp
     Check Projects Common Folder Exists
     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
     Open FXE
@@ -39,29 +39,25 @@ Points Tab
     Points Tab Select
     Left Panel Resize
     Points Tab Select Filter Create All Kinds Of Points
-    State Text Edit Form
-    Alarm Group Edit Form
-    
-    # Button Press Upload Alarmgroup To PLC
-    # Button Press Upload State Text To PLC
-    # Button Press Upload Changed Points To PLC
-    # Button Press Upload Displayed Points To PLC
-    # Button Press Upload Selected Points To PLC
+
     Button Press Points Panel Resize
  
     Left Panel Auto Resize Button
     Right Panel Auto Resize Button
-    
+
     Points Tab Left Panel ALARM Right Button Edit Argument-1    TE01_H
     Points Filter Name Filter Clear And De-Select
-    
-    Points Tab Left Panel AI Right Button Edit Arguments-2   TE01_M    1
+
+    Points Tab Left Panel AI Right Button Edit Arguments-2    TE01_M    1
     Points Filter Name Filter Clear And De-Select
-         
+
     Points Tab Left Panel DI Right Button Edit Argument-1    TE01_I
     Points Filter Name Filter Clear And De-Select
 
-    Points Tab Left Panel DO Right Button Edit Argument-1    TE01_O
+    Points Tab Left Panel DO Right Button Edit Argument-1    TE01_FO
+    Points Filter Name Filter Clear And De-Select
+
+    Points Tab Left Panel AO Right Button Edit Arguments-2    TE01_A    1
     Points Filter Name Filter Clear And De-Select
     
     Points Tab Left Panel CONTROL Right Button Edit Argument-1    TE01_C
@@ -72,16 +68,4 @@ Points Tab
 
     Points Tab Left Panel LOOKUP Right Button Edit Argument-1    TE01_L
     Points Filter Name Filter Clear And De-Select
-
-    # Points Right Panel Import Filter Edit Form
-    # Points Right Panel Button Bar Add Filter Button
-    # Points Right Panel Button Bar Copy Selected Filter
-    # Points Filter Name Filter Field
-    # Points Filter Point Type Filter
-
-    # Points Right Panel Import Filter Edit Form NO Save
-    Close Opened Project Without Saving
-    Splash Screen Check
-    Current Window System Force Close X Button
-    Splash Screen Check
 

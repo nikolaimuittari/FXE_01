@@ -346,7 +346,6 @@ Project Tab Point Settings Subtab
     RPA.Desktop.Type Text    Prefix_1
     RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
 
-
     # RPA.Desktop.Move Mouse    alias:FXE_main_project_tab_point_set_subtab_filter_icons    # Point Settings icons dims: 332*65 center: 166*33
     # RPA.Desktop.Click With Offset    x=-135    y=0    action=click    # Open prefix button
 
@@ -387,8 +386,16 @@ Project Tab Point Settings Subtab
     RPA.Desktop.Press Keys    enter
 
 Project Tab Settings Subtab
-    RPA.Desktop.Press Keys    tab    # "Autosave project every" checkbox
-    RPA.Desktop.Press Keys    space     # activate
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_settings_subtab    timeout=25
+    # RPA.Desktop.Click    alias:FXE_main_project_tab
+    # Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    RPA.Desktop.Click    alias:FXE_main_project_tab_settings_subtab
+    Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+    
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_tab_settings_subtab_autosave_chkbx     timeout=10
+    RPA.Desktop.Click    FXE_main_project_tab_settings_subtab_autosave_chkbx
+    # RPA.Desktop.Press Keys    tab    # "Autosave project every" checkbox
+    # RPA.Desktop.Press Keys    space     # activate
 
     RPA.Desktop.Press Keys    tab    # "minutes" textbox - 5 min is default
     RPA.Desktop.Type Text    10    # Changing to 10 min

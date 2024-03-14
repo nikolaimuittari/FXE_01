@@ -16,9 +16,9 @@ New Project Uisng Wizard
     Recreate Test Projects folder Arguments-1    c:\\QA\\TestProjects\\
     Open FXE
     New Project Wizard    Test-Project_1    FX3000X
-    Close Opened Project Without Saving
+    Close Opened Project With Saving
     New Project Wizard    Test-Project_2    FX3000C
-    Close Opened Project Without Saving
+    Close Opened Project With Saving
     Start Page New Group Project Wizard Open Close
     # Start Page Add Delete Favorites
     Current Window System Force Close X Button

@@ -140,6 +140,10 @@ Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1
             ## Sleep    5s 
             RPA.Desktop.Click With Offset    x=100    y=0    action=click    # CANCEL button click
 
+            RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_point_edit_form_save_form    timeout=10    # Save changes form
+            RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_point_edit_form_save_form
+            RPA.Desktop.Click With Offset    x=50    y=55    action=click    # Cancel button
+
         END
     END
 
@@ -443,15 +447,15 @@ Points Tab Left Panel DO Right Button Edit Argument-1
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit 
     #RPA.Desktop.Press Keys    enter
     # Sleep    1s
-    ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
-    IF    ${error_message}
-        RPA.Desktop.Press Keys    enter    # Error message
-    END
+    # ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
+    # IF    ${error_message}
+    #     RPA.Desktop.Press Keys    enter    # Error message
+    # END
 
     #RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_DO_edit_form    timeout=10    # DO point edit form   Dims: 524*646  center: 262*323
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_DO_edit_form    # DO point edit form
-    RPA.Desktop.Click    
+    RPA.Desktop.Click With Offset    x=0    y=-220    action=click    # Pointname field
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    ${pointname}  # Point name field
     RPA.Desktop.Press Keys    tab
@@ -863,16 +867,16 @@ Points Tab Left Panel AO Right Button Edit Arguments-2
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
     # Sleep    1s
-    ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
-    IF    ${error_message}
-        RPA.Desktop.Press Keys    enter    # Error message
-    END
+    # ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
+    # IF    ${error_message}
+    #     RPA.Desktop.Press Keys    enter    # Error message
+    # END
     #RPA.Desktop.Press Keys    enter
     #RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
 
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_AO_edit_form    timeout=10    # AI point edit form   Dims: 959*578  center:480*290
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_AO_edit_form    # AI point edit form
-    RPA.Desktop.Click    
+    RPA.Desktop.Click With Offset    x=0    y=-200    action=click     # Point name field   
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    ${pointname}  # Point name field
     RPA.Desktop.Press Keys    tab    # View
@@ -948,16 +952,19 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
 
     RPA.Desktop.Click With Offset    x=0    y=195    action=click     # Edit feature
     # Sleep    1s
-    ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
-    IF    ${error_message}
-        RPA.Desktop.Press Keys    enter    # Error message
-    END
+    # ${error_message}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_points_edit_property_missing_error_form    timeout=10    # Message if state text is missing
+    # IF    ${error_message}
+    #     RPA.Desktop.Press Keys    enter    # Error message
+    # END
     #RPA.Desktop.Press Keys    enter
     #RPA.Desktop.Click    alias:FXE_main_OK_noicon_form_btn
 
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_CONTROL_edit_form    timeout=10    # CONTROL point edit form   Dims: 959*578  center:480*290
-    RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form    # CONTROL point edit form
-    RPA.Desktop.Click    
+    # RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form    # CONTROL point edit form
+    
+    # RPA.Desktop.Wait For Element    alias:alias:FXE_main_points_tab_POINTNAME_txt    timeout=5
+    # RPA.Desktop.Click With Offset    alias:alias:FXE_main_points_tab_POINTNAME_txt    x=0    y=10    action=click    
+    RPA.Desktop.Click With Offset    alias:FXE_main_points_tab_CONTROL_edit_form    x=-400    y=-250    action=click    # Pointname field   
     RPA.Desktop.Press Keys    ctrl    a
     RPA.Desktop.Type Text    ${pointname}  # Point name field
     RPA.Desktop.Press Keys    tab    # View
@@ -987,7 +994,7 @@ Points Tab Left Panel CONTROL Right Button Edit Argument-1
     
     RPA.Desktop.Wait For Element    alias:FXE_main_points_tab_CONTROL_edit_form_main_measurement_ddwn    timeout=10    #  Main measurement  drop-down 
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_CONTROL_edit_form_main_measurement_ddwn       # Main measurement drop-down
-    RPA.Desktop.Click With Offset    x=0    y=20    action=click
+    RPA.Desktop.Click With Offset    x=0    y=0    action=click
     #RPA.Desktop.Press Keys    enter    # Main measurement pointname
     #RPA.Desktop.Press Keys    tab    # Main measurement drop-down
     RPA.Desktop.Press Keys    right    # Main measurement pointname
@@ -1182,7 +1189,7 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     ## Sleep    3s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     ## Sleep    3s
-    RPA.Desktop.Click With Offset    x=115    y=-225    action=click    # Edit form click on Lookup values "Name of X axis"
+    RPA.Desktop.Click With Offset    x=115    y=-225    action=doubleclick    # Edit form click on Lookup values "Name of X axis"
     ## Sleep    3s
     RPA.Desktop.Type Text    Outdoor_Temperature
     ## Sleep    3s
@@ -1217,10 +1224,8 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-350    y=260    action=click    # Edit form click on Show values checkbox
-    Sleep    3s
     RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
     RPA.Desktop.Click With Offset    x=-210    y=260    action=click    # Edit form click on Zoom to fit button
-    Sleep    3s
 
     # TODO: Check correct saving process
     # RPA.Desktop.Move Mouse    alias:FXE_main_points_tab_LOOKUP_edit_form
@@ -1233,10 +1238,10 @@ Points Tab Left Panel LOOKUP Right Button Edit Argument-1
     # RPA.Desktop.Type Text    ${random_number}
     # RPA.Desktop.Press Keys    enter     # Saving BMP
     
-    RPA.Desktop.Click    alias:FXE_main_OK_form_btn
+    # RPA.Desktop.Click    alias:FXE_main_OK_form_btn
 
     # Sleep    3s
-    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    3    # 1=OK, 2=APPLY, other=Cancel
+    Points Tab Point Edit Form OK-Apply-Cancel Buttons Argument-1    1    # 1=OK, 2=APPLY, other=Cancel
     # Sleep    3s
     Points Tab Point Edit Exit Form Keep-Rename-Cancel Argument-1    3    # 1=Keep, 2=APPLY, other=Cancel
 

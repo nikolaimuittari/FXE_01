@@ -39,10 +39,12 @@ Template Selection And Import
     RPA.Desktop.Press Keys    enter
     RPA.Desktop.Click    alias:FXE_main_OK_form_btn
     Wait For Element    alias:FXE_main_template_browser_form_filled    timeout=10
-    RPA.Desktop.Click   alias:FXE_main_template_browser_browse_btn
+    RPA.Desktop.Click With Offset   alias:FXE_main_template_browser_browse_btn    x=0    y=10    action=click    # Browse button
     Wait For Element    alias:FXE_main_template_browser_select_form    timeout=10    # Folder select form
     RPA.Desktop.Press Keys    esc    # Close form
     
+    RPA.Desktop.Click With Offset   alias:FXE_main_template_browser_browse_btn    x=0    y=-10    action=click    # Use default template folder button
+
     RPA.Desktop.Press Keys    down
     RPA.Desktop.Press Keys    down
     RPA.Desktop.Press Keys    down
@@ -55,7 +57,7 @@ Template Selection And Import
     Wait For Element    alias:FXE_main_template_open_btn    timeout=10
     RPA.Desktop.Click    alias:FXE_main_template_open_btn
     
-    Sleep    10s
+    Sleep    5s
     Wait For Element    alias:FXE_main_template_manager_add_cancel_btn    timeout=10
     
     RPA.Desktop.Click With Offset       alias:FXE_main_template_manager_tabs    x=50    y=0
@@ -66,7 +68,7 @@ Template Selection And Import
     Sleep    2s
 
     RPA.Desktop.Click With Offset    alias:FXE_main_template_manager_points_buttons    x=-150    y=0
-    Sleep    10s
+    Sleep    5s
 
     RPA.Desktop.Click With Offset    alias:FXE_main_template_manager_add_cancel_btn    x=-50    y=0
     ${replace_new}=    Run Keyword And Return Status    Wait For Element    alias:FXE_main_template_replace_new_form    timeout=10

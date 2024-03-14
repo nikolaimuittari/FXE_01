@@ -21,7 +21,9 @@ ${EXCEPTION_SCREENSHOT_PATH}    c:\\QA\RoboCorp\\FXE_01\\exception_images
 ${TEST_PROJECT_NAME}    Test-Project_1
 ${FXE_TEST_PROJECT_GROUP_PATH}    c:\\QA\\TestProjects\\Test-Group_12
 ${FXE_TEMPLATE_FOLDER_PATH}    C:\\ProgramData\\FX-Editor\\Templates\\FXT Templates\\
-${SLEEP_TIMEOUT_DEFAULT}    0.5s
+${SLEEP_TIMEOUT_DEFAULT}    0.15s
+${TEST_PROJECTS_PATH}    c:\\QA\\TestProjects\\
+${TEST_PROJECT_NAME}    Test-Project_1
 
 
 
@@ -133,22 +135,49 @@ Clear And Delete Folder Argument-1
         Log To Console    Folder ${folder_path} still exists
     END
 
-Check And Delete Project Folder Argument-1
+Check And Delete Folder
     [Arguments]    ${PROJECT_FOLDER_PATH}
     #OperatingSystem.Directory Should Not Exist    ${FXE_TEST_PROJECT_PATH}
     
     ${folder_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Exist    ${PROJECT_FOLDER_PATH}
-    Run Keyword If    ${folder_exists}    OperatingSystem.Remove Directory    ${PROJECT_FOLDER_PATH}    recursive=${True}
+    Log To Console    ${PROJECT_FOLDER_PATH} exists: ${folder_exists}
+    Run Keyword If    ${folder_exists}==${True}    OperatingSystem.Remove Directory    ${PROJECT_FOLDER_PATH}    recursive=${True}
     ${folder_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Not Exist    ${PROJECT_FOLDER_PATH}
     Run Keyword If    ${folder_exists}    Log To Console    *** Folder ${PROJECT_FOLDER_PATH} has been deleted OK
     Run Keyword If    ${folder_exists}==${False}    Log To Console    *** Folder ${PROJECT_FOLDER_PATH} still exists
-Check And Delete Test Group
-    #OperatingSystem.Directory Should Not Exist    ${FXE_TEST_PROJECT_PATH}
+
+Delete Group
+    [Arguments]    ${GROUP_FOLDER}    ${GROUP_NAME}
+    # OperatingSystem.Directory Should Not Exist    ${FXE_TEST_PROJECT_PATH}
+    ${group_folder_documents}=    Set Variable    ${GROUP_FOLDER}\\${GROUP_NAME} - Document\\
+    OperatingSystem.Remove Directory    ${group_folder_documents}    recursive=${True}
+    OperatingSystem.Should Not Exist    ${group_folder_documents}    Exists:${group_folder_documents}
     
-    ${folder_existed}=    Run Keyword And Return Status    OperatingSystem.Directory Should Exist    ${FXE_TEST_PROJECT_GROUP_PATH}
-    Run Keyword If    ${folder_existed}    OperatingSystem.Remove Directory    ${FXE_TEST_PROJECT_GROUP_PATH}    recursive=${True}
-    ${folder_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Not Exist    ${FXE_TEST_PROJECT_GROUP_PATH}
-    Run Keyword If    ${folder_exists} and ${folder_existed}    Log To Console    *** Group folder has been deleted OK
+    # ${folder_existed}=    Run Keyword And Return Status    OperatingSystem.Directory Should Not Exist    ${group_folder_documents}
+    # Run Keyword If    ${folder_existed}    Log To Console    Folder ${group_folder_documents} has been deleted
+    # Log To Console    ${group_folder_documents}
+    # ${folder_existed}=    Run Keyword And Return Status    OperatingSystem.Directory Should Exist    ${group_folder_documents}
+    # Run Keyword If    ${folder_existed}    OperatingSystem.Remove Directory    ${group_folder_documents}    recursive=${True}
+    # ${folder_exists}=    Run Keyword And Return Status    OperatingSystem.Directory Should Not Exist    ${group_folder_documents}
+    # Run Keyword If    ${folder_exists}    Log To Console    *** Group folder ${group_folder_documents} has been deleted OK
+    OperatingSystem.Remove File    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.log
+    OperatingSystem.Should Not Exist    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.log
+    Log To Console    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.log
+
+    OperatingSystem.Remove File    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.ini
+    OperatingSystem.Should Not Exist    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.ini
+    Log To Console    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.ini
+
+    OperatingSystem.Remove File    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.fxg
+    OperatingSystem.Should Not Exist    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.fxg
+    Log To Console    ${GROUP_FOLDER}\\${GROUP_NAME}\\${GROUP_NAME}.fxg
+    # ${file_exists}=    Run Keyword And Return Status    OperatingSystem.Remove File    ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.log
+    # Run Keyword If    ${file_exists}    Log To Console    File ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.log has been deleted
+    # ${file_exists}=    Run Keyword And Return Status    OperatingSystem.Remove File    ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.ini
+    # Run Keyword If    ${file_exists}    Log To Console    File ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.ini has been deleted
+    # ${file_exists}=    Run Keyword And Return Status    OperatingSystem.Remove File    ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.fxg
+    # Run Keyword If    ${file_exists}    Log To Console    File ${GROUP_FOLDER}${GROUP_NAME}\\${GROUP_NAME}.fxg has been deleted
+
 
 Check Empty Project Name Error
     RPA.Desktop.Click    alias:FXE_new_project_wizard_next_btn
@@ -378,6 +407,16 @@ New Project Wizard
 
     RPA.Desktop.Click    alias:FXE_new_project_wizard_create_btn
     Sleep    ${SLEEP_TIMEOUT_DEFAULT}
+
+    ${date_format_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_date_format_info_form    timeout=25
+    IF    ${date_format_form} == ${True}
+        RPA.Desktop.Click With Offset    alias:FXE_start_date_format_info_form     x=125    y=70    action=click       
+    END
+    ${date_format_form}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_start_date_format_info_form    timeout=25
+    IF    ${date_format_form} == ${True}
+        RPA.Desktop.Click With Offset    alias:FXE_start_date_format_info_form     x=125    y=70    action=click       
+    END
+    
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=25
     Log To Console    *** New project ${PROJECT_NAME} has been created OK
     
@@ -405,7 +444,9 @@ Open Existing Project
 Close Opened Project With Saving
     RPA.Desktop.Wait For Element    alias:FXE_main_project_tab    timeout=45
     Log To Console    Project is opened
-    RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    # RPA.Desktop.Click    alias:FXE_main_project_close_btn
+    RPA.Desktop.Wait For Element    alias:FXE_main_project_close_btn    timeout=25
+    RPA.Desktop.Click With Offset   alias:FXE_main_project_close_btn    x=60    y=0    action=click    # project close button
     # Saving dialog if project has been chnaged
     ${Saving_dialog}=    Run Keyword And Return Status    RPA.Desktop.Wait For Element    alias:FXE_project_save_msg    timeout=15
     # Pressing YES
